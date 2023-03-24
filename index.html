@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Version 2</title>
+
+    <!-- font -->
+    <link rel="stylesheet" href="font/font.css">
+
+    <!-- public -->
+    <link rel="stylesheet" href="style/main_content.css">
+
+    <!-- color -->
+    <link rel="stylesheet" href="color_a/style/main_content.css">
+    <!-- <link rel="stylesheet" href="color_b/style/main_content.css"> -->
+
+    <!-- rwd -->
+    <link rel="stylesheet" href="style/rwd.css">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+
+    <!-- js -->
+    <!-- 
+        jquery 3.6.
+        gsap 3.11.4
+    -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/anim.js"></script>
+    <script src="js/public.js"></script>
+</head>
+
+<body id="body">
+    
+    <!-- facebook thing -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v16.0"
+        nonce="5goK79nd"></script>
+
+    <!-- mobile menu -->
+    <section class="mobile_menu">
+        <!-- main header -->
+        <div class="mobile_header header">
+            <div class="container flex mobile_action">
+                <!-- menu -->
+                <button class="menu_btn"><i class="fa-solid fa-bars"></i></button>
+                <!-- logo -->
+                <img src="Images/logo_black2.png" style="height: 65%;" loading="lazy">
+                <!-- search -->
+                <button class="search_btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+        <!-- menu display -->
+        <div class="mobile_menu_bg" style="display: none;">
+            <!-- menu link -->
+            <div class="mobile_menu_group" style="overflow-y: scroll;"></div>
+        </div>
+    </section>
+    <!-- function area -->
+    <section class="function_area header">
+        <div class="container flex">
+            <!-- left side -->
+            <div class="navbar function_bar">
+                <a href="./index.html">
+                    <div class="navbar_icon">回首頁</div>
+                </a>
+                <a href="./contact.html">
+                    <div class="navbar_icon">聯絡我們</div>
+                </a>
+                <a href="./content.html">
+                    <div class="navbar_icon">購物清單</div>
+                </a>
+                <a href="./content.html">
+                    <div class="navbar_icon">結帳</div>
+                </a>
+                <div class="navbar_icon">語系<i class="fa-solid fa-caret-down"></i>
+                    <!-- dropdown -->
+                    <div class="navbar_dropdown">
+                        <a href="" class="navbar_dropdown_item">
+                            <div>中文</div>
+                        </a>
+                        <a href="" class="navbar_dropdown_item">
+                            <div>English</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar_icon">簡繁轉換<i class="fa-solid fa-caret-down"></i>
+                    <!-- dropdown -->
+                    <div class="navbar_dropdown">
+                        <a href="" class="navbar_dropdown_item">
+                            <div>簡體中文</div>
+                        </a>
+                        <a href="" class="navbar_dropdown_item">
+                            <div>繁體中文</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- right side -->
+            <div style="width: calc(100%/2);text-align: right;padding-right: 3%;">
+                <button class="search_btn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- fix button -->
+    <section class="fixed_menu">
+        <!-- search btn -->
+        <button class="fixed_btn search_btn" id="fixed_search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <!-- shopping car -->
+        <button class="fixed_btn" id="shopping_car" onclick="location.href=''">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <!-- number of shopping car -->
+            <div class="shopping_car_count">5</div>
+        </button>
+        <!-- back btn -->
+        <button class="fixed_btn" id="top_btn" onclick="location.href='#body'"><i
+                class="fa-solid fa-angle-up"></i></button>
+    </section>
+
+    <!-- search model -->
+    <section class="search_model" style="display:none;">
+        <div class="search_box">
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input type="text"/>
+            <button class="search_close">
+                <i class="fa-solid fa-xmark" ></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- shopping car model -->
+    <section class="shopping_car_model"></section>
+
+    <!-- main page  -->
+    <section class="main_page">
+        <img class="main_page_background" src="Images/787097.jpg" loading="lazy" alt="">
+        <div class="main_page_content flex">
+            <!-- logo -->
+            <div class="main_title" style="opacity: 0;">
+                <img src="Images/logo.png" alt="logo" loading="lazy">
+            </div>
+            <!-- subtitle -->
+            <div class="main_subtitle" style="color: white;opacity: 0;">
+                <div>一個有支援rwd功能的demo網站嘿嘿，希望你會喜歡，下面有carousel 介紹頁面 產品頁面 地圖頁面 跟頁尾</div>
+                <div>this is a website that my classmate,Lynn,my good friend find me to do it   haha</div>
+            </div>
+            <!-- link part -->
+            <div class="main_wrap_group" style="opacity: 0;"></div>
+        </div>
+
+        <!-- keep down btn -->
+        <div class="keep_read_btn" style="opacity: 0;">
+            <a href="#carousel"><i class="fa-solid fa-chevron-down"></i></a>
+        </div>
+        <!-- footer -->
+        <div class="main_footer"></div>
+    </section>
+
+    <!-- body -->
+    <section class="body">
+        <div class="container">
+            <!-- carousel -->
+            <section id="carousel" class="carousel" data-carousel>
+                <!-- prev btn -->
+                <button class="carousel-btn prev" data-carousel-btn="prev"><i
+                        class="fa-solid fa-caret-left"></i></button>
+                <!-- next btn -->
+                <button class="carousel-btn next" data-carousel-btn="next"><i
+                        class="fa-solid fa-caret-right"></i></button>
+                <ul data-slides>
+                    <!-- carousel img -->
+                    <li class="slide" data-active>
+                        <img src="./Images/公告1.jpg" alt="" loading="lazy">
+                    </li>
+                    <li class="slide" data-active>
+                        <img src="./Images/787097.jpg" alt="" loading="lazy">
+                    </li>
+                    <li class="slide">
+                        <img src="./Images/公告2.jpg" alt="" loading="lazy">
+                    </li>
+                    <li class="slide">
+                        <img src="./Images/公告3.jpg" alt="" loading="lazy">
+                    </li>
+                    <li class="slide">
+                        <img src="./Images/公告4.jpg" alt="" loading="lazy">
+                    </li>
+                </ul>
+            </section>
+
+            <!-- service page -->
+            <section class="service">
+                <!-- big title -->
+                <div class="service_title">
+                    <h1>我們的服務</h1>
+                    <p>我們提供更多更棒的服務，歡迎您進入網站挑選</p>
+                </div>
+                <!-- service group -->
+                <div class="service_group">
+                    <div class="service_item">
+                        <div class="service_img">
+                            <img src="Images/公告1.jpg" loading="lazy" alt="">
+                        </div>
+                        <h1>快速架站與上線</h1>
+                        <p>EZ架站雲開站速度快，不需另租虛擬主機，免安裝免繁鎖設定更不需專業人士即會使用，最快不用1小時即可開通上線。</p>
+                    </div>
+                    <div class="service_item">
+                        <div class="service_img">
+                            <img src="Images/公告2.jpg" loading="lazy" alt="">
+                        </div>
+                        <h1>雲端技術平台</h1>
+                        <p>系統以最新雲端技術開發而成,不必架設以及租用虛擬主機，不必安裝任何軟體,能上網即可輕鬆使用。</p>
+                    </div>
+                    <div class="service_item">
+                        <div class="service_img">
+                            <img src="Images/公告3.jpg" loading="lazy" alt="">
+                        </div>
+                        <h1>RWD嚮應式網站</h1>
+                        <p>新式的RWD網頁設計嚮應式技術讓您的網站打破設備隔閡，無論是桌機、平板、手機，3機一體大小通吃。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- product -->
+            <section class="product">
+                <div class="product_title">
+                    <h1>產品介紹</h1>
+                    <p>Product</p>
+                </div>
+                <div class="product_content">
+                    
+                    <a href="./product.html" class="product_item">
+                        <div class="product_container">
+                            <div class="product_img">
+                                <img src="Images/公告4.jpg" alt="haha" loading="lazy">
+                            </div>
+                            <div class="product_item_content">
+                                <div class="product_item_text">
+                                    <h1>A thing</h1>
+                                    <p>this is a product.</p>
+                                </div>
+                                <div class="product_price">
+                                    <h1 class="price">9487</h1>
+                                    <p class="onSale">10000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./product.html" class="product_item">
+                        <div class="product_container">
+                            <div class="product_img">
+                                <img src="Images/公告2.jpg" alt="haha" loading="lazy">
+                            </div>
+                            <div class="product_item_content">
+                                <div class="product_item_text">
+                                    <h1>A thing</h1>
+                                    <p>this is a product.</p>
+                                </div>
+                                <div class="product_price">
+                                    <h1 class="price">9487</h1>
+                                    <p class="onSale">10000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./product.html" class="product_item">
+                        <div class="product_container">
+                            <div class="product_img">
+                                <img src="Images/公告3.jpg" alt="haha" loading="lazy">
+                            </div>
+                            <div class="product_item_content">
+                                <div class="product_item_text">
+                                    <h1>A thing</h1>
+                                    <p>this is a product.</p>
+                                </div>
+                                <div class="product_price">
+                                    <h1 class="price">9487</h1>
+                                    <p class="onSale">10000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./product.html" class="product_item">
+                        <div class="product_container">
+                            <div class="product_img">
+                                <img src="Images/公告1.jpg" alt="haha" loading="lazy">
+                            </div>
+                            <div class="product_item_content">
+                                <div class="product_item_text">
+                                    <h1>A thing</h1>
+                                    <p>this is a product.</p>
+                                </div>
+                                <div class="product_price">
+                                    <h1 class="price">9487</h1>
+                                    <p class="onSale">10000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./product.html" class="product_item">
+                        <div class="product_container">
+                            <div class="product_img">
+                                <img src="Images/公告2.jpg" alt="haha" loading="lazy">
+                            </div>
+                            <div class="product_item_content">
+                                <div class="product_item_text">
+                                    <h1>A thing</h1>
+                                    <p>this is a product.</p>
+                                </div>
+                                <div class="product_price">
+                                    <h1 class="price">9487</h1>
+                                    <p class="onSale">10000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./product.html" class="product_item">
+                        <div class="product_container">
+                            <div class="product_img">
+                                <img src="Images/公告3.jpg" alt="haha" loading="lazy">
+                            </div>
+                            <div class="product_item_content">
+                                <div class="product_item_text">
+                                    <h1>A thing</h1>
+                                    <p>this is a product.</p>
+                                </div>
+                                <div class="product_price">
+                                    <h1 class="price">9487</h1>
+                                    <p class="onSale">10000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <a href="" class="more_btn">
+                    <div>查看更多</div>
+                </a>
+            </section>
+
+            <!-- map -->
+            <section class="map_page">
+                <iframe class="map "
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.6265973249333!2d120.68158251486757!3d24.149748179320216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d68cf62e061%3A0x7091dd73273f6236!2z5ZyL56uL6Ie65Lit56eR5oqA5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1666889270956!5m2!1szh-TW!2stw"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="container">
+            <div class="flex footer_main">
+                <!-- left side -->
+                <div class="footer_logo_side">
+                    <div>
+                        <img class="footer_logo" src="Images/logo.png" loading="lazy">
+                    </div>
+                    <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs=""
+                        data-adapt-container-width width="270" height="" data-small-header="false"
+                        data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a
+                                href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+                    </div>
+                </div>
+                <!-- right side -->
+                <div class="footer_content">
+                    <!-- fast link -->
+                    <div class="footer_fastLink">
+                        <div class="fastLink_row">
+                            <a href="">
+                                <div>品牌資訊</div>
+                            </a>
+                            <a href="">
+                                <div>門市據點</div>
+                            </a>
+                            <!-- <a href="">
+                                <div>禮贈品客製化</div>
+                            </a>
+                            <a href="">
+                                <div>聯絡我們</div>
+                            </a> -->
+                        </div>
+                        <div class="fastLink_row">
+                            <a href="">
+                                <div>會員權益說明</div>
+                            </a>
+                            <a href="">
+                                <div>付款方式</div>
+                            </a>
+                            <a href="">
+                                <div>寄送服務</div>
+                            </a>
+                            <a href="">
+                                <div>售後服務</div>
+                            </a>
+                        </div>
+                        <div class="fastLink_row">
+                            <a href="">
+                                <div>媒體報導</div>
+                            </a>
+                            <a href="">
+                                <div>隱私權條款</div>
+                            </a>
+                            <a href="">
+                                <div>場地租借(台中)</div>
+                            </a>
+                            <a href="">
+                                <div>團體行程(台中)</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- icons -->
+                    <div class="footer_icons">
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- back top btn -->
+            <div style="font-size: 50px;text-align: center;padding-bottom: 5vh;"><a href="#body"><i
+                        class="fa-regular fa-circle-up"></i></a></div>
+        </div>
+
+        <!-- copyright  -->
+        <div class="copyright">
+            <div class="container flex">
+                <div>
+                    Copyright © Company
+                </div>
+                <div>
+                    Tel: +886 0 0000-0000　　Fax: +886 0 0000-0000
+                </div>
+                <div>
+                    Address: 00000 台中市00區00路0段00號
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+
+</html>
