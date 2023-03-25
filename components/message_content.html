@@ -1,0 +1,108 @@
+<article class="article-column col-md-9 col-md-push-3">
+    <a name="target_article" id="target_article"></a>
+    <h2 class="page-title">Message </h2>
+
+
+    <div class="col-all">
+
+        <p>
+            若您有任何與本公司提供服務之相關問題，敬請詳述您的疑問或建議，我們會儘快回覆您。(本站為避免無關廣告或惡意攻擊他人的言論，本站保留公佈的權利。)</p>
+        <script language="JavaScript">
+            <!-- 
+            function checkpost(form) { 
+            if (form.names.value.length==0) { 
+                alert("請輸入您的姓名");
+                form.names.focus();
+                return false;
+            }
+            if (form.title.value.length==0) {
+                alert("請輸入 留言主題");
+                form.title.focus();
+                return false;
+            }
+            if (form.text.value.length==0) {
+                alert("請輸入 留言內容");
+                form.text.focus();
+                return false;
+            }
+            if (form.code.value.length==0) {
+                alert("請輸入 驗證碼");
+                form.code.focus();
+                return false;
+            }
+            return true;
+            }
+            // -->
+        </script>
+
+        <form name="form1" action="bbs.php" method="post" onsubmit="return checkpost(this);">
+
+
+            <div class="form-group">
+                <label class="col-left1 notice">姓名</label>
+                <div class="col-right1"><input name="names" type="text" class="form-control form-sizem" maxlength="16"
+                        placeholder="姓名第二個字會自動以O取代顯示以保謢您的個資"></div>
+                <div class="clearfloat"></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-left1">電話</label>
+                <div class="col-right1"><input name="tel" type="text" class="form-control form-sizem" maxlength="36">
+                </div>
+                <div class="clearfloat"></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-left1">電子郵件</label>
+                <div class="col-right1"><input name="email" type="text" class="form-control form-sizel" maxlength="60">
+                </div>
+                <div class="clearfloat"></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-left1">相關網址</label>
+                <div class="col-right1"><input name="www" type="text" class="form-control form-sizel"
+                        placeholder="http://" maxlength="100"></div>
+                <div class="clearfloat"></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-left1 notice">留言主題</label>
+                <div class="col-right1"><input name="title" type="text" class="form-control form-sizel" maxlength="100">
+                </div>
+                <div class="clearfloat"></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-left1 notice">留言內容</label>
+                <div class="col-right1"><textarea name="text" type="text" rows="5" wrap="virtual"
+                        class="form-control form-sizel"></textarea></div>
+                <div class="clearfloat"></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-left1 notice">驗證碼</label>
+                <div class="col-right1"><input name="code" type="text" class="form-control form-sizem" size="20"><iframe
+                        src="./../check_key/chk_pic.php" name="rundata_pic" width="99" height="40" align="middle"
+                        scrolling="No" frameborder="0" hspace="5" vspace="" id="rundata_pic"></iframe></div>
+                <div class="clearfloat"></div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-right1">
+
+
+                    <input name="flag" type="hidden" value="1">
+                    <input type="hidden" value="139" name="talkid">
+                    <input type="submit" class="btn btn-color" value="確定送出" name="Submit2">
+                    <input type="reset" class="btn btn-color" value="清除重填" name="Submit3">
+
+                </div>
+                <div class="clearfloat"></div>
+            </div>
+
+        </form>
+    </div><!--col-all結尾-->
+
+</article>
