@@ -82,6 +82,7 @@ ScrollTrigger.create({
 const mobileMenuBg = $('.mobile_menu_bg');
 const mobileMenuGroup = $('.mobile_menu_group');
 const searchModel = $('.search_model');
+let mobileMenuSwitch = false;
 $('.menu_btn').click((e) => {
     e.preventDefault();
     if (mobileMenuBg.is(':hidden')) {
@@ -91,7 +92,8 @@ $('.menu_btn').click((e) => {
                     xPercent: 120,
                     duration: 0.2,
                     onComplete: () => {
-                        this.hide();
+                        searchModel.hide();
+                        mobileMenuSwitch = !mobileMenuSwitch;
                         gsap.set(this, {
                             xPercent: 120
                         });
@@ -103,11 +105,13 @@ $('.menu_btn').click((e) => {
         fadeIn(mobileMenuBg);
         slideIn(mobileMenuGroup);
         mobileMenuBg.show();
+        mobileMenuSwitch = !mobileMenuSwitch;
         $('body').css('overflow-y', 'hidden');
     } else {
         slideOut(mobileMenuGroup);
         fadeOut(mobileMenuBg);
         $('body').css('overflow-y', 'scroll');
+        mobileMenuSwitch = !mobileMenuSwitch;
     }
 });
 
@@ -120,6 +124,7 @@ mobileMenuBg.click(function (e) {
                     duration: 0.2,
                     onComplete: () => {
                         searchModel.hide();
+                        mobileMenuSwitch = !mobileMenuSwitch;
                         gsap.set(this, {
                             xPercent: 120
                         });
@@ -130,6 +135,7 @@ mobileMenuBg.click(function (e) {
 
         slideOut(mobileMenuGroup);
         fadeOut(mobileMenuBg);
+        mobileMenuSwitch = !mobileMenuSwitch;
         $('body').css('overflow-y', 'scroll');
     };
 })
@@ -140,6 +146,7 @@ $(".search_btn").click(function (e) {
             slideOut('.mobile_menu_group');
             fadeOut('.mobile_menu_bg');
             $('body').css('overflow-y', 'scroll');
+            mobileMenuSwitch = !mobileMenuSwitch;
         }
         gsap.set(".search_model", {
             xPercent: 120
@@ -182,4 +189,54 @@ $('.search_close').click(function (e) {
             }
         }
     )
+});
+
+$(window).resize(function () {
+    let width = $(window).width();
+    if (width >= 991 && mobileMenuSwitch) {
+        $('body').css('overflow-y', 'scroll');
+    } else if ( width < 991 && mobileMenuSwitch ) {
+        $('body').css('overflow-y', 'hidden');
+    }
+    
+});
+
+
+
+$.ajax({
+    type: "GET",
+    url: "./jsons/link.json",
+    data: {},
+    dataType: "json",
+    success: function (response) {
+        // mobile menu load
+        for (let i = 0; i < response["links"].length; i++) {
+            if (response["links"][i]["dropdown"].length) {
+                $(".mobile_menu_group").append(
+                    `<div class="mobile_menu_item"><div class="mobile_dropdown">${response["links"][i]["title"]}<i class="fa-solid fa-chevron-down"></i></div><div class="mobile_dropdown_items"></div></div>`
+                );
+
+                for (let dropI = 0; dropI < response["links"][i]["dropdown"].length; dropI++) {
+                    $(".mobile_dropdown_items").last().append(
+                        `<a href="${response["links"][i]["dropdown"][dropI]["link"]}"><div class="mobile_menu_item">${response["links"][i]["dropdown"][dropI]["title"]}</div></a>`
+                    );
+                }
+
+            } else {
+                $(".mobile_menu_group").append(
+                    `<div class="mobile_menu_item"><a class="mobile_menu_link" href="${response["links"][i]["link"]}"><div>${response["links"][i]["title"]}</div></a></div>`);
+            }
+        };
+
+
+        $('.mobile_dropdown').click(function (e) {
+            e.preventDefault();
+            let mobile_dropdown_items = $(this).siblings('.mobile_dropdown_items')
+            if (mobile_dropdown_items.is(":hidden")) {
+                mobile_dropdown_items.show();
+            } else {
+                mobile_dropdown_items.hide();
+            };
+        });
+    }
 });

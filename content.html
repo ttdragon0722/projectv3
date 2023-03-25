@@ -5,36 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Version 2</title>
+    <title>Project Version 3 content null</title>
 
     <!-- font -->
     <link rel="stylesheet" href="font/font.css">
 
     <!-- public -->
+    <link rel="stylesheet" href="style/init.css">
+    <link rel="stylesheet" href="style/main_content.css">
+    <!-- rwd -->
+    <link rel="stylesheet" href="style/rwd.css">
+    <!-- components -->
     <link rel="stylesheet" href="style/content/main_content.css">
+
+    <!-- null -->
+    
+    <!-- carousel -->
+    <script src="js/carousel.js" defer></script>
+    <link rel="stylesheet" href="style/components/carousel.css">
+
 
     <!-- color -->
     <link rel="stylesheet" href="color_a/style/main_content.css">
-    <!-- <link rel="stylesheet" href="color_b/style/main_content.css"> -->
-
-    <!-- rwd -->
-    <link rel="stylesheet" href="style/content/rwd.css">
-
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
 
-
-    <!-- js -->
-    <!-- 
-        jquery 3.6.
-        gsap 3.11.4
-    -->
+    <!-- js -->    
+    <!-- cdn -->
+    <!-- jquery 3.6.1 -->
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <!-- gsap 3.11.4  main + scrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-    <script src="js/content/script.js"></script>
-    <script src="js/anim_content.js"></script>
+
+
+    <!-- public + animation  -->
+    <script src="js/public.js" defer></script>
+    <script src="js/anim.js" defer></script>
+    <script src="js/main_page.js" defer></script>
 </head>
 
 <body id="body">
@@ -51,7 +60,7 @@
                 <!-- menu -->
                 <button class="menu_btn"><i class="fa-solid fa-bars"></i></button>
                 <!-- logo -->
-                <img src="Images/logo_black2.png" style="height: 65%;">
+                <img src="Images/logo_black2.png" style="height: 65%;" loading="lazy">
                 <!-- search -->
                 <button class="search_btn">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -64,6 +73,7 @@
             <div class="mobile_menu_group" style="overflow-y: scroll;"></div>
         </div>
     </section>
+
 
     <!-- function area -->
     <section class="function_area header">
@@ -130,7 +140,7 @@
     <!-- search model -->
     <section class="search_model" style="display:none;">
         <div class="search_box">
-            <button>
+            <button class="search_btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
             <input type="text" />
@@ -139,9 +149,6 @@
             </button>
         </div>
     </section>
-
-    <!-- shopping car model -->
-    <section class="shopping_car_model"></section>
 
     <!-- main page  -->
     <section class="main_page">

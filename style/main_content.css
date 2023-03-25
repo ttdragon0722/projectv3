@@ -197,6 +197,7 @@
 .body {
     height: fit-content;
     position: relative;
+    min-height: 100vh;
 }
 
 .body .container {
