@@ -1,37 +1,11 @@
-/* 思源黑體 */
-@font-face {
-    font-family: "NotoSansTC Medium";
-    src: url("./Noto_Sans_TC/NotoSansTC-Medium.otf");
-}
-@font-face {
-    font-family: "NotoSansTC Regular";
-    src: url("./Noto_Sans_TC/NotoSansTC-Regular.otf");
-}
-@font-face {
-    font-family: "NotoSansTC Bold";
-    src: url("./Noto_Sans_TC/NotoSansTC-Bold.otf");
-}
-
-/* 思源宋體 */
-@font-face {
-    font-family: "NotoSerifTC Medium";
-    src: url("./Noto_Serif_TC/NotoSerifTC-Medium.otf");
-}
-@font-face {
-    font-family: "NotoSerifTC Bold";
-    src: url("./Noto_Serif_TC/NotoSerifTC-Bold.otf");
-}
-@font-face {
-    font-family: "NotoSerifTC Black";
-    src: url("./Noto_Serif_TC/NotoSerifTC-Black.otf");
-}
+/* 微軟正黑體 */
 
 @font-face {
-    font-family: "NotoSerifTC Regular";
-    src: url("./Noto_Serif_TC/NotoSerifTC-Regular.otf");
+    font-family: "Microsoft JhengHei";
+    src: url();
 }
+
 
 body {
-    font-family: 'NotoSerifTC Bold', sans-serif;
-    /* font-family: 'NotoSansTC Bold', sans-serif; */
+    font-family: "Microsoft JhengHei", sans-serif;
 }

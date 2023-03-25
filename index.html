@@ -5,24 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Version 2</title>
+    <title>Project Version 3</title>
 
     <!-- font -->
     <link rel="stylesheet" href="font/font.css">
 
     <!-- public -->
+    <link rel="stylesheet" href="style/init.css">
     <link rel="stylesheet" href="style/main_content.css">
+    <!-- rwd -->
+    <link rel="stylesheet" href="style/rwd.css">
+    <!-- components -->
+    <link rel="stylesheet" href="style/components/main_page.css">
+    <link rel="stylesheet" href="style/components/carousel.css">
+    <link rel="stylesheet" href="style/components/service.css">
+    <link rel="stylesheet" href="style/components/mainpageProduct.css">
+    <link rel="stylesheet" href="style/components/map.css">
 
     <!-- color -->
     <link rel="stylesheet" href="color_a/style/main_content.css">
-    <!-- <link rel="stylesheet" href="color_b/style/main_content.css"> -->
-
-    <!-- rwd -->
-    <link rel="stylesheet" href="style/rwd.css">
-
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
-
 
     <!-- js -->
     <!-- 
@@ -35,11 +38,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <!-- <script src="js/script.js"></script> -->
     <script src="js/anim.js"></script>
-    <script src="js/public.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body id="body">
-    
+
     <!-- facebook thing -->
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v16.0"
@@ -66,6 +69,8 @@
             <div class="mobile_menu_group" style="overflow-y: scroll;"></div>
         </div>
     </section>
+
+
     <!-- function area -->
     <section class="function_area header">
         <div class="container flex">
@@ -131,23 +136,20 @@
     <!-- search model -->
     <section class="search_model" style="display:none;">
         <div class="search_box">
-            <button>
+            <button class="search_btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-            <input type="text"/>
+            <input type="text" />
             <button class="search_close">
-                <i class="fa-solid fa-xmark" ></i>
+                <i class="fa-solid fa-xmark"></i>
             </button>
         </div>
     </section>
 
-    <!-- shopping car model -->
-    <section class="shopping_car_model"></section>
-
     <!-- main page  -->
     <section class="main_page">
-        <img class="main_page_background" src="Images/787097.jpg" loading="lazy" alt="">
-        <div class="main_page_content flex">
+        <img class="main_page_background" src="Images/test_寬度特長.jpg" loading="lazy" alt="">
+        <div class="main_page_content flex container">
             <!-- logo -->
             <div class="main_title" style="opacity: 0;">
                 <img src="Images/logo.png" alt="logo" loading="lazy">
@@ -155,7 +157,7 @@
             <!-- subtitle -->
             <div class="main_subtitle" style="color: white;opacity: 0;">
                 <div>一個有支援rwd功能的demo網站嘿嘿，希望你會喜歡，下面有carousel 介紹頁面 產品頁面 地圖頁面 跟頁尾</div>
-                <div>this is a website that my classmate,Lynn,my good friend find me to do it   haha</div>
+                <div>this is a website that my classmate,Lynn,my good friend find me to do it haha</div>
             </div>
             <!-- link part -->
             <div class="main_wrap_group" style="opacity: 0;"></div>
@@ -185,7 +187,7 @@
                     <li class="slide" data-active>
                         <img src="./Images/公告1.jpg" alt="" loading="lazy">
                     </li>
-                    <li class="slide" data-active>
+                    <li class="slide">
                         <img src="./Images/787097.jpg" alt="" loading="lazy">
                     </li>
                     <li class="slide">
@@ -240,10 +242,10 @@
                     <p>Product</p>
                 </div>
                 <div class="product_content">
-                    
+
                     <a href="./product.html" class="product_item">
                         <div class="product_container">
-                            <div class="product_img">
+                            <div class="product_img product_imgAuto">
                                 <img src="Images/公告4.jpg" alt="haha" loading="lazy">
                             </div>
                             <div class="product_item_content">
@@ -260,7 +262,7 @@
                     </a>
                     <a href="./product.html" class="product_item">
                         <div class="product_container">
-                            <div class="product_img">
+                            <div class="product_img product_imgAuto">
                                 <img src="Images/公告2.jpg" alt="haha" loading="lazy">
                             </div>
                             <div class="product_item_content">
@@ -277,7 +279,7 @@
                     </a>
                     <a href="./product.html" class="product_item">
                         <div class="product_container">
-                            <div class="product_img">
+                            <div class="product_img product_imgAuto">
                                 <img src="Images/公告3.jpg" alt="haha" loading="lazy">
                             </div>
                             <div class="product_item_content">
@@ -292,10 +294,11 @@
                             </div>
                         </div>
                     </a>
+
                     <a href="./product.html" class="product_item">
                         <div class="product_container">
-                            <div class="product_img">
-                                <img src="Images/公告1.jpg" alt="haha" loading="lazy">
+                            <div class="product_img product_imgFull">
+                                <img src="Images/公告4.jpg" alt="haha" loading="lazy">
                             </div>
                             <div class="product_item_content">
                                 <div class="product_item_text">
@@ -311,7 +314,7 @@
                     </a>
                     <a href="./product.html" class="product_item">
                         <div class="product_container">
-                            <div class="product_img">
+                            <div class="product_img product_imgFull">
                                 <img src="Images/公告2.jpg" alt="haha" loading="lazy">
                             </div>
                             <div class="product_item_content">
@@ -328,7 +331,7 @@
                     </a>
                     <a href="./product.html" class="product_item">
                         <div class="product_container">
-                            <div class="product_img">
+                            <div class="product_img product_imgFull">
                                 <img src="Images/公告3.jpg" alt="haha" loading="lazy">
                             </div>
                             <div class="product_item_content">
@@ -378,48 +381,37 @@
                 <div class="footer_content">
                     <!-- fast link -->
                     <div class="footer_fastLink">
-                        <div class="fastLink_row">
-                            <a href="">
-                                <div>品牌資訊</div>
-                            </a>
-                            <a href="">
-                                <div>門市據點</div>
-                            </a>
-                            <!-- <a href="">
-                                <div>禮贈品客製化</div>
-                            </a>
-                            <a href="">
-                                <div>聯絡我們</div>
-                            </a> -->
-                        </div>
-                        <div class="fastLink_row">
-                            <a href="">
-                                <div>會員權益說明</div>
-                            </a>
-                            <a href="">
-                                <div>付款方式</div>
-                            </a>
-                            <a href="">
-                                <div>寄送服務</div>
-                            </a>
-                            <a href="">
-                                <div>售後服務</div>
-                            </a>
-                        </div>
-                        <div class="fastLink_row">
-                            <a href="">
-                                <div>媒體報導</div>
-                            </a>
-                            <a href="">
-                                <div>隱私權條款</div>
-                            </a>
-                            <a href="">
-                                <div>場地租借(台中)</div>
-                            </a>
-                            <a href="">
-                                <div>團體行程(台中)</div>
-                            </a>
-                        </div>
+                        <a href="">
+                            <div>品牌資訊</div>
+                        </a>
+                        <a href="">
+                            <div>門市據點</div>
+                        </a>
+                        <a href="">
+                            <div>會員權益說明</div>
+                        </a>
+                        <a href="">
+                            <div>付款方式</div>
+                        </a>
+                        <a href="">
+                            <div>寄送服務</div>
+                        </a>
+                        <a href="">
+                            <div>售後服務</div>
+                        </a>
+                        <a href="">
+                            <div>媒體報導</div>
+                        </a>
+                        <a href="">
+                            <div>隱私權條款</div>
+                        </a>
+                        <a href="">
+                            <div>場地租借(台中)</div>
+                        </a>
+                        <a href="">
+                            <div>團體行程(台中)</div>
+                        </a>
+                        
                     </div>
 
                     <!-- icons -->
@@ -467,10 +459,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- back top btn -->
-            <div style="font-size: 50px;text-align: center;padding-bottom: 5vh;"><a href="#body"><i
-                        class="fa-regular fa-circle-up"></i></a></div>
         </div>
 
         <!-- copyright  -->
@@ -488,7 +476,7 @@
             </div>
         </div>
     </section>
-    
+
 </body>
 
 </html>
