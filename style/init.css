@@ -65,3 +65,10 @@ textarea :focus {
     width: 100%;
     height: 10vh;
 }
+
+.imgFull img {
+    object-fit: cover !important;
+}
+.imgAuto img {
+    object-fit: contain !important;
+}

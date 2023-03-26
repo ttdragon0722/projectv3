@@ -62,7 +62,7 @@ gsap.to(
     {
         scrollTrigger: {
             trigger: '#carousel',
-            start: 'top 10%'
+            start: 'top center'
         },
         opacity: 1, y: 0, ease: "ease-in",
         duration: 1
@@ -73,7 +73,7 @@ gsap.to(
     {
         scrollTrigger: {
             trigger: '.service_item',
-            start: 'top 80%'
+            start: 'top center'
         },
         opacity: 1,
         duration: 1,
