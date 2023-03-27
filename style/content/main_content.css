@@ -132,6 +132,9 @@
     border-radius: 2px;
 }
 
+.col-group,.col-group p {
+    margin: 1vh 0 5vh;
+}
 
 
 

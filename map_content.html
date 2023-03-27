@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>discussing page</title>
+    <title>map content page</title>
 
     <!-- font -->
     <link rel="stylesheet" href="font/font.css">
@@ -13,10 +13,9 @@
     <!-- public -->
     <link rel="stylesheet" href="style/init.css">
     <link rel="stylesheet" href="style/main_content.css">
-    <link rel="stylesheet" href="style/content/discussing.css">
     <!-- components -->
     <link rel="stylesheet" href="style/content/main_content.css">
-
+    
     <!-- carousel -->
     <script src="js/carousel.js" defer></script>
     <link rel="stylesheet" href="style/components/carousel.css">
@@ -27,7 +26,7 @@
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
 
-    <!-- js -->
+    <!-- js -->    
     <!-- cdn -->
     <!-- jquery 3.6.1 -->
     <script src="https://code.jquery.com/jquery-3.6.1.js"
@@ -161,9 +160,11 @@
 
     <section id="carousel" class="carousel mobile_carousel" data-carousel>
         <!-- prev btn -->
-        <button class="carousel-btn prev" data-carousel-btn="prev"><i class="fa-solid fa-caret-left"></i></button>
+        <button class="carousel-btn prev" data-carousel-btn="prev"><i
+                class="fa-solid fa-caret-left"></i></button>
         <!-- next btn -->
-        <button class="carousel-btn next" data-carousel-btn="next"><i class="fa-solid fa-caret-right"></i></button>
+        <button class="carousel-btn next" data-carousel-btn="next"><i
+                class="fa-solid fa-caret-right"></i></button>
         <ul data-slides>
             <!-- carousel img -->
             <li class="slide imgFull" data-active>
@@ -189,7 +190,7 @@
 
     <!-- body -->
     <section class="body">
-
+        
         <!-- content -->
         <div class="container content">
             <!-- sidebar menu -->
@@ -204,170 +205,41 @@
                     <!-- sidebar items -->
                 </div>
             </div>
-
-
-
-            
             <!-- main content -->
             <div class="text">
                 <article class="article-column col-md-9 col-md-push-3">
                     <a name="target_article" id="target_article"></a>
-                    <h2 class="page-title">討論區1zz </h2>
-                    <!-- <script language="JavaScript" type="text/JavaScript">
-                function MM_jumpMenu(targ,selObj,restore){ //v3.0
-                eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
-                if (restore) selObj.selectedIndex=0;
-                }
-                    </script> -->
-                    <div class="col-all">
-
+                    <h2 class="page-title">公司地圖 </h2>
+                    <div class="col-all mymap-line">
                         <div class="col-group">
-                            本站為避免無關廣告或惡意攻擊他人的言論，本站保留刪除文章之權益。2aaaaa</div>
-                        <div class="col-group">
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                <tbody>
-                                    <tr>
-                                        <td class="left">
-                                            <input type="button" name="gotomain_view" class="btn btn-color" value="發表主題"
-                                                onclick="location='main_new.php'">
-                                        </td>
-                                        <td class="right">
-                                            <form name="sch" method="get" action="/a0001/talk/main.php">
-                                                <table border="0" align="right" cellpadding="2" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td><select name="search" size="1">
-                                                                    <option value="1" selected="">主題</option>
-                                                                    <option value="2">發表人</option>
-                                                                    <option value="3">內容</option>
-                                                                </select></td>
-                                                            <td><input type="text" name="word" placeholder="關鍵字"
-                                                                    class="form-control">
-                                                            </td>
-                                                            <td><input type="submit" name="formsubmit" value="搜尋"
-                                                                    class="btn btn-color">
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </form>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <p>公司地址：台中市北屯區松竹路二段362-9號6樓<br>
+                                服務電話：04-22464135．傳真號碼：04-22411326<br>
+                                電子郵件信箱：service@wolong.com.tw<br>
+                                統一編號：53507724</p>
+                
+                            <p><iframe height="450"
+                                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3660.863988279066!2d120.65776295076031!3d23.429279906808965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5ZiJ576p57ij55Wq6Lev6YSJ5YWs55Sw5p2R6ZqZ6aCCNzXkuYsyMOmZhDjomZ8!5e0!3m2!1szh-TW!2stw!4v1631952782190!5m2!1szh-TW!2stw"
+                                    style="border:0;" width="100%"></iframe></p>
                         </div>
-
-
-
-                        <div class="table-wrapper">
-
-
-                            <table class="footable default no-paging footable-loaded" data-page-size="10">
-                                <thead>
-                                    <tr>
-                                        <th class="footable-visible footable-first-column footable-sortable">主題<span
-                                                class="footable-sort-indicator"></span></th>
-                                        <th data-hide="sphone,phone,tablet"
-                                            class="footable-visible footable-sortable footable-sorted-desc">發表人<span
-                                                class="footable-sort-indicator"></span></th>
-                                        <th class="footable-visible footable-sortable">回應<span
-                                                class="footable-sort-indicator"></span>
-                                        </th>
-                                        <th class="footable-visible footable-last-column footable-sortable">點閱 <span
-                                                class="footable-sort-indicator"></span></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="bottom-line2" style="display: table-row;">
-
-                                        <td class="footable-visible footable-first-column"><span
-                                                class="footable-toggle"></span><a
-                                                href="main_view.php?t=3423&amp;topage=" class="color1 big b">討論區主題範例</a>
-                                            <div class="small">日期:2016/07/01</div>
-                                        </td>
-                                        <td class="footable-visible">發表人姓名範例</td>
-                                        <td class="b big color2 footable-visible">0</td>
-                                        <td class="b big color3 footable-visible footable-last-column">165 </td>
-
-                                    </tr>
-                                    <tr class="bottom-line2" style="display: table-row;">
-
-                                        <td class="footable-visible footable-first-column"><span
-                                                class="footable-toggle"></span><a
-                                                href="main_view.php?t=3419&amp;topage=" class="color1 big b">zzz</a>
-                                            <div class="small">日期:2015/07/03</div>
-                                        </td>
-                                        <td class="footable-visible">zzz</td>
-                                        <td class="b big color2 footable-visible">2</td>
-                                        <td class="b big color3 footable-visible footable-last-column">212 </td>
-
-                                    </tr>
-                                    <tr class="bottom-line2" style="display: table-row;">
-
-                                        <td class="footable-visible footable-first-column"><span
-                                                class="footable-toggle"></span><a
-                                                href="main_view.php?t=3422&amp;topage=" class="color1 big b">11111</a>
-                                            <div class="small">日期:2016/07/01</div>
-                                        </td>
-                                        <td class="footable-visible">22222</td>
-                                        <td class="b big color2 footable-visible">0</td>
-                                        <td class="b big color3 footable-visible footable-last-column">152 </td>
-
-                                    </tr>
-                                    <tr class="bottom-line2" style="display: table-row;">
-
-                                        <td class="footable-visible footable-first-column"><span
-                                                class="footable-toggle"></span><a
-                                                href="main_view.php?t=3421&amp;topage=" class="color1 big b">1111</a>
-                                            <div class="small">日期:2016/07/01</div>
-                                        </td>
-                                        <td class="footable-visible">2222</td>
-                                        <td class="b big color2 footable-visible">1</td>
-                                        <td class="b big color3 footable-visible footable-last-column">143 </td>
-
-                                    </tr>
-                                    <tr class="bottom-line2" style="display: table-row;">
-
-                                        <td class="footable-visible footable-first-column"><span
-                                                class="footable-toggle"></span><a
-                                                href="main_view.php?t=3420&amp;topage=" class="color1 big b">111</a>
-                                            <div class="small">日期:2016/07/01</div>
-                                        </td>
-                                        <td class="footable-visible">222</td>
-                                        <td class="b big color2 footable-visible">0</td>
-                                        <td class="b big color3 footable-visible footable-last-column">158 </td>
-
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td colspan="4" class="footable-visible">
-                                            <div class="pagination pagination-centered">
-                                                <ul>
-                                                    <li class="footable-page-arrow disabled"><a data-page="first"
-                                                            href="#first">&lt;&lt;</a></li>
-                                                    <li class="footable-page-arrow disabled"><a data-page="prev"
-                                                            href="#prev">&lt;</a>
-                                                    </li>
-                                                    <li class="footable-page active"><a data-page="0" href="#">1</a>
-                                                    </li>
-                                                    <li class="footable-page-arrow disabled"><a data-page="next"
-                                                            href="#next">&gt;</a>
-                                                    </li>
-                                                    <li class="footable-page-arrow disabled"><a data-page="last"
-                                                            href="#last">&gt;&gt;</a></li>
-                                                </ul>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tfoot>
-                            </table>
-
-                        </div>
-
-
                     </div><!--col-all結尾-->
-
+                    <script>
+                        var ww = $(".iframeMap").parent().width();
+                        var iframeMapResize = function () {
+                            if (ww < 600) {
+                                $(".iframeMap").css({ "width": "100%", "height": "650px" });
+                            }
+                            else {
+                                $(".iframeMap").css({ "width": "100%", "height": "400px" });
+                            }
+                        }
+                        $(document).ready(function () {
+                            iframeMapResize();
+                        });
+                        $(window).bind('resize orientationchange', function () {
+                            ww = $(".iframeMap").parent().width();
+                            iframeMapResize();
+                        });
+                    </script>
                 </article>
             </div>
         </div>
@@ -423,7 +295,7 @@
                         <a href="">
                             <div>團體行程(台中)</div>
                         </a>
-
+                        
                     </div>
 
                     <!-- icons -->
