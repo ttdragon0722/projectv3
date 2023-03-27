@@ -207,7 +207,147 @@
             </div>
             <!-- main content -->
             <div class="text">
+                <article class="article-column col-md-9 col-md-push-3">
+                    <a name="target_article" id="target_article"></a>
+                    <h2 class="page-title">Map </h2>
+                    <div class="col-all">
+                        <div class="col-group g10000002-line" style="margin-bottom:35px">
+                            <script
+                                src="https://maps.google.com/maps/api/js?key=AIzaSyDvGWSVoXqKR72rdTuaiYiSnD_paj4WEIk&amp;sensor=false"
+                                type="text/javascript"></script>
+                            <script language="javascript">
+                                function initialize() {
                 
+                
+                                    var geocoder = new google.maps.Geocoder();
+                                    geocoder.geocode({ address: '台中市北屯區松竹路二段362-13號1樓' },
+                                        function (result, status) {
+                                            if (status == google.maps.GeocoderStatus.OK) {
+                
+                                                var location = result[0].geometry.location;
+                                                // location.Pa 緯度
+                                                // location.Qa 經度
+                                                //alert(result[0].geometry.location);
+                                                //document.getElementById("getlng_set").value=result[0].geometry.location;
+                                                //$("#getlng_set").val(location);
+                
+                
+                                                //var setpoint=document.getElementById("getlng_set").value;
+                                                //var fenway = new google.maps.LatLng(25.0409751, 121.57404710000003);
+                                                var fenway = eval("new google.maps.LatLng" + location);
+                                                var mapOptions = {
+                                                    center: fenway,
+                                                    zoom: 17,
+                                                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                                                };
+                                                var map = new google.maps.Map(
+                                                    document.getElementById("map_canvas10000002"), mapOptions);
+                                                var panoramaOptions = {
+                                                    position: fenway,
+                                                    pov: {
+                                                        heading: 34,
+                                                        pitch: 10,
+                                                        zoom: 1
+                                                    }
+                                                };
+                                                var panorama10000002 = new google.maps.StreetViewPanorama(document.getElementById("pano10000002"), panoramaOptions);
+                                                map.setStreetView(panorama10000002);
+                
+                
+                
+                
+                                            } else {
+                                                alert('解析失敗!回傳狀態為：' + status);
+                                            }
+                                        });
+                
+                
+                                }
+                            </script>
+                            <div class="col-cross4 col-align-c map">
+                                <a href="https://img.okweb.asia/a0001/images/map/bm__14374665724.jpg" class="group1 cboxElement"><img
+                                        src="https://img.okweb.asia/a0001/images/map/m__14374665724.jpg" border="0"
+                                        class="img-thumbnail lazy"></a>
+                            </div>
+                
+                            <div class="col-cross8 mapText">
+                                <strong class="color2 big">台中分公司</strong><br>
+                                <p>因Google街景不一定能夠正確解析您填的轉換地址，導致街景對照圖無法正確顯示出來，遇到這種情形，請試著將轉換地址中的幾樓之幾去掉只保留號或往前往後加減號數，有時差一兩號就能順利產生街景圖。</p>
+                
+                                <a href="main_view.php?mt=1&amp;map_id=10000002" class="iframe_map_rwd cboxElement"><img
+                                        src="https://www.okweb.asia/images/maps-24.png" alt="檢視地圖" width="18" height="24" hspace="0"
+                                        border="0" align="absmiddle"> 檢視地圖</a>
+                            </div>
+                            <div class="clearfloat"></div>
+                        </div>
+                
+                
+                
+                        <div class="col-group g10000003-line" style="margin-bottom:35px">
+                            <script
+                                src="https://maps.google.com/maps/api/js?key=AIzaSyDvGWSVoXqKR72rdTuaiYiSnD_paj4WEIk&amp;sensor=false"
+                                type="text/javascript"></script>
+                            <script language="javascript">
+                                function initialize() {
+                
+                
+                                    var geocoder = new google.maps.Geocoder();
+                                    geocoder.geocode({ address: '222' },
+                                        function (result, status) {
+                                            if (status == google.maps.GeocoderStatus.OK) {
+                
+                                                var location = result[0].geometry.location;
+                                                // location.Pa 緯度
+                                                // location.Qa 經度
+                                                //alert(result[0].geometry.location);
+                                                //document.getElementById("getlng_set").value=result[0].geometry.location;
+                                                //$("#getlng_set").val(location);
+                
+                
+                                                //var setpoint=document.getElementById("getlng_set").value;
+                                                //var fenway = new google.maps.LatLng(25.0409751, 121.57404710000003);
+                                                var fenway = eval("new google.maps.LatLng" + location);
+                                                var mapOptions = {
+                                                    center: fenway,
+                                                    zoom: 17,
+                                                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                                                };
+                                                var map = new google.maps.Map(
+                                                    document.getElementById("map_canvas10000003"), mapOptions);
+                                                var panoramaOptions = {
+                                                    position: fenway,
+                                                    pov: {
+                                                        heading: 34,
+                                                        pitch: 10,
+                                                        zoom: 1
+                                                    }
+                                                };
+                                                var panorama10000003 = new google.maps.StreetViewPanorama(document.getElementById("pano10000003"), panoramaOptions);
+                                                map.setStreetView(panorama10000003);
+                                            } else {
+                                                alert('解析失敗!回傳狀態為：' + status);
+                                            }
+                                        });
+                
+                
+                                }
+                            </script>
+                            <div class="col-cross4 col-align-c map">
+                                <a href="https://img.okweb.asia/a0001/images/map/bmap_10000003.jpg" class="group1 cboxElement"><img
+                                        src="https://img.okweb.asia/a0001/images/map/map_10000003.jpg" border="0"
+                                        class="img-thumbnail lazy"></a>
+                            </div>
+                
+                            <div class="col-cross8 mapText">
+                                <strong class="color2 big">2222</strong><br>
+                                <p>2222</p>
+                
+                            </div>
+                            <div class="clearfloat"></div>
+                        </div>
+                    </div><!--col-all結尾-->
+                
+                </article>
             </div>
         </div>
     </section>

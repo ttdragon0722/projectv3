@@ -1,161 +1,141 @@
 <article class="article-column col-md-9 col-md-push-3">
     <a name="target_article" id="target_article"></a>
-    <h2 class="page-title">Download </h2>
+    <h2 class="page-title">Map </h2>
     <div class="col-all">
+        <div class="col-group g10000002-line" style="margin-bottom:35px">
+            <script
+                src="https://maps.google.com/maps/api/js?key=AIzaSyDvGWSVoXqKR72rdTuaiYiSnD_paj4WEIk&amp;sensor=false"
+                type="text/javascript"></script>
+            <script language="javascript">
+                function initialize() {
+
+
+                    var geocoder = new google.maps.Geocoder();
+                    geocoder.geocode({ address: '台中市北屯區松竹路二段362-13號1樓' },
+                        function (result, status) {
+                            if (status == google.maps.GeocoderStatus.OK) {
+
+                                var location = result[0].geometry.location;
+                                // location.Pa 緯度
+                                // location.Qa 經度
+                                //alert(result[0].geometry.location);
+                                //document.getElementById("getlng_set").value=result[0].geometry.location;
+                                //$("#getlng_set").val(location);
+
+
+                                //var setpoint=document.getElementById("getlng_set").value;
+                                //var fenway = new google.maps.LatLng(25.0409751, 121.57404710000003);
+                                var fenway = eval("new google.maps.LatLng" + location);
+                                var mapOptions = {
+                                    center: fenway,
+                                    zoom: 17,
+                                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                                };
+                                var map = new google.maps.Map(
+                                    document.getElementById("map_canvas10000002"), mapOptions);
+                                var panoramaOptions = {
+                                    position: fenway,
+                                    pov: {
+                                        heading: 34,
+                                        pitch: 10,
+                                        zoom: 1
+                                    }
+                                };
+                                var panorama10000002 = new google.maps.StreetViewPanorama(document.getElementById("pano10000002"), panoramaOptions);
+                                map.setStreetView(panorama10000002);
 
 
 
 
-        <div class="form-group">
-            類別:
-            <select name="data_m_id" id="data_m_id"
-                onchange="location.href='/a0001/download/main.php?index_m_id='+this.value;">
-                <option value="0" selected="">不分類</option>
-                <option value="14">bbbb</option>
-                <option value="13">aaa</option>
-            </select>
+                            } else {
+                                alert('解析失敗!回傳狀態為：' + status);
+                            }
+                        });
+
+
+                }
+            </script>
+            <div class="col-cross4 col-align-c map">
+                <a href="https://img.okweb.asia/a0001/images/map/bm__14374665724.jpg" class="group1 cboxElement"><img
+                        src="https://img.okweb.asia/a0001/images/map/m__14374665724.jpg" border="0"
+                        class="img-thumbnail lazy"></a>
+            </div>
+
+            <div class="col-cross8 mapText">
+                <strong class="color2 big">台中分公司</strong><br>
+                <p>因Google街景不一定能夠正確解析您填的轉換地址，導致街景對照圖無法正確顯示出來，遇到這種情形，請試著將轉換地址中的幾樓之幾去掉只保留號或往前往後加減號數，有時差一兩號就能順利產生街景圖。</p>
+
+                <a href="main_view.php?mt=1&amp;map_id=10000002" class="iframe_map_rwd cboxElement"><img
+                        src="https://www.okweb.asia/images/maps-24.png" alt="檢視地圖" width="18" height="24" hspace="0"
+                        border="0" align="absmiddle"> 檢視地圖</a>
+            </div>
+            <div class="clearfloat"></div>
         </div>
 
-        <table class="footable footable-loaded no-paging" data-page-size="10">
-            <thead>
-                <tr>
-                    <th class="footable-sortable">檔案名稱<span class="footable-sort-indicator"></span></th>
-                    <th data-sort-ignore="true">下載</th>
-
-                </tr>
-            </thead>
-            <tbody>
 
 
-                <tr style="display: table-row;">
-                    <td valign="top">
-                        <div class="d86-line">
-                            <h3 class="stitle">555555</h3>印地安人今戰洋基，台灣投手李振昌六局上場中繼1局，三上三下，沒失分，助隊4：1獲勝，本季首次中繼成功。
-                        </div>
-                    </td>
-
-                    <td valign="top"><a href="download.php?id=86" class="btn btn-color">下載</a></td>
-
-                </tr>
+        <div class="col-group g10000003-line" style="margin-bottom:35px">
+            <script
+                src="https://maps.google.com/maps/api/js?key=AIzaSyDvGWSVoXqKR72rdTuaiYiSnD_paj4WEIk&amp;sensor=false"
+                type="text/javascript"></script>
+            <script language="javascript">
+                function initialize() {
 
 
+                    var geocoder = new google.maps.Geocoder();
+                    geocoder.geocode({ address: '222' },
+                        function (result, status) {
+                            if (status == google.maps.GeocoderStatus.OK) {
 
-                <tr style="display: table-row;">
-                    <td valign="top">
-                        <div class="d85-line">
-                            <h3 class="stitle">中文檔案型錄</h3>印地安人在一、三、五局各攻下1分，六局領先3分，李振昌接替先發投手卡拉斯科（Carlos
-                            Carrasco）登板，先讓瑟維里(Francisco Cervelli)擊出外野飛球，接著三振強棒加納(Brett Gardner)，再面對名將基特（Derek
-                            Jeter），李振昌第1球飆出95哩速球，最後將基特三振，三上三下，完成1局的中繼任務退場。<br>
-                            <br>
-                            李振昌大聯盟生涯首度與洋基交手，投1局，僅用14球、其中8顆好球，沒有失分，2次三振，順利拿下本季第1個中繼點。<br>
-                            <br>
-                            總計李振昌本季出賽17場，投15.2局，被打15支安打，失7分其中6分是責失，18次三振，4次四壞球保送，防禦率3.45。
-                        </div>
-                    </td>
-
-                    <td valign="top"><a href="download.php?id=85" class="btn btn-color">下載</a></td>
-
-                </tr>
+                                var location = result[0].geometry.location;
+                                // location.Pa 緯度
+                                // location.Qa 經度
+                                //alert(result[0].geometry.location);
+                                //document.getElementById("getlng_set").value=result[0].geometry.location;
+                                //$("#getlng_set").val(location);
 
 
-
-                <tr style="display: table-row;">
-                    <td valign="top">
-                        <div class="d87-line">
-                            <h3 class="stitle">fefre</h3>frefe
-                        </div>
-                    </td>
-
-                    <td valign="top"><a href="download.php?id=87" class="btn btn-color">下載</a></td>
-
-                </tr>
-
-
-
-                <tr style="display: table-row;">
-                    <td valign="top">
-                        <div class="d88-line">
-                            <h3 class="stitle">fcsdfd</h3>fsdfds
-                        </div>
-                    </td>
-
-                    <td valign="top"><a href="download.php?id=88" class="btn btn-color">下載</a></td>
-
-                </tr>
-
-
-
-                <tr style="display: table-row;">
-                    <td valign="top">
-                        <div class="d89-line">
-                            <h3 class="stitle">hfh</h3>fghgh
-                        </div>
-                    </td>
-
-                    <td valign="top"><a href="download.php?id=89" class="btn btn-color">下載</a></td>
-
-                </tr>
+                                //var setpoint=document.getElementById("getlng_set").value;
+                                //var fenway = new google.maps.LatLng(25.0409751, 121.57404710000003);
+                                var fenway = eval("new google.maps.LatLng" + location);
+                                var mapOptions = {
+                                    center: fenway,
+                                    zoom: 17,
+                                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                                };
+                                var map = new google.maps.Map(
+                                    document.getElementById("map_canvas10000003"), mapOptions);
+                                var panoramaOptions = {
+                                    position: fenway,
+                                    pov: {
+                                        heading: 34,
+                                        pitch: 10,
+                                        zoom: 1
+                                    }
+                                };
+                                var panorama10000003 = new google.maps.StreetViewPanorama(document.getElementById("pano10000003"), panoramaOptions);
+                                map.setStreetView(panorama10000003);
+                            } else {
+                                alert('解析失敗!回傳狀態為：' + status);
+                            }
+                        });
 
 
+                }
+            </script>
+            <div class="col-cross4 col-align-c map">
+                <a href="https://img.okweb.asia/a0001/images/map/bmap_10000003.jpg" class="group1 cboxElement"><img
+                        src="https://img.okweb.asia/a0001/images/map/map_10000003.jpg" border="0"
+                        class="img-thumbnail lazy"></a>
+            </div>
 
-                <tr style="display: table-row;">
-                    <td valign="top">
-                        <div class="d90-line">
-                            <h3 class="stitle">gdfg</h3>dfgf
-                        </div>
-                    </td>
+            <div class="col-cross8 mapText">
+                <strong class="color2 big">2222</strong><br>
+                <p>2222</p>
 
-                    <td valign="top"><a href="download.php?id=90" class="btn btn-color">下載</a></td>
-
-                </tr>
-
-
-
-                <tr style="display: table-row;">
-                    <td valign="top">
-                        <div class="d91-line">
-                            <h3 class="stitle">fsdfdfdf</h3>dsfdsf
-                        </div>
-                    </td>
-
-                    <td valign="top"><a href="download.php?id=91" class="btn btn-color">下載</a></td>
-
-                </tr>
-
-
-
-                <tr style="display: table-row;">
-                    <td valign="top">
-                        <div class="d92-line">
-                            <h3 class="stitle">gdfgfgfdtest</h3>gfdgfdgftest
-                        </div>
-                    </td>
-
-                    <td valign="top"><a href="download.php?id=92" class="btn btn-color">下載</a></td>
-
-                </tr>
-
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="3">
-                        <div class="pagination pagination-centered">
-                            <ul>
-                                <li class="footable-page-arrow disabled"><a data-page="first" href="#first">&lt;&lt;</a>
-                                </li>
-                                <li class="footable-page-arrow disabled"><a data-page="prev" href="#prev">&lt;</a></li>
-                                <li class="footable-page active"><a data-page="0" href="#">1</a></li>
-                                <li class="footable-page-arrow disabled"><a data-page="next" href="#next">&gt;</a></li>
-                                <li class="footable-page-arrow disabled"><a data-page="last" href="#last">&gt;&gt;</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-            </tfoot>
-        </table>
-
-
+            </div>
+            <div class="clearfloat"></div>
+        </div>
     </div><!--col-all結尾-->
 
 </article>

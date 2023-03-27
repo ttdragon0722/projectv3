@@ -1,20 +1,4 @@
-### TODO
-- [x] 字型改成微軟黑體
-- [x] Search bar padding fix
-- [x] Product 圖做一組置中
 
-- footer 
-  - [x] 改成以元素做成的flex wrap
-  - [x] remove the back to top button  
-
-- main page
-  - [ ] remove mobile logo
-  - [ ] add subtitle 
-  - [x] main text padding
-  - [ ] 內頁main page 改成 carousel
-
-- [ ] inside page   
-[Page source](http://ae1.okweb.asia/a0001/buy/main_pay.php)
 
 
 ##**PC Menu Sample**

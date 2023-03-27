@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Version 3 content null</title>
+
+    <!-- font -->
+    <link rel="stylesheet" href="font/font.css">
+
+    <!-- public -->
+    <link rel="stylesheet" href="style/init.css">
+    <link rel="stylesheet" href="style/main_content.css">
+    <!-- components -->
+    <link rel="stylesheet" href="style/content/main_content.css">
+
+    <!-- carousel -->
+    <script src="js/carousel.js" defer></script>
+    <link rel="stylesheet" href="style/components/carousel.css">
+
+
+    <!-- color -->
+    <link rel="stylesheet" href="color_a/style/main_content.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+    <!-- js -->
+    <!-- cdn -->
+    <!-- jquery 3.6.1 -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <!-- gsap 3.11.4  main + scrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+
+    <!-- public + animation  -->
+    <script src="js/public.js" defer></script>
+    <script src="js/anim.js" defer></script>
+    <script src="js/main_page.js" defer></script>
+
+    <script src="js/content.js" defer></script>
+
+</head>
+
+<body id="body">
+    <!-- facebook thing -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v16.0"
+        nonce="5goK79nd"></script>
+
+    <!-- mobile menu -->
+    <section class="mobile_menu">
+        <!-- main header -->
+        <div class="mobile_header header">
+            <div class="container flex mobile_action">
+                <!-- menu -->
+                <button class="menu_btn"><i class="fa-solid fa-bars"></i></button>
+                <!-- logo -->
+                <img src="Images/logo_black2.png" style="height: 65%;" loading="lazy">
+                <!-- search -->
+                <button class="search_btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+        <!-- menu display -->
+        <div class="mobile_menu_bg" style="display: none;">
+            <!-- menu link -->
+            <div class="mobile_menu_group" style="overflow-y: scroll;"></div>
+        </div>
+    </section>
+    <!-- function area -->
+    <section class="function_area header">
+        <div class="container flex">
+            <!-- left side -->
+            <div class="navbar function_bar">
+                <a href="./index.html">
+                    <div class="navbar_icon">回首頁</div>
+                </a>
+                <a href="./contact.html">
+                    <div class="navbar_icon">聯絡我們</div>
+                </a>
+                <a href="./content.html">
+                    <div class="navbar_icon">購物清單</div>
+                </a>
+                <a href="./content.html">
+                    <div class="navbar_icon">結帳</div>
+                </a>
+                <div class="navbar_icon">語系<i class="fa-solid fa-caret-down"></i>
+                    <!-- dropdown -->
+                    <div class="navbar_dropdown">
+                        <a href="" class="navbar_dropdown_item">
+                            <div>中文</div>
+                        </a>
+                        <a href="" class="navbar_dropdown_item">
+                            <div>English</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar_icon">簡繁轉換<i class="fa-solid fa-caret-down"></i>
+                    <!-- dropdown -->
+                    <div class="navbar_dropdown">
+                        <a href="" class="navbar_dropdown_item">
+                            <div>簡體中文</div>
+                        </a>
+                        <a href="" class="navbar_dropdown_item">
+                            <div>繁體中文</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- right side -->
+            <div style="width: calc(100%/2);text-align: right;padding-right: 3%;">
+                <button class="search_btn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- fix button -->
+    <section class="fixed_menu">
+        <!-- search btn -->
+        <button class="fixed_btn search_btn" id="fixed_search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <!-- shopping car -->
+        <button class="fixed_btn" id="shopping_car" onclick="location.href=''">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <!-- number of shopping car -->
+            <div class="shopping_car_count">5</div>
+        </button>
+        <!-- back btn -->
+        <button class="fixed_btn" id="top_btn" onclick="location.href='#body'"><i
+                class="fa-solid fa-angle-up"></i></button>
+    </section>
+
+    <!-- search model -->
+    <section class="search_model" style="display:none;">
+        <div class="search_box">
+            <button class="search_btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input type="text" />
+            <button class="search_close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- main page  -->
+    <section class="main_page">
+        <img class="main_page_background" src="Images/homepage1.jpg" alt="">
+        <div class="main_page_content container">
+            <!-- logo -->
+            <div class="main_title" style="opacity: 0;">
+                <img src="Images/logo.png" alt="logo">
+            </div>
+        </div>
+    </section>
+
+    <section id="carousel" class="carousel mobile_carousel" data-carousel>
+        <!-- prev btn -->
+        <button class="carousel-btn prev" data-carousel-btn="prev"><i class="fa-solid fa-caret-left"></i></button>
+        <!-- next btn -->
+        <button class="carousel-btn next" data-carousel-btn="next"><i class="fa-solid fa-caret-right"></i></button>
+        <ul data-slides>
+            <!-- carousel img -->
+            <li class="slide imgFull" data-active>
+                <img src="./Images/公告1.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide imgFull ">
+                <img src="./Images/test_寬度特長.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide imgFull">
+                <img src="./Images/公告4.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide imgAuto">
+                <img src="./Images/公告1.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide imgAuto ">
+                <img src="./Images/test_寬度特長.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide imgAuto">
+                <img src="./Images/公告4.jpg" alt="" loading="lazy">
+            </li>
+        </ul>
+    </section>
+
+    <!-- body -->
+    <section class="body">
+
+        <!-- content -->
+        <div class="container content">
+            <!-- sidebar menu -->
+            <div class="sidebar">
+                <!-- back home button -->
+                <a href="./index.html" class="back_home">
+                    <div>
+                        <i class="fa-solid fa-square-caret-left"></i> 回首頁
+                    </div>
+                </a>
+                <div class="sidebar_list">
+                    <!-- sidebar items -->
+                </div>
+            </div>
+            <!-- main content -->
+            <div class="text">
+                <article class="article-column col-md-9 col-md-push-3">
+                    <a name="target_article" id="target_article"></a>
+                    <h2 class="page-title">Message </h2>
+                    <script language="JavaScript" type="text/JavaScript">
+                <!--
+                function MM_jumpMenu(targ,selObj,restore){ //v3.0
+                eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+                if (restore) selObj.selectedIndex=0;
+                }
+                //-->
+                </script>
+
+                    <div class="col-all">
+
+
+
+                        <div class="col-group">
+                            若您有任何與本公司提供服務之相關問題，敬請詳述您的疑問或建議，我們會儘快回覆您。(本站為避免無關廣告或惡意攻擊他人的言論，本站保留公佈的權利。)</div>
+
+                        <div class="col-group">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="left"><input type="button" name="gotomain_view" class="btn btn-color"
+                                                value="發表新留言" onclick="location='main_new.php?mt=1'">
+                                        </td>
+                                        <td class="right">
+                                            <table border="0" align="right" cellpadding="5" cellspacing="0">
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td nowrap=""><a href="#"
+                                                                class="glyphicon glyphicon-chevron-left ">上一頁</a></td>
+                                                        <td nowrap="">
+                                                            <select name="select" onchange="MM_jumpMenu('self',this,0)">
+                                                                <option selected=""
+                                                                    value="/a0001/guestbook/main.php?topage=1">第 1 頁*
+                                                                </option>
+                                                                <option value="/a0001/guestbook/main.php?topage=2">第 2 頁
+                                                                </option>
+                                                            </select>
+                                                        </td>
+                                                        <td nowrap=""><a href="#"
+                                                                class="glyphicon glyphicon-chevron-right "
+                                                                onclick="location='/a0001/guestbook/main.php?topage=2'">下一頁</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">HYTH</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span>
+                                                        中OAAAAZZZFHH</label></td>
+                                                <td class="right small">2015-07-23</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>HYHYHaaaaaaaaaghhyhy中hy文</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">FDS</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span>
+                                                        FOSFDSFDSF</label></td>
+                                                <td class="right small">2015-07-23</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>FDSF</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">seXY</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span> 測OseXY</label>
+                                                </td>
+                                                <td class="right small">2015-07-23</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>seXY結束aAAAAAAAA中文中文AAAAAAAAAZ</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">SEXY</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span> SOXY</label>
+                                                </td>
+                                                <td class="right small">2015-07-23</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>SEXY</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">45254</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span> 5O2</label></td>
+                                                <td class="right small">2015-07-22</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>sexy</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">555</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span> 1O1</label></td>
+                                                <td class="right small">2015-07-22</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>555</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">我想要測留言板</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span> 測O新的發信程式</label>
+                                                </td>
+                                                <td class="right small">2015-06-25</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>只是測試發信</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">ggg</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span> gOg</label></td>
+                                                <td class="right small">2015-02-16</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>ggg</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">447</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span> 1O1</label></td>
+                                                <td class="right small">2014-11-13</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>575</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">smtp已改成hinet了</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span> 小O</label></td>
+                                                <td class="right small">2014-08-19</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>系統測試gmail</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">系統測試</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span>
+                                                        留O板寄信功能乍麼了</label></td>
+                                                <td class="right small">2014-08-19</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>111222</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">333</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span> 1O1</label></td>
+                                                <td class="right small">2014-08-19</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>444</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">系統測試</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span> 測O否會收到信</label>
+                                                </td>
+                                                <td class="right small">2014-08-19</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>留言測試</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">測試留言主題</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span> 王O明</label></td>
+                                                <td class="right small">2014-08-15</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>
+                                        三星電子欲與谷歌及蘋果競逐，力求在家庭自動化占一席之地，因此決定買下新創公司SmartThings，SmartThings開發的行動應用可以遠距遙控居家裝置。<br>
+                                        <br>
+                                        這起交易的相關明細外界不得而知，但科技部落格Recode報導，併購價碼達2億美元。<br>
+                                        <br>
+                                        SmartThings在部落格貼文指出，公司將隸屬三星開放創新中心（Open Innovation
+                                        Center）旗下，但經營將維持獨立，還將進駐位在加州巴羅艾托（PaloAlto）的新總部。<br>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">25</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span> 2O2</label></td>
+                                                <td class="right small">2014-08-13</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>252</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">22</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span> 2O2</label></td>
+                                                <td class="right small">2014-08-13</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>22</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">25</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span> 2O2</label></td>
+                                                <td class="right small">2014-08-13</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>252</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">5</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span> 5O</label></td>
+                                                <td class="right small">2014-08-13</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>5</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">25</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span> 2O52</label>
+                                                </td>
+                                                <td class="right small">2014-08-13</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>2525</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">444</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span> 1O1</label></td>
+                                                <td class="right small">2014-07-09</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>555</div>
+                                </div>
+
+                                <hr>
+                                <div class="col-group">
+                                    <label class="color3 big"><span class="glyphicon glyphicon-tag"></span>站長答覆</label>
+                                    <div>
+                                        6666
+
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">cc</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span>
+                                                        aOaaaazzzzzz</label></td>
+                                                <td class="right small">2012-03-13</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>ccccc看得</div>
+                                </div>
+
+                                <hr>
+                                <div class="col-group">
+                                    <label class="color3 big"><span class="glyphicon glyphicon-tag"></span>站長答覆</label>
+                                    <div>
+                                        aaaaaaaaaaaa<br>
+                                        2222
+
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">fffffffffffffffff</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span> 非O時顯示</label>
+                                                </td>
+                                                <td class="right small">2012-03-12</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>ffffffffffff</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">dddddddddddddd</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span> 即O顯示</label>
+                                                </td>
+                                                <td class="right small">2012-03-12</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>ddddddddddddd</div>
+                                </div>
+
+                                <hr>
+                                <div class="col-group">
+                                    <label class="color3 big"><span class="glyphicon glyphicon-tag"></span>站長答覆</label>
+                                    <div>
+                                        ghjk3636366666
+
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">bbbbbbbbbbbbb</h3>
+                            </div>
+
+
+
+
+                            <div class="panel-body">
+
+                                <div class="col-group">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-align-l"> <label class="color2 big"><span
+                                                            class="glyphicon glyphicon-comment"></span> bObbb</label>
+                                                </td>
+                                                <td class="right small">2012-03-12</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>bbbbbbbbbbbbbbbbb</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="col-group">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="left">
+                                            <input type="button" name="gotomain_view" class="btn btn-color"
+                                                value="發表新留言" onclick="location='main_new.php?mt=1'">
+                                        </td>
+                                        <td class="right">
+                                            <table border="0" align="right" cellpadding="5" cellspacing="0">
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td nowrap=""><a href="#"
+                                                                class="glyphicon glyphicon-chevron-left ">上一頁</a></td>
+                                                        <td nowrap="">
+                                                            <select name="select" onchange="MM_jumpMenu('self',this,0)">
+                                                                <option selected=""
+                                                                    value="/a0001/guestbook/main.php?topage=1">第 1 頁*
+                                                                </option>
+                                                                <option value="/a0001/guestbook/main.php?topage=2">第 2 頁
+                                                                </option>
+                                                            </select>
+                                                        </td>
+                                                        <td nowrap=""><a href="#"
+                                                                class="glyphicon glyphicon-chevron-right "
+                                                                onclick="location='/a0001/guestbook/main.php?topage=2'">下一頁</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div><!--col-all結尾-->
+                    <div class="pushSociable">
+                        <span class="fb-like fb_iframe_widget"
+                            style="width:auto !important; display:inline-block !important; vertical-align: top !important;  line-height: 1 !important; margin:0 5px 7px -8px; padding:0;"
+                            data-href="http://ae1.okweb.asia/a0001/guestbook/main.php?mt=1" data-layout="button"
+                            data-size="large" data-action="like" data-show-faces="false" data-share="true"
+                            fb-xfbml-state="rendered"
+                            fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=0&amp;href=http%3A%2F%2Fae1.okweb.asia%2Fa0001%2Fguestbook%2Fmain.php%3Fmt%3D1&amp;layout=button&amp;locale=zh_TW&amp;sdk=joey&amp;share=true&amp;show_faces=false&amp;size=large"><span
+                                style="vertical-align: bottom; width: 138px; height: 28px;"><iframe
+                                    name="f23125c70c18864" width="1000px" height="1000px"
+                                    data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin"
+                                    frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no"
+                                    allow="encrypted-media"
+                                    src="https://www.facebook.com/v11.0/plugins/like.php?action=like&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Dfe0d7390eb3f5%26domain%3Dae1.okweb.asia%26is_canvas%3Dfalse%26origin%3Dhttp%253A%252F%252Fae1.okweb.asia%252Ff157fe66983ca%26relation%3Dparent.parent&amp;container_width=0&amp;href=http%3A%2F%2Fae1.okweb.asia%2Fa0001%2Fguestbook%2Fmain.php%3Fmt%3D1&amp;layout=button&amp;locale=zh_TW&amp;sdk=joey&amp;share=true&amp;show_faces=false&amp;size=large"
+                                    style="border: none; visibility: visible; width: 138px; height: 28px;"
+                                    class=""></iframe></span></span>
+                        <div class="col-group sociable social_push-set-line"
+                            style="margin:5px auto 0 auto; text-align:center">
+
+                            <ul>
+
+                                <li class="sociablelast"><a
+                                        href="javascript:desc='';if(window.getSelection)desc=window.getSelection();if(document.getSelection)desc=document.getSelection();if(document.selection)desc=document.selection.createRange().text;void(open('https://twitter.com/?status='+encodeURIComponent(location.href+' ('+document.title.split('@')[0].replace(/([\s]*$)/g,'')+')'+' ')));"
+                                        title="twitter"><img class="sociable-hovers icons sociable-twitter"
+                                            alt="twitter" title="twitter"
+                                            src="https://www.okweb.asia/images/spacer.gif"></a></li>
+                                <li><a href="https://www.yahoo.com.tw" target="_blank" rel="noopener noreferrer"
+                                        title="google 商家"><img class="sociable-hovers icons sociable-google"
+                                            alt="google 商家" title="google 商家"
+                                            src="https://www.okweb.asia/images/spacer.gif"></a></li>
+                                <li><a href="javascript:desc='';if(window.getSelection)desc=window.getSelection();if(document.getSelection)desc=document.getSelection();if(document.selection)desc=document.selection.createRange().text;void(open('https://www.plurk.com/?qualifier=shares&amp;status='+encodeURIComponent(location.href+' ('+document.title.split('@')[0].replace(/([\s]*$)/g,'')+')'+' ')));"
+                                        title="plurk"><img class="sociable-hovers icons sociable-plurk" alt="plurk"
+                                            title="plurk" src="https://www.okweb.asia/images/spacer.gif"></a></li>
+                                <li><a href="https://service.weibo.com/share/share.php?appkey=&amp;title=%E5%BB%96%E8%A8%98%E6%89%8B%E5%B7%A5%E9%BA%BB%E7%B3%ACzzz &amp;url=http://ae1.okweb.asia/a0001/guestbook/main.php?mt=1&amp;pic=&amp;searchPic=true&amp;style=simple"
+                                        target="_blank" rel="noopener noreferrer" title="微博"><img
+                                            class="sociable-hovers icons sociable-weibo" alt="微博" title="微博"
+                                            src="https://www.okweb.asia/images/spacer.gif"></a></li>
+                                <li><a href="https://line.naver.jp/R/msg/text/? %0D%0Ahttp://ae1.okweb.asia/a0001/guestbook/main.php?mt=1"
+                                        target="_blank" rel="noopener noreferrer" title="Line"><img
+                                            class="sociable-hovers icons sociable-line" alt="Line" title="Line"
+                                            src="https://www.okweb.asia/images/spacer.gif"></a></li>
+                                <li><a href="https://www.instagram.com/ryanliao8" target="_blank"
+                                        rel="noopener noreferrer" title="Instagram"><img
+                                            class="sociable-hovers icons sociable-Instagram" alt="Instagram"
+                                            title="Instagram" src="https://www.okweb.asia/images/spacer.gif"></a></li>
+                                <li><a href="https://diy.wolong.tw" target="_blank" rel="noopener noreferrer"
+                                        title="wechat"><img class="sociable-hovers icons sociable-wechat" alt="wechat"
+                                            title="wechat" src="https://www.okweb.asia/images/spacer.gif"></a></li>
+                                <li><a href="mailto:ryan@wolong.com.tw" target="_blank" rel="noopener noreferrer"
+                                        title="E-mail"><img class="sociable-hovers icons sociable-mail" alt="E-mail"
+                                            title="E-mail" src="https://www.okweb.asia/images/spacer.gif"></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="container">
+            <div class="flex footer_main">
+                <!-- left side -->
+                <div class="footer_logo_side">
+                    <div>
+                        <img class="footer_logo" src="Images/logo.png" loading="lazy">
+                    </div>
+                    <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs=""
+                        data-adapt-container-width width="270" height="" data-small-header="false"
+                        data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a
+                                href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+                    </div>
+                </div>
+                <!-- right side -->
+                <div class="footer_content">
+                    <!-- fast link -->
+                    <div class="footer_fastLink">
+                        <a href="">
+                            <div>品牌資訊</div>
+                        </a>
+                        <a href="">
+                            <div>門市據點</div>
+                        </a>
+                        <a href="">
+                            <div>會員權益說明</div>
+                        </a>
+                        <a href="">
+                            <div>付款方式</div>
+                        </a>
+                        <a href="">
+                            <div>寄送服務</div>
+                        </a>
+                        <a href="">
+                            <div>售後服務</div>
+                        </a>
+                        <a href="">
+                            <div>媒體報導</div>
+                        </a>
+                        <a href="">
+                            <div>隱私權條款</div>
+                        </a>
+                        <a href="">
+                            <div>場地租借(台中)</div>
+                        </a>
+                        <a href="">
+                            <div>團體行程(台中)</div>
+                        </a>
+
+                    </div>
+
+                    <!-- icons -->
+                    <div class="footer_icons">
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- copyright  -->
+        <div class="copyright">
+            <div class="container flex">
+                <div>
+                    Copyright © Company
+                </div>
+                <div>
+                    Tel: +886 0 0000-0000　　Fax: +886 0 0000-0000
+                </div>
+                <div>
+                    Address: 00000 台中市00區00路0段00號
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
