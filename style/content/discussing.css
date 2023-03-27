@@ -1,0 +1,145 @@
+.col-group {
+    margin: 1vh 0 5vh;
+}
+
+.table-wrapper table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.table-wrapper table thead,.table-wrapper tfoot {
+    background-color: black;
+    color :white;
+    font-size: 15px;
+    text-align: left;
+}
+
+.table-wrapper table thead th {
+    padding: 0.5% 1.5%;
+}
+
+.table-wrapper table tbody tr {
+    border: 1px solid rgba(0,0,0,.2)
+}
+
+.table-wrapper table tbody :hover  {
+    background-color: rgba(0,0,0,.2);
+}
+.table-wrapper table tbody tr :hover {
+    background-color: unset;
+}
+.table-wrapper table tbody tr td {
+    padding: 1.5% 1.5%;
+}
+@media (max-width:420px) {
+    .right form table tbody {
+        width: 100%;
+    }
+
+    .right form table tbody tr {
+        display: flex !important; 
+        flex-wrap: wrap;
+        flex-direction: unset;
+        align-items: center;
+    }
+    .right form table {
+        float: unset;
+        width: 100%;
+    }
+    
+    .right form table tbody tr td {
+        width:calc(100%/2);
+        /* text-align: center; */
+    }
+    .right form table tbody tr td:first-child {
+        margin-top: 1vh;
+        width: 100% !important;
+    }
+
+    .right form table tbody tr td:nth-child(2) {
+        width: calc(100%/4*3);
+    }
+    .right form table tbody tr td:nth-child(2) input {
+        width: calc(100%/4*3);
+    }
+
+    .right form table tbody tr td:last-child {
+        text-align: center;
+        width: calc(100%/4);
+    }    
+}
+
+
+@media (max-width:580px) {
+    .col-group table tbody tr {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .right form table tbody tr {
+        display: unset;
+    }
+}
+
+@media (max-width:420px) {
+    .form-control , select {
+        /* width: 20%; */
+    }
+}
+
+input[type="button"],input[type="submit"] {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    line-height: 1.8;
+    font-weight: 700;
+    border: 0;
+    text-align: center;
+    padding: 0.6em 1em;
+    margin-right: 0.5em;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+    background-color: black;
+    color: white;
+}
+.form-control , select {
+    margin-right: 2px;
+    padding: 10px 20px;
+    background-color: #fcfcfc;
+    border: 1px solid #00000033;
+    outline: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border-radius: 3px;
+    color: #333;
+}
+.form-control:focus , select:focus {
+    -webkit-box-shadow: 0 0 2px 1px black;
+    -moz-box-shadow: 0 0 2px 1px black;
+    box-shadow: 0 0 2px 1px black;
+    border: 1px solid black;
+}
+
+
+.pagination ul {
+    padding: 0.5% 0;
+}
+
+.pagination li {
+    display:inline; 
+    margin: 0 1%;
+}
+
+.big {
+    font-size: 19.5px;
+}
+
+.small {
+    font-size: 13.5px;
+}
+
+.pagination {
+    text-align: center;
+    
+}

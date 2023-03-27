@@ -68,16 +68,4 @@ gsap.to(
         duration: 1
     }
 );
-gsap.to(
-    '.service_item',
-    {
-        scrollTrigger: {
-            trigger: '.service_item',
-            start: 'top center'
-        },
-        opacity: 1,
-        duration: 1,
-        stagger: 0.2
-    }
-);
 

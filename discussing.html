@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Version 3 content null</title>
+
+    <!-- font -->
+    <link rel="stylesheet" href="font/font.css">
+
+    <!-- public -->
+    <link rel="stylesheet" href="style/init.css">
+    <link rel="stylesheet" href="style/main_content.css">
+    <link rel="stylesheet" href="style/content/discussing.css">
+    <!-- components -->
+    <link rel="stylesheet" href="style/content/main_content.css">
+
+    <!-- carousel -->
+    <script src="js/carousel.js" defer></script>
+    <link rel="stylesheet" href="style/components/carousel.css">
+
+
+    <!-- color -->
+    <link rel="stylesheet" href="color_a/style/main_content.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+    <!-- js -->
+    <!-- cdn -->
+    <!-- jquery 3.6.1 -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <!-- gsap 3.11.4  main + scrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+
+    <!-- public + animation  -->
+    <script src="js/public.js" defer></script>
+    <script src="js/anim.js" defer></script>
+    <script src="js/main_page.js" defer></script>
+
+    <script src="js/content.js" defer></script>
+
+</head>
+
+<body id="body">
+    <!-- facebook thing -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v16.0"
+        nonce="5goK79nd"></script>
+
+    <!-- mobile menu -->
+    <section class="mobile_menu">
+        <!-- main header -->
+        <div class="mobile_header header">
+            <div class="container flex mobile_action">
+                <!-- menu -->
+                <button class="menu_btn"><i class="fa-solid fa-bars"></i></button>
+                <!-- logo -->
+                <img src="Images/logo_black2.png" style="height: 65%;" loading="lazy">
+                <!-- search -->
+                <button class="search_btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+        <!-- menu display -->
+        <div class="mobile_menu_bg" style="display: none;">
+            <!-- menu link -->
+            <div class="mobile_menu_group" style="overflow-y: scroll;"></div>
+        </div>
+    </section>
+    <!-- function area -->
+    <section class="function_area header">
+        <div class="container flex">
+            <!-- left side -->
+            <div class="navbar function_bar">
+                <a href="./index.html">
+                    <div class="navbar_icon">回首頁</div>
+                </a>
+                <a href="./contact.html">
+                    <div class="navbar_icon">聯絡我們</div>
+                </a>
+                <a href="./content.html">
+                    <div class="navbar_icon">購物清單</div>
+                </a>
+                <a href="./content.html">
+                    <div class="navbar_icon">結帳</div>
+                </a>
+                <div class="navbar_icon">語系<i class="fa-solid fa-caret-down"></i>
+                    <!-- dropdown -->
+                    <div class="navbar_dropdown">
+                        <a href="" class="navbar_dropdown_item">
+                            <div>中文</div>
+                        </a>
+                        <a href="" class="navbar_dropdown_item">
+                            <div>English</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar_icon">簡繁轉換<i class="fa-solid fa-caret-down"></i>
+                    <!-- dropdown -->
+                    <div class="navbar_dropdown">
+                        <a href="" class="navbar_dropdown_item">
+                            <div>簡體中文</div>
+                        </a>
+                        <a href="" class="navbar_dropdown_item">
+                            <div>繁體中文</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- right side -->
+            <div style="width: calc(100%/2);text-align: right;padding-right: 3%;">
+                <button class="search_btn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- fix button -->
+    <section class="fixed_menu">
+        <!-- search btn -->
+        <button class="fixed_btn search_btn" id="fixed_search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <!-- shopping car -->
+        <button class="fixed_btn" id="shopping_car" onclick="location.href=''">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <!-- number of shopping car -->
+            <div class="shopping_car_count">5</div>
+        </button>
+        <!-- back btn -->
+        <button class="fixed_btn" id="top_btn" onclick="location.href='#body'"><i
+                class="fa-solid fa-angle-up"></i></button>
+    </section>
+
+    <!-- search model -->
+    <section class="search_model" style="display:none;">
+        <div class="search_box">
+            <button class="search_btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input type="text" />
+            <button class="search_close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- main page  -->
+    <section class="main_page">
+        <img class="main_page_background" src="Images/homepage1.jpg" alt="">
+        <div class="main_page_content container">
+            <!-- logo -->
+            <div class="main_title" style="opacity: 0;">
+                <img src="Images/logo.png" alt="logo">
+            </div>
+        </div>
+    </section>
+
+    <section id="carousel" class="carousel mobile_carousel" data-carousel>
+        <!-- prev btn -->
+        <button class="carousel-btn prev" data-carousel-btn="prev"><i class="fa-solid fa-caret-left"></i></button>
+        <!-- next btn -->
+        <button class="carousel-btn next" data-carousel-btn="next"><i class="fa-solid fa-caret-right"></i></button>
+        <ul data-slides>
+            <!-- carousel img -->
+            <li class="slide imgFull" data-active>
+                <img src="./Images/公告1.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide imgFull ">
+                <img src="./Images/test_寬度特長.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide imgFull">
+                <img src="./Images/公告4.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide imgAuto">
+                <img src="./Images/公告1.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide imgAuto ">
+                <img src="./Images/test_寬度特長.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide imgAuto">
+                <img src="./Images/公告4.jpg" alt="" loading="lazy">
+            </li>
+        </ul>
+    </section>
+
+    <!-- body -->
+    <section class="body">
+
+        <!-- content -->
+        <div class="container content">
+            <!-- sidebar menu -->
+            <div class="sidebar">
+                <!-- back home button -->
+                <a href="./index.html" class="back_home">
+                    <div>
+                        <i class="fa-solid fa-square-caret-left"></i> 回首頁
+                    </div>
+                </a>
+                <div class="sidebar_list">
+                    <!-- sidebar items -->
+                </div>
+            </div>
+
+
+
+            
+            <!-- main content -->
+            <div class="text">
+                <article class="article-column col-md-9 col-md-push-3">
+                    <a name="target_article" id="target_article"></a>
+                    <h2 class="page-title">討論區1zz </h2>
+                    <!-- <script language="JavaScript" type="text/JavaScript">
+                function MM_jumpMenu(targ,selObj,restore){ //v3.0
+                eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+                if (restore) selObj.selectedIndex=0;
+                }
+                    </script> -->
+                    <div class="col-all">
+
+                        <div class="col-group">
+                            本站為避免無關廣告或惡意攻擊他人的言論，本站保留刪除文章之權益。2aaaaa</div>
+                        <div class="col-group">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="left">
+                                            <input type="button" name="gotomain_view" class="btn btn-color" value="發表主題"
+                                                onclick="location='main_new.php'">
+                                        </td>
+                                        <td class="right">
+                                            <form name="sch" method="get" action="/a0001/talk/main.php">
+                                                <table border="0" align="right" cellpadding="2" cellspacing="0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><select name="search" size="1">
+                                                                    <option value="1" selected="">主題</option>
+                                                                    <option value="2">發表人</option>
+                                                                    <option value="3">內容</option>
+                                                                </select></td>
+                                                            <td><input type="text" name="word" placeholder="關鍵字"
+                                                                    class="form-control">
+                                                            </td>
+                                                            <td><input type="submit" name="formsubmit" value="搜尋"
+                                                                    class="btn btn-color">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+                        <div class="table-wrapper">
+
+
+                            <table class="footable default no-paging footable-loaded" data-page-size="10">
+                                <thead>
+                                    <tr>
+                                        <th class="footable-visible footable-first-column footable-sortable">主題<span
+                                                class="footable-sort-indicator"></span></th>
+                                        <th data-hide="sphone,phone,tablet"
+                                            class="footable-visible footable-sortable footable-sorted-desc">發表人<span
+                                                class="footable-sort-indicator"></span></th>
+                                        <th class="footable-visible footable-sortable">回應<span
+                                                class="footable-sort-indicator"></span>
+                                        </th>
+                                        <th class="footable-visible footable-last-column footable-sortable">點閱 <span
+                                                class="footable-sort-indicator"></span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bottom-line2" style="display: table-row;">
+
+                                        <td class="footable-visible footable-first-column"><span
+                                                class="footable-toggle"></span><a
+                                                href="main_view.php?t=3423&amp;topage=" class="color1 big b">討論區主題範例</a>
+                                            <div class="small">日期:2016/07/01</div>
+                                        </td>
+                                        <td class="footable-visible">發表人姓名範例</td>
+                                        <td class="b big color2 footable-visible">0</td>
+                                        <td class="b big color3 footable-visible footable-last-column">165 </td>
+
+                                    </tr>
+                                    <tr class="bottom-line2" style="display: table-row;">
+
+                                        <td class="footable-visible footable-first-column"><span
+                                                class="footable-toggle"></span><a
+                                                href="main_view.php?t=3419&amp;topage=" class="color1 big b">zzz</a>
+                                            <div class="small">日期:2015/07/03</div>
+                                        </td>
+                                        <td class="footable-visible">zzz</td>
+                                        <td class="b big color2 footable-visible">2</td>
+                                        <td class="b big color3 footable-visible footable-last-column">212 </td>
+
+                                    </tr>
+                                    <tr class="bottom-line2" style="display: table-row;">
+
+                                        <td class="footable-visible footable-first-column"><span
+                                                class="footable-toggle"></span><a
+                                                href="main_view.php?t=3422&amp;topage=" class="color1 big b">11111</a>
+                                            <div class="small">日期:2016/07/01</div>
+                                        </td>
+                                        <td class="footable-visible">22222</td>
+                                        <td class="b big color2 footable-visible">0</td>
+                                        <td class="b big color3 footable-visible footable-last-column">152 </td>
+
+                                    </tr>
+                                    <tr class="bottom-line2" style="display: table-row;">
+
+                                        <td class="footable-visible footable-first-column"><span
+                                                class="footable-toggle"></span><a
+                                                href="main_view.php?t=3421&amp;topage=" class="color1 big b">1111</a>
+                                            <div class="small">日期:2016/07/01</div>
+                                        </td>
+                                        <td class="footable-visible">2222</td>
+                                        <td class="b big color2 footable-visible">1</td>
+                                        <td class="b big color3 footable-visible footable-last-column">143 </td>
+
+                                    </tr>
+                                    <tr class="bottom-line2" style="display: table-row;">
+
+                                        <td class="footable-visible footable-first-column"><span
+                                                class="footable-toggle"></span><a
+                                                href="main_view.php?t=3420&amp;topage=" class="color1 big b">111</a>
+                                            <div class="small">日期:2016/07/01</div>
+                                        </td>
+                                        <td class="footable-visible">222</td>
+                                        <td class="b big color2 footable-visible">0</td>
+                                        <td class="b big color3 footable-visible footable-last-column">158 </td>
+
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="4" class="footable-visible">
+                                            <div class="pagination pagination-centered">
+                                                <ul>
+                                                    <li class="footable-page-arrow disabled"><a data-page="first"
+                                                            href="#first">&lt;&lt;</a></li>
+                                                    <li class="footable-page-arrow disabled"><a data-page="prev"
+                                                            href="#prev">&lt;</a>
+                                                    </li>
+                                                    <li class="footable-page active"><a data-page="0" href="#">1</a>
+                                                    </li>
+                                                    <li class="footable-page-arrow disabled"><a data-page="next"
+                                                            href="#next">&gt;</a>
+                                                    </li>
+                                                    <li class="footable-page-arrow disabled"><a data-page="last"
+                                                            href="#last">&gt;&gt;</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+
+                        </div>
+
+
+                    </div><!--col-all結尾-->
+
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="container">
+            <div class="flex footer_main">
+                <!-- left side -->
+                <div class="footer_logo_side">
+                    <div>
+                        <img class="footer_logo" src="Images/logo.png" loading="lazy">
+                    </div>
+                    <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs=""
+                        data-adapt-container-width width="270" height="" data-small-header="false"
+                        data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a
+                                href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+                    </div>
+                </div>
+                <!-- right side -->
+                <div class="footer_content">
+                    <!-- fast link -->
+                    <div class="footer_fastLink">
+                        <a href="">
+                            <div>品牌資訊</div>
+                        </a>
+                        <a href="">
+                            <div>門市據點</div>
+                        </a>
+                        <a href="">
+                            <div>會員權益說明</div>
+                        </a>
+                        <a href="">
+                            <div>付款方式</div>
+                        </a>
+                        <a href="">
+                            <div>寄送服務</div>
+                        </a>
+                        <a href="">
+                            <div>售後服務</div>
+                        </a>
+                        <a href="">
+                            <div>媒體報導</div>
+                        </a>
+                        <a href="">
+                            <div>隱私權條款</div>
+                        </a>
+                        <a href="">
+                            <div>場地租借(台中)</div>
+                        </a>
+                        <a href="">
+                            <div>團體行程(台中)</div>
+                        </a>
+
+                    </div>
+
+                    <!-- icons -->
+                    <div class="footer_icons">
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- copyright  -->
+        <div class="copyright">
+            <div class="container flex">
+                <div>
+                    Copyright © Company
+                </div>
+                <div>
+                    Tel: +886 0 0000-0000　　Fax: +886 0 0000-0000
+                </div>
+                <div>
+                    Address: 00000 台中市00區00路0段00號
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
