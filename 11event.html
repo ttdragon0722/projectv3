@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Version 3 content null</title>
+
+    <!-- font -->
+    <link rel="stylesheet" href="font/font.css">
+
+    <!-- public -->
+    <link rel="stylesheet" href="style/init.css">
+    <link rel="stylesheet" href="style/main_content.css">
+    <!-- components -->
+    <link rel="stylesheet" href="style/content/main_content.css">
+    
+    <!-- carousel -->
+    <script src="js/carousel.js" defer></script>
+    <link rel="stylesheet" href="style/components/carousel.css">
+
+
+    <!-- color -->
+    <link rel="stylesheet" href="color_a/style/main_content.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+    <!-- js -->    
+    <!-- cdn -->
+    <!-- jquery 3.6.1 -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <!-- gsap 3.11.4  main + scrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+
+    <!-- public + animation  -->
+    <script src="js/public.js" defer></script>
+    <script src="js/anim.js" defer></script>
+    <script src="js/main_page.js" defer></script>
+
+    <script src="js/content.js" defer></script>
+
+</head>
+
+<body id="body">
+    <!-- facebook thing -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v16.0"
+        nonce="5goK79nd"></script>
+
+    <!-- mobile menu -->
+    <section class="mobile_menu">
+        <!-- main header -->
+        <div class="mobile_header header">
+            <div class="container flex mobile_action">
+                <!-- menu -->
+                <button class="menu_btn"><i class="fa-solid fa-bars"></i></button>
+                <!-- logo -->
+                <img src="Images/logo_black2.png" style="height: 65%;" loading="lazy">
+                <!-- search -->
+                <button class="search_btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+        <!-- menu display -->
+        <div class="mobile_menu_bg" style="display: none;">
+            <!-- menu link -->
+            <div class="mobile_menu_group" style="overflow-y: scroll;"></div>
+        </div>
+    </section>
+    <!-- function area -->
+    <section class="function_area header">
+        <div class="container flex">
+            <!-- left side -->
+            <div class="navbar function_bar">
+                <a href="./index.html">
+                    <div class="navbar_icon">回首頁</div>
+                </a>
+                <a href="./contact.html">
+                    <div class="navbar_icon">聯絡我們</div>
+                </a>
+                <a href="./content.html">
+                    <div class="navbar_icon">購物清單</div>
+                </a>
+                <a href="./content.html">
+                    <div class="navbar_icon">結帳</div>
+                </a>
+                <div class="navbar_icon">語系<i class="fa-solid fa-caret-down"></i>
+                    <!-- dropdown -->
+                    <div class="navbar_dropdown">
+                        <a href="" class="navbar_dropdown_item">
+                            <div>中文</div>
+                        </a>
+                        <a href="" class="navbar_dropdown_item">
+                            <div>English</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar_icon">簡繁轉換<i class="fa-solid fa-caret-down"></i>
+                    <!-- dropdown -->
+                    <div class="navbar_dropdown">
+                        <a href="" class="navbar_dropdown_item">
+                            <div>簡體中文</div>
+                        </a>
+                        <a href="" class="navbar_dropdown_item">
+                            <div>繁體中文</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- right side -->
+            <div style="width: calc(100%/2);text-align: right;padding-right: 3%;">
+                <button class="search_btn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- fix button -->
+    <section class="fixed_menu">
+        <!-- search btn -->
+        <button class="fixed_btn search_btn" id="fixed_search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <!-- shopping car -->
+        <button class="fixed_btn" id="shopping_car" onclick="location.href=''">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <!-- number of shopping car -->
+            <div class="shopping_car_count">5</div>
+        </button>
+        <!-- back btn -->
+        <button class="fixed_btn" id="top_btn" onclick="location.href='#body'"><i
+                class="fa-solid fa-angle-up"></i></button>
+    </section>
+
+    <!-- search model -->
+    <section class="search_model" style="display:none;">
+        <div class="search_box">
+            <button class="search_btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input type="text" />
+            <button class="search_close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- main page  -->
+    <section class="main_page">
+        <img class="main_page_background" src="Images/homepage1.jpg" alt="">
+        <div class="main_page_content container">
+            <!-- logo -->
+            <div class="main_title" style="opacity: 0;">
+                <img src="Images/logo.png" alt="logo">
+            </div>
+        </div>
+    </section>
+
+    <section id="carousel" class="carousel mobile_carousel" data-carousel>
+        <!-- prev btn -->
+        <button class="carousel-btn prev" data-carousel-btn="prev"><i
+                class="fa-solid fa-caret-left"></i></button>
+        <!-- next btn -->
+        <button class="carousel-btn next" data-carousel-btn="next"><i
+                class="fa-solid fa-caret-right"></i></button>
+        <ul data-slides>
+            <!-- carousel img -->
+            <li class="slide imgFull" data-active>
+                <img src="./Images/公告1.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide imgFull ">
+                <img src="./Images/test_寬度特長.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide imgFull">
+                <img src="./Images/公告4.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide imgAuto">
+                <img src="./Images/公告1.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide imgAuto ">
+                <img src="./Images/test_寬度特長.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide imgAuto">
+                <img src="./Images/公告4.jpg" alt="" loading="lazy">
+            </li>
+        </ul>
+    </section>
+
+    <!-- body -->
+    <section class="body">
+        
+        <!-- content -->
+        <div class="container content">
+            <!-- sidebar menu -->
+            <div class="sidebar">
+                <!-- back home button -->
+                <a href="./index.html" class="back_home">
+                    <div>
+                        <i class="fa-solid fa-square-caret-left"></i> 回首頁
+                    </div>
+                </a>
+                <div class="sidebar_list">
+                    <!-- sidebar items -->
+                </div>
+            </div>
+            <!-- main content -->
+            <div class="text">
+                <article class="article-column col-md-9 col-md-push-3">
+                    <a name="target_article" id="target_article"></a>
+                    <h2 class="page-title">活動花絮 </h2>
+                    <div class="col-all">
+                        <a name="album_start" id="album_start"></a>
+                        <div class="col-row">
+                            <div class="album-single n176-line">
+                                <div class="img-thumbnail">
+                                    <div class="album-one-id"
+                                        style="width: 240px; height: 240px; overflow: hidden; margin-left: auto; margin-right: auto; display: table-cell;">
+                                        <a href="main_view.php?id=176&amp;frompage=1#album_start"><img width="436" height="290"
+                                                style="margin: 0px; max-width: 240px; max-height: 240px; width: auto; height: auto;"
+                                                src="https://img.okweb.asia/a0001/images/album/n__14756620092.jpg" border="0"
+                                                title="111111111"></a></div>
+                                </div>
+                                <span class="album-subhead">11111111</span>
+                            </div>
+                            <div class="album-single n175-line">
+                                <div class="img-thumbnail">
+                                    <div class="album-one-id"
+                                        style="width: 240px; height: 240px; overflow: hidden; margin-left: auto; margin-right: auto; display: table-cell;">
+                                        <a href="main_view.php?id=175&amp;frompage=1#album_start"><img width="436" height="290"
+                                                style="margin: 0px; max-width: 240px; max-height: 240px; width: auto; height: auto;"
+                                                src="https://img.okweb.asia/a0001/images/album/n__14756277690.jpg" border="0"
+                                                title="fsdfsdfd"></a></div>
+                                </div>
+                                <span class="album-subhead">fsdfsd</span>
+                            </div>
+                
+                
+                
+                
+                
+                            <div class="album-single n174-line">
+                                <div class="img-thumbnail">
+                                    <div class="album-one-id"
+                                        style="width: 240px; height: 240px; overflow: hidden; margin-left: auto; margin-right: auto; display: table-cell;">
+                                        <a href="main_view.php?id=174&amp;frompage=1#album_start"><img width="746" height="290"
+                                                style="margin: 0px; max-width: 240px; max-height: 240px; width: auto; height: auto;"
+                                                src="https://img.okweb.asia/a0001/images/album/n__13999691516.jpg" border="0"
+                                                title="sdfsdfsdfdsfzzz"></a></div>
+                                </div>
+                                <span class="album-subhead">fsdfsdfzzz</span>
+                            </div>
+                
+                
+                
+                
+                
+                            <div class="album-single n173-line">
+                                <div class="img-thumbnail">
+                                    <div class="album-one-id"
+                                        style="width: 240px; height: 240px; overflow: hidden; margin-left: auto; margin-right: auto; display: table-cell;">
+                                        <a href="main_view.php?id=173&amp;frompage=1#album_start"><img width="436" height="290"
+                                                style="margin: 0px; max-width: 240px; max-height: 240px; width: auto; height: auto;"
+                                                src="https://img.okweb.asia/a0001/images/album/album_173.jpg" border="0"
+                                                title="bbb"></a></div>
+                                </div>
+                                <span class="album-subhead">aaa</span>
+                            </div>
+                
+                
+                
+                
+                
+                            <div class="album-single n172-line">
+                                <div class="img-thumbnail">
+                                    <div class="album-one-id"
+                                        style="width: 240px; height: 240px; overflow: hidden; margin-left: auto; margin-right: auto; display: table-cell;">
+                                        <a href="main_view.php?id=172&amp;frompage=1#album_start"><img width="290" height="387"
+                                                style="margin: 0px; max-width: 240px; max-height: 240px; width: auto; height: auto;"
+                                                src="https://img.okweb.asia/a0001/images/album/album_172.jpg" border="0"
+                                                title="bbb"></a></div>
+                                </div>
+                                <span class="album-subhead">aaa</span>
+                            </div>
+                
+                
+                
+                
+                
+                            <div class="album-single n171-line">
+                                <div class="img-thumbnail">
+                                    <div class="album-one-id"
+                                        style="width: 240px; height: 240px; overflow: hidden; margin-left: auto; margin-right: auto; display: table-cell;">
+                                        <a href="main_view.php?id=171&amp;frompage=1#album_start"><img width="387" height="290"
+                                                style="margin: 0px; max-width: 240px; max-height: 240px; width: auto; height: auto;"
+                                                src="https://img.okweb.asia/a0001/images/album/album_171.jpg" border="0" title=""></a>
+                                    </div>
+                                </div>
+                                <span class="album-subhead">101010</span>
+                            </div>
+                
+                
+                
+                
+                
+                            <div class="album-single n170-line">
+                                <div class="img-thumbnail">
+                                    <div class="album-one-id"
+                                        style="width: 240px; height: 240px; overflow: hidden; margin-left: auto; margin-right: auto; display: table-cell;">
+                                        <a href="main_view.php?id=170&amp;frompage=1#album_start"><img
+                                                src="https://img.okweb.asia/images/no-cover.jpg" border="0"
+                                                style="max-width: 240px; max-height: 240px; margin: 0px; width: auto; height: auto;"></a>
+                                    </div>
+                                </div>
+                                <span class="album-subhead">99999</span>
+                            </div>
+                
+                
+                
+                
+                
+                            <div class="album-single n169-line">
+                                <div class="img-thumbnail">
+                                    <div class="album-one-id"
+                                        style="width: 240px; height: 240px; overflow: hidden; margin-left: auto; margin-right: auto; display: table-cell;">
+                                        <a href="main_view.php?id=169&amp;frompage=1#album_start"><img width="436" height="290"
+                                                style="margin: 0px; max-width: 240px; max-height: 240px; width: auto; height: auto;"
+                                                src="https://img.okweb.asia/a0001/images/album/album_169.jpg" border="0" title=""></a>
+                                    </div>
+                                </div>
+                                <span class="album-subhead">888888</span>
+                            </div>
+                
+                
+                
+                
+                
+                            <div class="album-single n168-line">
+                                <div class="img-thumbnail">
+                                    <div class="album-one-id"
+                                        style="width: 240px; height: 240px; overflow: hidden; margin-left: auto; margin-right: auto; display: table-cell;">
+                                        <a href="main_view.php?id=168&amp;frompage=1#album_start"><img width="438" height="290"
+                                                style="margin: 0px; max-width: 240px; max-height: 240px; width: auto; height: auto;"
+                                                src="https://img.okweb.asia/a0001/images/album/album_168.jpg" border="0" title=""></a>
+                                    </div>
+                                </div>
+                                <span class="album-subhead">因為目前郵件主機是採用Google的系統,若變動此帳號的密碼~</span>
+                            </div>
+                
+                
+                
+                
+                
+                            <div class="album-single n167-line">
+                                <div class="img-thumbnail">
+                                    <div class="album-one-id"
+                                        style="width: 240px; height: 240px; overflow: hidden; margin-left: auto; margin-right: auto; display: table-cell;">
+                                        <a href="main_view.php?id=167&amp;frompage=1#album_start"><img width="387" height="290"
+                                                style="margin: 0px; max-width: 240px; max-height: 240px; width: auto; height: auto;"
+                                                src="https://img.okweb.asia/a0001/images/album/n__13884519426.jpg" border="0" title="相簿簡述
+                相簿簡述相簿簡述相簿簡述相簿簡述相簿簡述相簿簡述相簿簡述相簿簡述相簿簡述"></a></div>
+                                </div>
+                                <span class="album-subhead">aaaa</span>
+                            </div>
+                
+                
+                
+                
+                
+                            <div class="album-single n166-line">
+                                <div class="img-thumbnail">
+                                    <div class="album-one-id"
+                                        style="width: 240px; height: 240px; overflow: hidden; margin-left: auto; margin-right: auto; display: table-cell;">
+                                        <a href="main_view.php?id=166&amp;frompage=1#album_start"><img
+                                                src="https://img.okweb.asia/images/no-cover.jpg" border="0"
+                                                style="max-width: 240px; max-height: 240px; margin: 0px; width: auto; height: auto;"></a>
+                                    </div>
+                                </div>
+                                <span class="album-subhead">5555</span>
+                            </div>
+                
+                
+                
+                
+                
+                            <div class="album-single n165-line">
+                                <div class="img-thumbnail">
+                                    <div class="album-one-id"
+                                        style="width: 240px; height: 240px; overflow: hidden; margin-left: auto; margin-right: auto; display: table-cell;">
+                                        <a href="main_view.php?id=165&amp;frompage=1#album_start"><img
+                                                src="https://img.okweb.asia/images/no-cover.jpg" border="0"
+                                                style="max-width: 240px; max-height: 240px; margin: 0px; width: auto; height: auto;"></a>
+                                    </div>
+                                </div>
+                                <span class="album-subhead">44444d</span>
+                            </div>
+                
+                
+                
+                
+                
+                            <div class="album-single n164-line">
+                                <div class="img-thumbnail">
+                                    <div class="album-one-id"
+                                        style="width: 240px; height: 240px; overflow: hidden; margin-left: auto; margin-right: auto; display: table-cell;">
+                                        <a href="main_view.php?id=164&amp;frompage=1#album_start"><img width="577" height="290"
+                                                style="margin: 0px; max-width: 240px; max-height: 240px; width: auto; height: auto;"
+                                                src="https://img.okweb.asia/a0001/images/album/n__13882249532.jpg" border="0"
+                                                title=""></a></div>
+                                </div>
+                                <span class="album-subhead">333</span>
+                            </div>
+                
+                
+                
+                
+                
+                            <div class="album-single n163-line">
+                                <div class="img-thumbnail">
+                                    <div class="album-one-id"
+                                        style="width: 240px; height: 240px; overflow: hidden; margin-left: auto; margin-right: auto; display: table-cell;">
+                                        <a href="main_view.php?id=163&amp;frompage=1#album_start"><img width="436" height="290"
+                                                style="margin: 0px; max-width: 240px; max-height: 240px; width: auto; height: auto;"
+                                                src="https://img.okweb.asia/a0001/images/album/n__13882249127.jpg" border="0"
+                                                title=""></a></div>
+                                </div>
+                                <span class="album-subhead">相簿2</span>
+                            </div>
+                
+                
+                
+                
+                
+                            <div class="album-single n162-line">
+                                <div class="img-thumbnail">
+                                    <div class="album-one-id"
+                                        style="width: 240px; height: 240px; overflow: hidden; margin-left: auto; margin-right: auto; display: table-cell;">
+                                        <a href="main_view.php?id=162&amp;frompage=1#album_start"><img
+                                                src="https://img.okweb.asia/images/no-cover.jpg" border="0"
+                                                style="max-width: 240px; max-height: 240px; margin: 0px; width: auto; height: auto;"></a>
+                                    </div>
+                                </div>
+                                <span class="album-subhead">相簿名稱</span>
+                            </div>
+                
+                
+                
+                
+                            <div class="clearfloat"></div>
+                        </div><!--/col-row-->
+                
+                
+                
+                
+                
+                    </div><!--col-all結尾-->
+                
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="container">
+            <div class="flex footer_main">
+                <!-- left side -->
+                <div class="footer_logo_side">
+                    <div>
+                        <img class="footer_logo" src="Images/logo.png" loading="lazy">
+                    </div>
+                    <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs=""
+                        data-adapt-container-width width="270" height="" data-small-header="false"
+                        data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a
+                                href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+                    </div>
+                </div>
+                <!-- right side -->
+                <div class="footer_content">
+                    <!-- fast link -->
+                    <div class="footer_fastLink">
+                        <a href="">
+                            <div>品牌資訊</div>
+                        </a>
+                        <a href="">
+                            <div>門市據點</div>
+                        </a>
+                        <a href="">
+                            <div>會員權益說明</div>
+                        </a>
+                        <a href="">
+                            <div>付款方式</div>
+                        </a>
+                        <a href="">
+                            <div>寄送服務</div>
+                        </a>
+                        <a href="">
+                            <div>售後服務</div>
+                        </a>
+                        <a href="">
+                            <div>媒體報導</div>
+                        </a>
+                        <a href="">
+                            <div>隱私權條款</div>
+                        </a>
+                        <a href="">
+                            <div>場地租借(台中)</div>
+                        </a>
+                        <a href="">
+                            <div>團體行程(台中)</div>
+                        </a>
+                        
+                    </div>
+
+                    <!-- icons -->
+                    <div class="footer_icons">
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- copyright  -->
+        <div class="copyright">
+            <div class="container flex">
+                <div>
+                    Copyright © Company
+                </div>
+                <div>
+                    Tel: +886 0 0000-0000　　Fax: +886 0 0000-0000
+                </div>
+                <div>
+                    Address: 00000 台中市00區00路0段00號
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

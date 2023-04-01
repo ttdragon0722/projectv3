@@ -78,12 +78,6 @@
     }
 }
 
-@media (max-width:420px) {
-    .form-control , select {
-        /* width: 20%; */
-    }
-}
-
 input[type="button"],input[type="submit"] {
     cursor: pointer;
     display: inline-block;
@@ -137,5 +131,4 @@ input[type="button"],input[type="submit"] {
 
 .pagination {
     text-align: center;
-    
 }
