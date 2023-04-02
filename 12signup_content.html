@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>download</title>
+    <title>signup content</title>
 
     <!-- font -->
     <link rel="stylesheet" href="font/font.css">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style/main_content.css">
     <!-- components -->
     <link rel="stylesheet" href="style/content/main_content.css">
-    
+
     <!-- carousel -->
     <script src="js/carousel.js" defer></script>
     <link rel="stylesheet" href="style/components/carousel.css">
@@ -26,7 +26,7 @@
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
 
-    <!-- js -->    
+    <!-- js -->
     <!-- cdn -->
     <!-- jquery 3.6.1 -->
     <script src="https://code.jquery.com/jquery-3.6.1.js"
@@ -160,11 +160,9 @@
 
     <section id="carousel" class="carousel mobile_carousel" data-carousel>
         <!-- prev btn -->
-        <button class="carousel-btn prev" data-carousel-btn="prev"><i
-                class="fa-solid fa-caret-left"></i></button>
+        <button class="carousel-btn prev" data-carousel-btn="prev"><i class="fa-solid fa-caret-left"></i></button>
         <!-- next btn -->
-        <button class="carousel-btn next" data-carousel-btn="next"><i
-                class="fa-solid fa-caret-right"></i></button>
+        <button class="carousel-btn next" data-carousel-btn="next"><i class="fa-solid fa-caret-right"></i></button>
         <ul data-slides>
             <!-- carousel img -->
             <li class="slide imgFull" data-active>
@@ -190,7 +188,7 @@
 
     <!-- body -->
     <section class="body">
-        
+
         <!-- content -->
         <div class="container content">
             <!-- sidebar menu -->
@@ -209,164 +207,104 @@
             <div class="text">
                 <article class="article-column col-md-9 col-md-push-3">
                     <a name="target_article" id="target_article"></a>
-                    <h2 class="page-title">Download </h2>
-                    <div class="col-all">
-                
-                
-                
-                
-                        <div class="form-group">
-                            類別:
-                            <select name="data_m_id" id="data_m_id"
-                                onchange="location.href='/a0001/download/main.php?index_m_id='+this.value;">
-                                <option value="0" selected="">不分類</option>
-                                <option value="14">bbbb</option>
-                                <option value="13">aaa</option>
-                            </select>
+                    <h2 class="page-title">線上報名1 </h2>
+                    <div class="col-all main_service-set-line">
+<!-- 
+                        <script language="JavaScript">
+                            function checkpost(form) { 
+                                if (form.contact_title.value.length==0) { 
+                                    alert("請輸入公司名稱ccc");
+                                    form.contact_title.focus();
+                                    return false;
+                                }
+                                
+                                if (form.contact_name.value.length==0) { 
+                                    alert("請輸入姓名");
+                                    form.contact_name.focus();
+                                    return false;
+                                }
+                                
+                                
+                                
+                                if (form.m_code.value.length==0) {
+                                    alert("請輸入驗證碼");
+                                    form.m_code.focus();
+                                    return false;
+                                }
+                                return true;
+                            }
+                        </script> -->
+                        <div class="panel2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">abcccccc</h3>
+                            </div>
+                            <div class="panel-body">
+                                <ul>
+                                    <li><span class="glyphicon glyphicon-calendar color1"></span> 日期：fdsfdsf</li>
+                                </ul>
+                            </div>
+                            <div class="panel-heading">
+                                <h3 class="panel-title">報名表</h3>
+                            </div>
+                            <div class="panel-body">
+                                <form method="post" action="" onsubmit="return checkpost(this);">
+                                    <input name="proName" type="hidden" id="textfield" value="abcccccc" readonly="">
+                                    <input name="enrol_id" type="hidden" id="textfield" value="3" readonly="">
+                                    <input name="proNum" type="hidden" id="textfield" value="abcccccc" readonly="">
+                                    <input name="proDate" type="hidden" id="textfield" value="fdsfdsf" readonly="">
+                                    <input name="proTime" type="hidden" id="textfield" value="" readonly="">
+                                    <input name="proFee" type="hidden" id="textfield" value="" readonly="">
+                                    <input name="endText" type="hidden" id="textfield" value="" readonly="">
+                                    <input name="endLink" type="hidden" id="textfield" value="" readonly="">
+                                    <input name="ttt" type="hidden" class="form-style" value="線上報名1 ">
+                                    <div class="form-group">
+                                        <label class="col-left1 notice">公司名稱ccc</label>
+                                        <div class="col-right1"><input name="contact_title" type="text"
+                                                class="form-control form-sizel"></div>
+                                        <div class="clearfloat"></div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-left1 notice">姓名</label>
+                                        <div class="col-right1"><input name="contact_name" type="text"
+                                                class="form-control form-sizel"></div>
+                                        <div class="clearfloat"></div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-left1 ">123ccc</label>
+                                        <div class="col-right1"><input name="contact_tel" type="text"
+                                                class="form-control form-sizel"></div>
+                                        <div class="clearfloat"></div>
+                                    </div>
+
+
+
+
+                                    <div class="form-group">
+                                        <label class="col-left1 notice">驗證碼</label>
+                                        <div class="col-right1"><input name="m_code" type="text"
+                                                class="form-control form-sizem" size="20"><iframe
+                                                src="./../check_key/chk_pic.php" name="rundata_pic" width="99"
+                                                height="40" align="middle" scrolling="No" frameborder="0" hspace="5"
+                                                vspace="" id="rundata_pic"></iframe></div>
+                                        <div class="clearfloat"></div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-right1">
+                                            <input type="submit" class="btn btn-color" value="確定送出" name="Submit">
+                                            <input type="reset" class="btn btn-color" value="清除重填" name="Submit3">
+                                        </div>
+                                        <div class="clearfloat"></div>
+                                    </div>
+
+
+
+                                </form>
+                            </div>
                         </div>
-                
-                        <table class="footable footable-loaded no-paging" data-page-size="10">
-                            <thead>
-                                <tr>
-                                    <th class="footable-sortable">檔案名稱<span class="footable-sort-indicator"></span></th>
-                                    <th data-sort-ignore="true">下載</th>
-                
-                                </tr>
-                            </thead>
-                            <tbody>
-                
-                
-                                <tr style="display: table-row;">
-                                    <td valign="top">
-                                        <div class="d86-line">
-                                            <h3 class="stitle">555555</h3>印地安人今戰洋基，台灣投手李振昌六局上場中繼1局，三上三下，沒失分，助隊4：1獲勝，本季首次中繼成功。
-                                        </div>
-                                    </td>
-                
-                                    <td valign="top"><a href="download.php?id=86" class="btn btn-color">下載</a></td>
-                
-                                </tr>
-                
-                
-                
-                                <tr style="display: table-row;">
-                                    <td valign="top">
-                                        <div class="d85-line">
-                                            <h3 class="stitle">中文檔案型錄</h3>印地安人在一、三、五局各攻下1分，六局領先3分，李振昌接替先發投手卡拉斯科（Carlos
-                                            Carrasco）登板，先讓瑟維里(Francisco Cervelli)擊出外野飛球，接著三振強棒加納(Brett Gardner)，再面對名將基特（Derek
-                                            Jeter），李振昌第1球飆出95哩速球，最後將基特三振，三上三下，完成1局的中繼任務退場。<br>
-                                            <br>
-                                            李振昌大聯盟生涯首度與洋基交手，投1局，僅用14球、其中8顆好球，沒有失分，2次三振，順利拿下本季第1個中繼點。<br>
-                                            <br>
-                                            總計李振昌本季出賽17場，投15.2局，被打15支安打，失7分其中6分是責失，18次三振，4次四壞球保送，防禦率3.45。
-                                        </div>
-                                    </td>
-                
-                                    <td valign="top"><a href="download.php?id=85" class="btn btn-color">下載</a></td>
-                
-                                </tr>
-                
-                
-                
-                                <tr style="display: table-row;">
-                                    <td valign="top">
-                                        <div class="d87-line">
-                                            <h3 class="stitle">fefre</h3>frefe
-                                        </div>
-                                    </td>
-                
-                                    <td valign="top"><a href="download.php?id=87" class="btn btn-color">下載</a></td>
-                
-                                </tr>
-                
-                
-                
-                                <tr style="display: table-row;">
-                                    <td valign="top">
-                                        <div class="d88-line">
-                                            <h3 class="stitle">fcsdfd</h3>fsdfds
-                                        </div>
-                                    </td>
-                
-                                    <td valign="top"><a href="download.php?id=88" class="btn btn-color">下載</a></td>
-                
-                                </tr>
-                
-                
-                
-                                <tr style="display: table-row;">
-                                    <td valign="top">
-                                        <div class="d89-line">
-                                            <h3 class="stitle">hfh</h3>fghgh
-                                        </div>
-                                    </td>
-                
-                                    <td valign="top"><a href="download.php?id=89" class="btn btn-color">下載</a></td>
-                
-                                </tr>
-                
-                
-                
-                                <tr style="display: table-row;">
-                                    <td valign="top">
-                                        <div class="d90-line">
-                                            <h3 class="stitle">gdfg</h3>dfgf
-                                        </div>
-                                    </td>
-                
-                                    <td valign="top"><a href="download.php?id=90" class="btn btn-color">下載</a></td>
-                
-                                </tr>
-                
-                
-                
-                                <tr style="display: table-row;">
-                                    <td valign="top">
-                                        <div class="d91-line">
-                                            <h3 class="stitle">fsdfdfdf</h3>dsfdsf
-                                        </div>
-                                    </td>
-                
-                                    <td valign="top"><a href="download.php?id=91" class="btn btn-color">下載</a></td>
-                
-                                </tr>
-                
-                
-                
-                                <tr style="display: table-row;">
-                                    <td valign="top">
-                                        <div class="d92-line">
-                                            <h3 class="stitle">gdfgfgfdtest</h3>gfdgfdgftest
-                                        </div>
-                                    </td>
-                
-                                    <td valign="top"><a href="download.php?id=92" class="btn btn-color">下載</a></td>
-                
-                                </tr>
-                
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <td colspan="3">
-                                        <div class="pagination pagination-centered">
-                                            <ul>
-                                                <li class="footable-page-arrow disabled"><a data-page="first" href="#first">&lt;&lt;</a>
-                                                </li>
-                                                <li class="footable-page-arrow disabled"><a data-page="prev" href="#prev">&lt;</a></li>
-                                                <li class="footable-page active"><a data-page="0" href="#">1</a></li>
-                                                <li class="footable-page-arrow disabled"><a data-page="next" href="#next">&gt;</a></li>
-                                                <li class="footable-page-arrow disabled"><a data-page="last" href="#last">&gt;&gt;</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tfoot>
-                        </table>
-                
-                
                     </div><!--col-all結尾-->
-                
                 </article>
             </div>
         </div>
@@ -422,7 +360,7 @@
                         <a href="">
                             <div>團體行程(台中)</div>
                         </a>
-                        
+
                     </div>
 
                     <!-- icons -->

@@ -1,0 +1,39 @@
+.col-group {
+    display: flex;
+}
+
+.mapText {
+    width: 100%;
+    margin: 0 5%;
+}
+.mapText p {
+    width: 100%;
+    margin-top: 2%;
+}
+
+.cboxElement {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width:730px) {
+    .col-group {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mapText {
+        display: flex;
+        flex-direction: column;
+        margin: 5% 0;
+    }
+    .mapText br {
+        display: none;
+    }
+    .mapText .big{
+        text-align: center;
+    }
+    .mapText p {
+        margin: 5% 0;
+    }
+}
