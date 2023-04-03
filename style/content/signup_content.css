@@ -1,0 +1,50 @@
+.form-group input {
+    padding: 1.2% 0;
+    width: 100% !important; 
+}
+
+.form-group .col-left1 {
+    width: 15% !important;
+}
+
+input[type="submit"],input[type="reset"]  {
+    width: unset !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    line-height: 1.8;
+    font-weight: 700;
+    border: 0;
+    text-align: center;
+    padding: 0.6em 1em;
+    margin-right: 0.5em;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+    background-color: black;
+    color: white;
+}
+
+.panel-body form .form-group:last-child .col-right1 {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width:630px) {
+    .form-group {
+        flex-direction: column;
+        margin: 3%;
+    }
+
+    .form-group .col-left1 {
+        text-align: left;
+        width: 100% !important;
+    }
+
+    input[name="m_code"] {
+        width: 30% !important;
+    }
+
+    .notice {
+        margin-bottom: 1.8%;
+    }
+}

@@ -1,4 +1,4 @@
-input[type="button"],input[type="submit"] {
+input[type="button"],input[type="submit"]  {
     cursor: pointer;
     display: inline-block;
     font-size: 1em;
@@ -7,15 +7,16 @@ input[type="button"],input[type="submit"] {
     border: 0;
     text-align: center;
     padding: 0.6em 1em;
-    margin-right: 0.5em;
-    margin-bottom: 0.3em;
-    margin-top: 0.3em;
     background-color: black;
     color: white;
 }
-.form-control , select {
-    margin-right: 2px;
-    padding: 10px 20px;
+
+input[type="button"]:hover,input[type="submit"]:hover {
+    background-color: #333!important;
+}
+
+input[type="number"] {
+    padding: 0.6em 1em;
     background-color: #fcfcfc;
     border: 1px solid #00000033;
     outline: none;
@@ -24,18 +25,15 @@ input[type="button"],input[type="submit"] {
     border-radius: 3px;
     color: #333;
 }
-.form-control:focus , select:focus {
+input[type="number"]:focus {
     -webkit-box-shadow: 0 0 2px 1px black;
     -moz-box-shadow: 0 0 2px 1px black;
     box-shadow: 0 0 2px 1px black;
     border: 1px solid black;
 }
-
-.big {
-    font-size: 19.5px;
+input[type="number"]:hover {
+    background-color: white !important;
 }
 
-.small {
-    font-size: 13.5px;
-}
+
 
