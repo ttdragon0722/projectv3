@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>discussing content</title>
+    <title>Project Version 3</title>
 
     <!-- font -->
     <link rel="stylesheet" href="font/font.css">
@@ -14,14 +14,11 @@
     <link rel="stylesheet" href="style/init.css">
     <link rel="stylesheet" href="style/main_content.css">
     <!-- components -->
-    <link rel="stylesheet" href="style/content/main_content.css">
-    <link rel="stylesheet" href="style/content/form.css">
-    <style>
-        textarea {
-            width: 98% !important;
-        }
-    </style>
-
+    <link rel="stylesheet" href="style/components/main_page.css">
+    <link rel="stylesheet" href="style/components/service.css">
+    <link rel="stylesheet" href="style/components/mainpageProduct.css">
+    <link rel="stylesheet" href="style/components/map.css">
+    
     <!-- carousel -->
     <script src="js/carousel.js" defer></script>
     <link rel="stylesheet" href="style/components/carousel.css">
@@ -32,7 +29,7 @@
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
 
-    <!-- js -->
+    <!-- js -->    
     <!-- cdn -->
     <!-- jquery 3.6.1 -->
     <script src="https://code.jquery.com/jquery-3.6.1.js"
@@ -46,12 +43,10 @@
     <script src="js/public.js" defer></script>
     <script src="js/anim.js" defer></script>
     <script src="js/main_page.js" defer></script>
-
-    <script src="js/content.js" defer></script>
-
 </head>
 
 <body id="body">
+
     <!-- facebook thing -->
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v16.0"
@@ -78,6 +73,8 @@
             <div class="mobile_menu_group" style="overflow-y: scroll;"></div>
         </div>
     </section>
+
+
     <!-- function area -->
     <section class="function_area header">
         <div class="container flex">
@@ -155,215 +152,219 @@
 
     <!-- main page  -->
     <section class="main_page">
-        <img class="main_page_background" src="Images/homepage1.jpg" alt="">
-        <div class="main_page_content container">
+        <img class="main_page_background" src="Images/test_寬度特長.jpg" loading="lazy" alt="">
+        <div class="main_page_content flex container">
             <!-- logo -->
             <div class="main_title" style="opacity: 0;">
-                <img src="Images/logo.png" alt="logo">
+                <img src="Images/logo.png" alt="logo" loading="lazy">
             </div>
+            <!-- subtitle -->
+            <div class="main_subtitle" style="color: white;opacity: 0;">
+                <div>一個有支援rwd功能的demo網站嘿嘿，希望你會喜歡，下面有carousel 介紹頁面 產品頁面 地圖頁面 跟頁尾</div>
+                <div>this is a website that my classmate,Lynn,my good friend find me to do it haha</div>
+            </div>
+            <!-- link part -->
+            <div class="main_wrap_group" style="opacity: 0;"></div>
         </div>
-    </section>
 
-    <section id="carousel" class="carousel mobile_carousel" data-carousel>
-        <!-- prev btn -->
-        <button class="carousel-btn prev" data-carousel-btn="prev"><i class="fa-solid fa-caret-left"></i></button>
-        <!-- next btn -->
-        <button class="carousel-btn next" data-carousel-btn="next"><i class="fa-solid fa-caret-right"></i></button>
-        <ul data-slides>
-            <!-- carousel img -->
-            <li class="slide imgFull" data-active>
-                <img src="./Images/公告1.jpg" alt="" loading="lazy">
-            </li>
-            <li class="slide imgFull ">
-                <img src="./Images/test_寬度特長.jpg" alt="" loading="lazy">
-            </li>
-            <li class="slide imgFull">
-                <img src="./Images/公告4.jpg" alt="" loading="lazy">
-            </li>
-            <li class="slide imgAuto">
-                <img src="./Images/公告1.jpg" alt="" loading="lazy">
-            </li>
-            <li class="slide imgAuto ">
-                <img src="./Images/test_寬度特長.jpg" alt="" loading="lazy">
-            </li>
-            <li class="slide imgAuto">
-                <img src="./Images/公告4.jpg" alt="" loading="lazy">
-            </li>
-        </ul>
+        <!-- keep down btn -->
+        <div class="keep_read_btn" style="opacity: 0;">
+            <a href="#carousel"><i class="fa-solid fa-chevron-down"></i></a>
+        </div>
+        <!-- footer -->
+        <div class="main_footer"></div>
     </section>
 
     <!-- body -->
     <section class="body">
+        <div class="container">
+            <!-- carousel -->
+            <section id="carousel" class="carousel" data-carousel>
+                <!-- prev btn -->
+                <button class="carousel-btn prev" data-carousel-btn="prev"><i
+                        class="fa-solid fa-caret-left"></i></button>
+                <!-- next btn -->
+                <button class="carousel-btn next" data-carousel-btn="next"><i
+                        class="fa-solid fa-caret-right"></i></button>
+                <ul data-slides>
+                    <!-- carousel img -->
+                    <li class="slide imgFull" data-active>
+                        <img src="./Images/公告1.jpg" alt="" loading="lazy">
+                    </li>
+                    <li class="slide imgFull ">
+                        <img src="./Images/test_寬度特長.jpg" alt="" loading="lazy">
+                    </li>
+                    <li class="slide imgFull">
+                        <img src="./Images/公告4.jpg" alt="" loading="lazy">
+                    </li>
+                    <li class="slide imgAuto">
+                        <img src="./Images/公告1.jpg" alt="" loading="lazy">
+                    </li>
+                    <li class="slide imgAuto ">
+                        <img src="./Images/test_寬度特長.jpg" alt="" loading="lazy">
+                    </li>
+                    <li class="slide imgAuto">
+                        <img src="./Images/公告4.jpg" alt="" loading="lazy">
+                    </li>
+                </ul>
+            </section>
 
-        <!-- content -->
-        <div class="container content">
-            <!-- sidebar menu -->
-            <div class="sidebar">
-                <!-- back home button -->
-                <a href="./index.html" class="back_home">
-                    <div>
-                        <i class="fa-solid fa-square-caret-left"></i> 回首頁
-                    </div>
-                </a>
-                <div class="sidebar_list">
-                    <!-- sidebar items -->
+            <!-- service page -->
+            <section class="service">
+                <!-- big title -->
+                <div class="service_title">
+                    <h1>我們的服務</h1>
+                    <p>我們提供更多更棒的服務，歡迎您進入網站挑選</p>
                 </div>
-            </div>
-            <!-- main content -->
-            <div class="text">
-                <article class="article-column col-md-9 col-md-push-3">
-                    <a name="target_article" id="target_article"></a>
-                    <h2 class="page-title">討論區1zz </h2>
-                    <!-- <script language="JavaScript">
-                        
-                        function checkpost(form) { 
-                            if (form.names.value.length==0) { 
-                                alert("請輸入回覆人姓名");
-                                form.names.focus();
-                                return false;
-                            }
-                        
-                            if (form.message.value.length==0) {
-                                alert("請輸入回覆內容");
-                                form.message.focus();
-                                return false;
-                            }
-                            if (form.chk_word.value.length==0) {
-                                alert("請輸入驗證碼");
-                                form.chk_word.focus();
-                                return false;
-                            }
-                            return true;
-                        }
-                    </script> -->
-
-                    <div class="col-all main_bbs2-set-line">
-
-
-
-                        <p>
-                            本站為避免無關廣告或惡意攻擊他人的言論，本站保留刪除文章之權益。2aaaaa</p>
-
-                        <div class="col-group">
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                <tbody>
-                                    <tr>
-                                        <td class="left">
-                                            <input type="button" name="gotomain_view" class="btn btn-color" value="發表主題"
-                                                onclick="location='main_new.php'">
-                                        </td>
-                                        <td class="right"><a href="main.php">回上頁</a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                <!-- service group -->
+                <div class="service_group">
+                    <div class="service_item">
+                        <div class="service_img">
+                            <img src="Images/公告1.jpg" loading="lazy" alt="">
                         </div>
+                        <h1>快速架站與上線</h1>
+                        <p>EZ架站雲開站速度快，不需另租虛擬主機，免安裝免繁鎖設定更不需專業人士即會使用，最快不用1小時即可開通上線。</p>
+                    </div>
+                    <div class="service_item">
+                        <div class="service_img">
+                            <img src="Images/公告2.jpg" loading="lazy" alt="">
+                        </div>
+                        <h1>雲端技術平台</h1>
+                        <p>系統以最新雲端技術開發而成,不必架設以及租用虛擬主機，不必安裝任何軟體,能上網即可輕鬆使用。</p>
+                    </div>
+                    <div class="service_item">
+                        <div class="service_img">
+                            <img src="Images/公告3.jpg" loading="lazy" alt="">
+                        </div>
+                        <h1>RWD嚮應式網站</h1>
+                        <p>新式的RWD網頁設計嚮應式技術讓您的網站打破設備隔閡，無論是桌機、平板、手機，3機一體大小通吃。</p>
+                    </div>
+                </div>
+            </section>
 
+            <!-- product -->
+            <section class="product">
+                <div class="product_title">
+                    <h1>產品介紹</h1>
+                    <p>Product</p>
+                </div>
+                <div class="product_content">
 
-
-
-
-                        <div class="panel">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">11111</h3>
+                    <a href="./product.html" class="product_item">
+                        <div class="product_container">
+                            <div class="product_img product_imgAuto">
+                                <img src="Images/公告4.jpg" alt="haha" loading="lazy">
                             </div>
-                            <div class="panel-body">
-                                <table width="100%" border="0" cellspacing="0" cellpadding="4">
-                                    <tbody>
-                                        <tr>
-                                            <td align="left">
-                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td align="left" class="color2 big b">22222</td>
-                                                            <td align="right"><span class="small">2016/07/01</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>33333</td>
-                                        </tr>
-                                        <tr>
-                                            <td><span class="small"><a href="#reply">回覆</a> | <a
-                                                        href="main_new.php">發表主題</a> | <a
-                                                        href="main.php">返回討論區列表</a></span></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div class="product_item_content">
+                                <div class="product_item_text">
+                                    <h1>A thing</h1>
+                                    <p>this is a product.</p>
+                                </div>
+                                <div class="product_price">
+                                    <h1 class="price">9487</h1>
+                                    <p class="onSale">10000</p>
+                                </div>
                             </div>
                         </div>
-
-
-                        <div class="panel2"><a name="reply"></a>
-                            <div class="panel-heading">
-                                <h3 class="panel-title"></h3>
+                    </a>
+                    <a href="./product.html" class="product_item">
+                        <div class="product_container">
+                            <div class="product_img product_imgAuto">
+                                <img src="Images/公告2.jpg" alt="haha" loading="lazy">
                             </div>
-                            <div class="panel-body">
-                                <form action="bbs.php" method="post" onsubmit="return checkpost(this);">
-                                    <input type="hidden" name="ttt" value="討論區1zz ">
-
-                                    <div class="form-group">
-                                        <label class="col-left1 notice">回覆人姓名</label>
-                                        <div class="col-right1"><input name="names" type="text"
-                                                class="form-control form-sizem"></div>
-                                        <div class="clearfloat"></div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-left1">電子郵件</label>
-                                        <div class="col-right1"><input name="email" type="text"
-                                                class="form-control form-sizel"></div>
-                                        <div class="clearfloat"></div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-left1">相關網址</label>
-                                        <div class="col-right1"><input name="www" type="text"
-                                                class="form-control form-sizel"></div>
-                                        <div class="clearfloat"></div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-left1 notice">留言內容</label>
-                                        <div class="col-right1"><textarea name="message" type="text" rows="5"
-                                                wrap="virtual" class="form-control form-sizel"></textarea></div>
-                                        <div class="clearfloat"></div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-left1 notice">驗證碼</label>
-                                        <div class="col-right1"><input name="chk_word" type="text"
-                                                class="form-control form-sizes" size="20"><iframe
-                                                src="./../check_key/chk_pic.php" name="rundata_pic" width="99"
-                                                height="40" align="middle" scrolling="No" frameborder="0" hspace="5"
-                                                vspace="" id="rundata_pic"></iframe></div>
-                                        <div class="clearfloat"></div>
-                                    </div>
-
-
-                                    <div class="form-group">
-                                        <div class="col-right1">
-
-                                            <input type="hidden" name="t" value="3422">
-                                            <input type="hidden" name="topage" value="">
-                                            <input type="hidden" name="m" value="reply">
-                                            <input type="submit" class="btn btn-color" name="Submit" value="確定送出">
-                                            <input type="submit" class="btn btn-color" name="Submit" value="清除重填">
-
-                                        </div>
-                                        <div class="clearfloat"></div>
-                                    </div>
-
-                                </form>
+                            <div class="product_item_content">
+                                <div class="product_item_text">
+                                    <h1>A thing</h1>
+                                    <p>this is a product.</p>
+                                </div>
+                                <div class="product_price">
+                                    <h1 class="price">9487</h1>
+                                    <p class="onSale">10000</p>
+                                </div>
                             </div>
                         </div>
+                    </a>
+                    <a href="./product.html" class="product_item">
+                        <div class="product_container">
+                            <div class="product_img product_imgAuto">
+                                <img src="Images/公告3.jpg" alt="haha" loading="lazy">
+                            </div>
+                            <div class="product_item_content">
+                                <div class="product_item_text">
+                                    <h1>A thing</h1>
+                                    <p>this is a product.</p>
+                                </div>
+                                <div class="product_price">
+                                    <h1 class="price">9487</h1>
+                                    <p class="onSale">10000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
 
+                    <a href="./product.html" class="product_item">
+                        <div class="product_container">
+                            <div class="product_img product_imgFull">
+                                <img src="Images/公告4.jpg" alt="haha" loading="lazy">
+                            </div>
+                            <div class="product_item_content">
+                                <div class="product_item_text">
+                                    <h1>A thing</h1>
+                                    <p>this is a product.</p>
+                                </div>
+                                <div class="product_price">
+                                    <h1 class="price">9487</h1>
+                                    <p class="onSale">10000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./product.html" class="product_item">
+                        <div class="product_container">
+                            <div class="product_img product_imgFull">
+                                <img src="Images/公告2.jpg" alt="haha" loading="lazy">
+                            </div>
+                            <div class="product_item_content">
+                                <div class="product_item_text">
+                                    <h1>A thing</h1>
+                                    <p>this is a product.</p>
+                                </div>
+                                <div class="product_price">
+                                    <h1 class="price">9487</h1>
+                                    <p class="onSale">10000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./product.html" class="product_item">
+                        <div class="product_container">
+                            <div class="product_img product_imgFull">
+                                <img src="Images/公告3.jpg" alt="haha" loading="lazy">
+                            </div>
+                            <div class="product_item_content">
+                                <div class="product_item_text">
+                                    <h1>A thing</h1>
+                                    <p>this is a product.</p>
+                                </div>
+                                <div class="product_price">
+                                    <h1 class="price">9487</h1>
+                                    <p class="onSale">10000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <a href="" class="more_btn">
+                    <div>查看更多</div>
+                </a>
+            </section>
 
-                    </div><!--col-all結尾-->
-
-                </article>
-            </div>
+            <!-- map -->
+            <section class="map_page">
+                <iframe class="map "
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.6265973249333!2d120.68158251486757!3d24.149748179320216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d68cf62e061%3A0x7091dd73273f6236!2z5ZyL56uL6Ie65Lit56eR5oqA5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1666889270956!5m2!1szh-TW!2stw"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
         </div>
     </section>
 
@@ -417,7 +418,7 @@
                         <a href="">
                             <div>團體行程(台中)</div>
                         </a>
-
+                        
                     </div>
 
                     <!-- icons -->

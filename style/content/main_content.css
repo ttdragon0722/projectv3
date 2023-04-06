@@ -130,6 +130,12 @@
 
 /* content */
 
+iframe {
+    width: 100%;
+    aspect-ratio:16/9;
+    border-radius: 10px;
+}
+
 input[type="button"],input[type="submit"],input[type="reset"]  {
     cursor: pointer;
     display: inline-block;
@@ -375,8 +381,8 @@ input[type="button"],input[type="submit"],input[type="reset"]  {
     color: white;
 }
 
-input[type="text"],textarea {
-    padding-left: 2% !important;
+input[type="text"],input[type="password"] {
+    
     width: 98% !important;
     color: black;
 }

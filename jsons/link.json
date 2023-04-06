@@ -1,167 +1,170 @@
 {
-    "links":[
+    "links": [
         {
-            "title":"首頁",
-            "link":"./index.html",
-            "dropdown":[]
+            "title": "首頁",
+            "link": "./index.html",
+            "dropdown": []
         },
         {
-            "title":"關於",
-            "link":"./exhibit.html",
-            "dropdown":[]
-        },
-        {
-            "title":"全部商品",
-            "link":"./content.html",
-            "dropdown":[]
-        },
-        {
-            "title":"年節福運送好禮",
-            "link":"./content.html",
-            "dropdown":[]
-        },
-        {
-            "title":"居家/生活",
-            "link":"",
-            "dropdown":[
+            "title": "關於我們",
+            "link": "./2introduce.html",
+            "dropdown": [
                 {
-                    "title":"link1",
-                    "link":"./content.html"
+                    "title": "關於我們",
+                    "link": "./2introduce.html"
                 },
                 {
-                    "title":"link2",
-                    "link":"./content.html"
-                },
-                {
-                    "title":"link3",
-                    "link":"./content.html"
+                    "title": "關於我們內頁",
+                    "link": "./2introduce_content.html"
                 }
             ]
         },
         {
-            "title":"玩具/桌遊戲",
-            "link":"",
-            "dropdown":[
+            "title": "討論區",
+            "link": "./1discussing.html",
+            "dropdown": [
                 {
-                    "title":"link1",
-                    "link":"./content.html"
+                    "title": "討論區",
+                    "link": "./1discussing.html"
                 },
                 {
-                    "title":"link2",
-                    "link":"./content.html"
+                    "title": "發表",
+                    "link": "./1discussing_post.html"
                 },
                 {
-                    "title":"link3",
-                    "link":"./content.html"
+                    "title": "內頁",
+                    "link": "./1discussing_content.html"
                 }
             ]
         },
         {
-            "title":"辦公/文具",
-            "link":"",
-            "dropdown":[
+            "title": "最新消息",
+            "link": "./3news.html",
+            "dropdown": [
                 {
-                    "title":"link1",
-                    "link":"./content.html"
+                    "title": "最新消息",
+                    "link": "./3news.html"
                 },
                 {
-                    "title":"link2",
-                    "link":"./content.html"
-                },
-                {
-                    "title":"link3",
-                    "link":"./content.html"
+                    "title": "最新消息內頁",
+                    "link": "./3news_content.html"
                 }
             ]
         },
         {
-            "title":"授權聯名",
-            "link":"",
-            "dropdown":[
+            "title": "產品介紹",
+            "link": "./4product.html",
+            "dropdown": [
                 {
-                    "title":"link1",
-                    "link":"./content.html"
+                    "title": "產品介紹",
+                    "link": "./4product.html"
                 },
                 {
-                    "title":"link2",
-                    "link":"./content.html"
-                },
-                {
-                    "title":"link3",
-                    "link":"./content.html"
+                    "title": "產品內頁",
+                    "link": "./4product_content.html"
                 }
             ]
         },
         {
-            "title":"護木/愛木/惜木",
-            "link":"",
-            "dropdown":[
+            "title": "聯絡我們",
+            "link": "./5contact.html",
+            "dropdown": []
+        },
+        {
+            "title": "留言區",
+            "link": "./6message.html",
+            "dropdown": [
                 {
-                    "title":"link1",
-                    "link":"./content.html"
+                    "title": "留言區",
+                    "link": "./6message.html"
                 },
                 {
-                    "title":"link2adfa",
-                    "link":"./content.html"
-                },
-                {
-                    "title":"link3dfadf",
-                    "link":"./content.html"
+                    "title": "留言區內頁",
+                    "link": "./6message_content.html"
                 }
             ]
         },
         {
-            "title":"木工機器體驗",
-            "link":"",
-            "dropdown":[
+            "title": "影片頁面",
+            "link": "./7video.html",
+            "dropdown": []
+        },
+        {
+            "title": "下載專區",
+            "link": "./8download.html",
+            "dropdown": []
+        },
+        {
+            "title": "公司據點",
+            "link": "./9map.html",
+            "dropdown": []
+        },
+        {
+            "title": "公司地圖",
+            "link": "./10map_content.html",
+            "dropdown": []
+        },
+        {
+            "title": "活動花絮",
+            "link": "./11event.html",
+            "dropdown": []
+        },
+        {
+            "title": "線上報名",
+            "link": "./12signup.html",
+            "dropdown": [
                 {
-                    "title":"lajk1",
-                    "link":"./content.html"
+                    "title": "線上報名",
+                    "link": "./12signup.html"
                 },
                 {
-                    "title":"linajajaj",
-                    "link":"./content.html"
-                },
-                {
-                    "title":"lihahaha",
-                    "link":"./content.html"
+                    "title": "報名內頁",
+                    "link": "./12signup_content.html"
                 }
             ]
         },
         {
-            "title":"套裝行程",
-            "link":"./content.html",
-            "dropdown":[]
+            "title": "購物導覽",
+            "link": "./13guide.html",
+            "dropdown": [
+                {
+                    "title": "購物導覽",
+                    "link": "./13guide.html"
+                },
+                {
+                    "title": "購物導覽內頁",
+                    "link": "./13guide_content.html"
+                }
+            ]
         },
         {
-            "title":"客製化商品",
-            "link":"./content.html",
-            "dropdown":[]
+            "title": "常見問題",
+            "link": "./14problem_list.html",
+            "dropdown": [
+                {
+                    "title": "常見問題",
+                    "link": "./14problem_list.html"
+                },
+                {
+                    "title": "問題內頁",
+                    "link": "./14problem_content.html"
+                }
+            ]
         },
         {
-            "title":"最新消息",
-            "link":"./content.html",
-            "dropdown":[]
+            "title": "客戶付費回傳通知",
+            "link": "./15trackback.html",
+            "dropdown": []
         },
         {
-            "title":"講座",
-            "link":"./content.html",
-            "dropdown":[]
+            "title": "登入",
+            "link": "./16login.html",
+            "dropdown": []
         },
         {
-            "title":"媒體報導",
-            "link":"./content.html",
-            "dropdown":[]
-        },
-        {
-            "title":"門市據點",
-            "link":"./content.html",
-            "dropdown":[]
-        },
-        {
-            "title":"聯絡我們",
-            "link":"./contact.html",
-            "dropdown":[]
+            "title": "購物車",
+            "link": "./17shoppingcar.html",
+            "dropdown": []
         }
     ]
 }
