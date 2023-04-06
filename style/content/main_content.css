@@ -153,32 +153,6 @@ input[type="button"],input[type="submit"],input[type="reset"]  {
 }
 
 
-.panel2 {
-    border: 1px solid #ddd;
-    margin-bottom: 5%;
-}
-
-.panel2 .panel-body .col-group div:last-child {
-    margin-top: 1.5%;
-}
-
-.panel2 .right {
-    text-align: right;
-}
-
-.panel2 .panel-heading , .panel2 .panel-body {
-    padding: 0 2%;
-}
-
-.panel2 .panel-heading .panel-title {
-    padding: 1% 0;
-}
-
-.panel2 .panel-heading {
-    background-color: #2e2e2e;
-    color: white;
-}
-
 .pagination ul {
     padding: 0.5% 0;
 }
@@ -342,6 +316,43 @@ input[type="button"],input[type="submit"],input[type="reset"]  {
     margin-bottom: 3vh;
 }
 
+.panel2,.panel {
+    border: 1px solid #ddd;
+    margin-bottom: 5%;
+}
+
+.panel2 .panel-body .col-group div:last-child ,
+.panel .panel-body .col-group div:last-child {
+    margin-top: 1.5%;
+}
+
+.panel2 .right,.panel .right {
+    text-align: right;
+}
+
+.panel2 .panel-heading , .panel2 .panel-body , 
+.panel .panel-heading , .panel .panel-body {
+    padding: 0 2% !important;
+}
+
+.panel2 .panel-heading .panel-title ,.panel .panel-heading .panel-title {
+    padding: 1% 0;
+}
+
+
+.panel2 .panel-heading ,
+.panel .panel-heading {
+    background-color: #2e2e2e;
+    color: white;
+}
+
+.panel .small a:hover {
+    text-decoration: underline;
+}
+
+.col-group > table > tbody > tr > .right {
+    text-align: right;
+}
 
 .form-group {
     display: flex;
@@ -352,14 +363,43 @@ input[type="button"],input[type="submit"],input[type="reset"]  {
 }
 
 .form-group input{
-    padding: 1.2% 0;
-    background-color: #fcfcfc;
+    /* width: 98% !important; */
+    padding: 1.2% 0 ;
+    /* background-color: #fcfcfc; */
     border: 1px solid #00000033;
     outline: none;
     letter-spacing: 1px;
     transition: 0.3s;
     border-radius: 3px;
-    color: #333;
+    
+    color: white;
+}
+
+input[type="text"],textarea {
+    padding-left: 2% !important;
+    width: 98% !important;
+    color: black;
+}
+
+.btn {
+    padding: 0.6em 1em !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    line-height: 1.8;
+    font-weight: 700;
+    border: 0;
+    text-align: center;
+    padding: 0.6em 1em;
+    margin-right: 0.5em;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+    background-color: black;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #333!important;
 }
 
 .form-group textarea:focus {

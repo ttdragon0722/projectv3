@@ -1,0 +1,17 @@
+@media (max-width:835px) {
+    .form-group .col-left1 {
+        width: 15%;
+    }
+}
+
+@media (max-width:550px) {
+    .form-group {
+        flex-direction: column;
+        margin: 5% 0;
+    }
+    .form-group .col-left1 {
+        text-align: left;
+        padding-left: 0;
+        width: 100% !important;
+    }
+}
