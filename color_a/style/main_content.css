@@ -63,6 +63,59 @@
 .copyright {background-color: #323638;}
 
 
+/* content */
+.btn {background-color: black;color: white;}
+.btn:hover {background-color: #333!important;}
+.btn-color {background-color: black;color: white;}
+.btn-color:hover {background-color: #333!important;}
+.color1 {}
+.color2 {}
+.color3 {}
+
+.panel2 .panel-heading ,
+.panel .panel-heading {
+    background-color: #2e2e2e;
+    color: white;
+}
+.form-group input {border-color: #00000033;color: white;}
+.form-group input:focus {
+    -webkit-box-shadow: 0 0 2px 1px black;
+    -moz-box-shadow: 0 0 2px 1px black;
+    box-shadow: 0 0 2px 1px black;
+    border: 1px solid black;
+}
+.form-group textarea {
+    background-color: #fcfcfc;
+    border-color: #00000033;
+    color: #333;
+}
+.form-group textarea:focus {
+    -webkit-box-shadow: 0 0 2px 1px black;
+    -moz-box-shadow: 0 0 2px 1px black;
+    box-shadow: 0 0 2px 1px black;
+    border: 1px solid black;
+}
+input[type="text"],input[type="password"] {color: black;}
+input[type="button"],input[type="submit"],input[type="reset"] {background-color: black;
+    color: white;}
+
+.table-wrapper table thead,.table-wrapper tfoot {
+    background-color: black;
+    color :white;
+}
+.table-wrapper table tbody tr {
+    border: 1px solid rgba(0,0,0,.2)
+}
+.table-wrapper table tbody :hover  {
+    background-color: rgba(0,0,0,.2);
+}
+
+.singlepagelist-subhead {background-color: white;box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.137);}
+.singlepagelist-subhead:hover ,.singlepagelist a:hover {color: rgb(210, 0, 0);}
+
+.page-title::before , .singlepagelist-subhead::before {background-color: black;}
+.p-single > .img-thumbnail ,.album-single > .img-thumbnail {background-color: rgba(204, 203, 203, 0.2);}
+
 /* ====== still don't check ==========================*/
 
 .lang_modal {background-color: white;}
