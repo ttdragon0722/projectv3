@@ -130,6 +130,12 @@
 
 /* content */
 
+.img-thumbnail {
+    /* width: 100%;
+    aspect-ratio:1/1; */
+}
+
+
 iframe {
     width: 100%;
     aspect-ratio:16/9;
@@ -279,9 +285,53 @@ input[type="button"],input[type="submit"],input[type="reset"]  {
     flex-wrap: wrap;
 }
 
-.col-row .p-single {
+.col-row .p-single,.col-row .album-single{
     width: calc(100%/3);
     margin-bottom: 3vh;
+}
+
+.p-single > .img-thumbnail ,.album-single > .img-thumbnail {
+    width: 80%;
+    aspect-ratio:1/1;
+    border-radius: 10px;
+    background-color: rgba(204, 203, 203, 0.2);
+    overflow: hidden;
+}
+
+.p-single > .img-thumbnail > .intro-one-id,.p-single > .img-thumbnail > .intro-one-id > a, .album-single > .img-thumbnail > .intro-one-id ,.album-single > .img-thumbnail > .intro-one-id > a{
+    width: 100%;
+    height: 100%;
+}
+
+.product-one-id {
+    width: 100% !important;
+    height: 100% !important;
+} 
+
+.product-one-id img {
+    margin: 0 !important;
+}
+
+.album-one-id {
+    max-width: unset !important;
+    min-width: unset !important;
+    max-height: unset !important;
+    min-height: unset !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: unset !important;
+}
+
+.p-single > .img-thumbnail > .intro-one-id img,.img-thumbnail >.product-one-id img,
+.album-single > .img-thumbnail > .album-one-id img,.album-single > .img-thumbnail > .album-one-id a img{
+    max-width: unset !important;
+    min-width: unset !important;
+    max-height: unset !important;
+    min-height: unset !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-position: center;
+    object-fit: contain !important;
 }
 
 .p-tit,.p-txt {
@@ -529,7 +579,6 @@ input[type="text"],input[type="password"] {
         display: flex;
         flex-direction: column;
     }
-    
     .right form table tbody tr {
         display: unset;
     }
@@ -538,12 +587,18 @@ input[type="text"],input[type="password"] {
 
 
 @media (max-width:785px) {
-    .col-row .p-single {
+    .col-row .p-single, .col-row .album-single{
         width: calc(100%/2);
+    }
+    .p-single ,.album-single {
+        justify-content: flex-start !important;
+    }
+    .p-single > .img-thumbnail ,.album-single > .img-thumbnail  {
+        width: 90% !important;
     }
 }
 
-.p-single {
+.p-single ,.album-single {
     text-align: center;
     display: flex;
     flex-direction: column;
