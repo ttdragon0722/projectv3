@@ -415,7 +415,8 @@ input[type="button"],input[type="submit"],input[type="reset"]  {
 }
 
 .form-group input{
-    padding: 1.2% 0 ;
+    width: 90%;
+    padding: 1.2% 1em ;
     border: 1px solid ;
     outline: none;
     letter-spacing: 1px;
@@ -423,8 +424,8 @@ input[type="button"],input[type="submit"],input[type="reset"]  {
     border-radius: 3px;
 }
 
-input[type="text"],input[type="password"] {
-    width: 98% !important;
+input[type="text"],input[type="password"],input[type="number"],input[type="tel"],input[type="email"] ,textarea {
+    width: 95% ;
 }
 
 .btn {
@@ -444,7 +445,8 @@ input[type="text"],input[type="password"] {
 
 
 .form-group textarea {
-    padding: 1.2% 0;
+    /* width: 90%; */
+    padding: 1.2% 1em;
     border: 1px solid;
     outline: none;
     letter-spacing: 1px;
@@ -461,14 +463,6 @@ input[type="text"],input[type="password"] {
     text-align: right;
     padding: 0 2%;
 }
-
-.form-group .col-right1 input,.form-group .col-right1 textarea {
-    width: 100%;
-}
-
-/* .panel-body form .form-group :last-child:last-of-type {
-    width: fit-content;
-} */
 
 .table-wrapper table {
     width: 100%;

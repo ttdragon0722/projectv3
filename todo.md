@@ -27,9 +27,6 @@
  17. ✅ 購物車 表單 
 
 
-聯絡我們 留言區 客戶 debug
-product內頁
-
 ### TODO
 - [x] 字型改成微軟黑體
 - [x] Search bar padding fix

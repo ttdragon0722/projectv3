@@ -76,7 +76,7 @@
 }
 
 .amount {
-    width: 20%;
+    width: 20% !important; 
     padding: 0.6em 1em;
     margin: 0 2%;
     height: 80%;

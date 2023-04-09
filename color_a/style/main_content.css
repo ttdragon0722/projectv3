@@ -85,7 +85,7 @@
     border: 1px solid black;
 }
 .form-group textarea {
-    background-color: #fcfcfc;
+    background-color: white;
     border-color: #00000033;
     color: #333;
 }
@@ -95,7 +95,7 @@
     box-shadow: 0 0 2px 1px black;
     border: 1px solid black;
 }
-input[type="text"],input[type="password"] {color: black;}
+input[type="text"],input[type="password"],input[type="number"],input[type="tel"],input[type="email"] {color: black;}
 input[type="button"],input[type="submit"],input[type="reset"] {background-color: black;
     color: white;}
 
