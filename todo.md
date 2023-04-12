@@ -40,8 +40,8 @@
 
 - main page
   - [x] remove mobile logo
-  - [ ] add subtitle 
+  - [x] add subtitle 
   - [x] main text padding
   - [x] 內頁main page 改成 carousel
 
-- [ ] inside page   
+- [x] inside page   

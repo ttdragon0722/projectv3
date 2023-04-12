@@ -7,6 +7,12 @@
     margin-bottom: 10vh;
 }
 
+.title {
+    font-size: 30px;
+    margin-bottom: 3%;
+    font-weight: 1000;
+}
+
 .main_page_background {
     width: 100%;
     height: 100%;
@@ -148,7 +154,7 @@
 
     .main_page {
         margin-top: 10vh;
-        height: 75vh;
+        height: 65vh;
     }
     .main_wrap {
         display: none;
@@ -157,5 +163,19 @@
     .main_title img {
         transform: scale(120%);
     }
+    .title {
+        display: block;
+    }
+    .main_title {
+        display: none;
+    }
 }
+
+
+@media (min-width:991px) {
+    .title {
+        display: none;
+    }
+}
+
 
