@@ -1,0 +1,49 @@
+.form-group {
+    text-align: left;
+    justify-content: left !important;
+}
+.footable-sortable {
+    text-align: left;
+}
+
+.form-group table { 
+    text-align: left;
+}
+
+.col-all > table {
+    border-spacing:0;
+    /* border-collapse:0; */
+}
+
+.col-all > table thead  {
+    color: white;
+    background-color: black;
+}
+
+table thead tr th:first-child {
+    width: 85%;
+}
+
+.col-all > table thead tr th:first-child ,
+.col-all > table tbody tr td:first-child {
+    padding: 0.5% 1.2%;
+    border-right: 0 !important;
+}
+
+table tbody tr td{
+    border: 1px solid rgba(0,0,0,.2);
+}
+
+.col-all > table tbody tr td:last-child {
+    text-align: center;
+    padding: 1em 1em;
+    border-left: 0 !important;
+}
+
+
+.stitle {
+    font-size: 1.3em;
+    font-weight: 1000;
+    margin: 1em 0;
+    padding: 0;
+}
