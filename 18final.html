@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Version 3 content null</title>
+
+    <!-- font -->
+    <link rel="stylesheet" href="font/font.css">
+
+    <!-- public -->
+    <link rel="stylesheet" href="style/init.css">
+    <link rel="stylesheet" href="style/main_content.css">
+    <!-- components -->
+    <link rel="stylesheet" href="style/content/main_content.css">
+    <link rel="stylesheet" href="style/content/final.css">
+
+    <!-- carousel -->
+    <script src="js/carousel.js" defer></script>
+    <link rel="stylesheet" href="style/components/carousel.css">
+
+
+    <!-- color -->
+    <link rel="stylesheet" href="color_a/style/main_content.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+    <!-- js -->
+    <!-- cdn -->
+    <!-- jquery 3.6.1 -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <!-- gsap 3.11.4  main + scrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+
+    <!-- public + animation  -->
+    <script src="js/public.js" defer></script>
+    <script src="js/anim.js" defer></script>
+    <script src="js/main_page.js" defer></script>
+
+    <script src="js/content.js" defer></script>
+
+</head>
+
+<body id="body">
+    <!-- facebook thing -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v16.0"
+        nonce="5goK79nd"></script>
+
+    <!-- mobile menu -->
+    <section class="mobile_menu">
+        <!-- main header -->
+        <div class="mobile_header header">
+            <div class="container flex mobile_action">
+                <!-- menu -->
+                <button class="menu_btn"><i class="fa-solid fa-bars"></i></button>
+                <!-- logo -->
+                <img src="Images/logo_black2.png" style="height: 65%;" loading="lazy">
+                <!-- search -->
+                <button class="search_btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+        <!-- menu display -->
+        <div class="mobile_menu_bg" style="display: none;">
+            <!-- menu link -->
+            <div class="mobile_menu_group" style="overflow-y: scroll;"></div>
+        </div>
+    </section>
+    <!-- function area -->
+    <section class="function_area header">
+        <div class="container flex">
+            <!-- left side -->
+            <div class="navbar function_bar">
+                <a href="./index.html">
+                    <div class="navbar_icon">回首頁</div>
+                </a>
+                <a href="./5contact.html">
+                    <div class="navbar_icon">聯絡我們</div>
+                </a>
+                <a href="./17shoppingcar.html">
+                    <div class="navbar_icon">購物清單</div>
+                </a>
+                <div class="navbar_icon">語系<i class="fa-solid fa-caret-down"></i>
+                    <!-- dropdown -->
+                    <div class="navbar_dropdown">
+                        <a href="" class="navbar_dropdown_item">
+                            <div>中文</div>
+                        </a>
+                        <a href="" class="navbar_dropdown_item">
+                            <div>English</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar_icon">簡繁轉換<i class="fa-solid fa-caret-down"></i>
+                    <!-- dropdown -->
+                    <div class="navbar_dropdown">
+                        <a href="" class="navbar_dropdown_item">
+                            <div>簡體中文</div>
+                        </a>
+                        <a href="" class="navbar_dropdown_item">
+                            <div>繁體中文</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- right side -->
+            <div style="width: calc(100%/2);text-align: right;padding-right: 3%;">
+                <button class="search_btn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- fix button -->
+    <section class="fixed_menu">
+        <!-- search btn -->
+        <button class="fixed_btn search_btn" id="fixed_search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <!-- shopping car -->
+        <button class="fixed_btn" id="shopping_car" onclick="location.href=''">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <!-- number of shopping car -->
+            <div class="shopping_car_count">5</div>
+        </button>
+        <!-- back btn -->
+        <button class="fixed_btn" id="top_btn" onclick="location.href='#body'"><i
+                class="fa-solid fa-angle-up"></i></button>
+    </section>
+
+    <!-- search model -->
+    <section class="search_model" style="display:none;">
+        <div class="search_box">
+            <button class="search_btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input type="text" />
+            <button class="search_close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- main page  -->
+    <section class="main_page">
+        <img class="main_page_background" src="Images/homepage1.jpg" alt="">
+        <div class="main_page_content container">
+            <!-- logo -->
+            <div class="main_title" style="opacity: 0;">
+                <img src="Images/logo.png" alt="logo">
+            </div>
+        </div>
+    </section>
+
+    <section id="carousel" class="carousel mobile_carousel" data-carousel>
+        <!-- prev btn -->
+        <button class="carousel-btn prev" data-carousel-btn="prev"><i class="fa-solid fa-caret-left"></i></button>
+        <!-- next btn -->
+        <button class="carousel-btn next" data-carousel-btn="next"><i class="fa-solid fa-caret-right"></i></button>
+        <ul data-slides>
+            <!-- carousel img -->
+            <li class="slide imgFull" data-active>
+                <img src="./Images/公告1.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide imgFull ">
+                <img src="./Images/test_寬度特長.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide imgFull">
+                <img src="./Images/公告4.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide imgAuto">
+                <img src="./Images/公告1.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide imgAuto ">
+                <img src="./Images/test_寬度特長.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide imgAuto">
+                <img src="./Images/公告4.jpg" alt="" loading="lazy">
+            </li>
+        </ul>
+    </section>
+
+    <!-- body -->
+    <section class="body">
+
+        <!-- content -->
+        <div class="container content">
+            <!-- sidebar menu -->
+            <div class="sidebar">
+                <!-- back home button -->
+                <a href="./index.html" class="back_home">
+                    <div>
+                        <i class="fa-solid fa-square-caret-left"></i> 回首頁
+                    </div>
+                </a>
+                <div class="sidebar_list">
+                    <!-- sidebar items -->
+                </div>
+            </div>
+            <!-- main content -->
+            <div class="text">
+                <article class="article-column col-md-9 col-md-push-3">
+                    <a name="target_article" id="target_article"></a>
+                    <h2 class="page-title">產品介紹 </h2>
+                    <!-- <style type="text/css">
+                        .footable-row-detail-name,
+                        .footable-row-detail-value {
+                            display: inline !important;
+                        }
+                    </style> -->
+
+
+                    <!-- <script language="JavaScript">
+                        var subed = false;
+                            function checkpost(form) {
+
+                                if ($('input[name="cart_pay"]').is(':checked')) {
+                                    //
+                                } else {
+                                    alert("請選擇付費方式 !!");
+                                    $('html, body').animate({
+                                        scrollTop: $("#paymentTop").offset().top
+                                    }, 500);
+                                    return false;
+                                }
+
+
+
+
+                                if (form.m_name.value.length == 0) {
+                                    alert("請輸入姓名！");
+                                    form.m_name.focus();
+                                    return false;
+                                }
+                                if (form.m_tel.value.length == 0) {
+                                    alert("請輸入電話！");
+                                    form.m_tel.focus();
+                                    return false;
+                                }
+                                if (form.m_tel.value.length != 0) {
+                                    if (!form.m_tel.value.match(/^\(?\d{2}\)?[\s\-]?\d{3,4}\-?\d{4}$/)) {
+                                        alert("電話格式不正確")
+                                        form.m_tel.focus();
+                                        return false;
+                                    }
+                                } if (form.m_mtel.value.length == 0) {
+                                    alert("請輸入行動電話！");
+                                    form.m_mtel.focus();
+                                    return false;
+                                }
+                                if (form.m_mtel.value.length != 0) {
+                                    if (!form.m_mtel.value.match(/^09[0-9]{8}$/)) {
+                                        alert("手機必須09開頭的10碼數字。")
+                                        form.m_mtel.focus();
+                                        return false;
+                                    }
+                                } if (form.m_email.value.length == 0) {
+                                    alert("請輸入電子信箱！");
+                                    form.m_email.focus();
+                                    return false;
+                                }
+                                if (form.m_email.value.length != 0) {
+                                    data = form.m_email.value.match(/^\S+@\S+\.\S+$/);
+                                    if (!data) {
+                                        alert("請輸入正確電子信箱");
+                                        form.m_email.focus();
+                                        return false;
+                                    }
+                                } if (form.m_zip.value.length == 0) {
+                                    alert("請輸入郵遞區號");
+                                    form.m_zip.focus();
+                                    return false;
+                                }
+                                if (form.m_zip.value.length != 0) {
+                                    if (!form.m_zip.value.match(/[0-9]{3}$/)) {
+                                        alert("必須為數字")
+                                        form.m_zip.focus();
+                                        return false;
+                                    }
+                                } if (form.m_adr.value.length == 0) {
+                                    alert("請輸入地址！");
+                                    form.m_adr.focus();
+                                    return false;
+                                }
+                                if (form.m_invoice_title.value.length == 0) {
+                                    alert("請輸入發票抬頭！");
+                                    form.m_invoice_title.focus();
+                                    return false;
+                                }
+                                if (form.m_invoice_no.value.length == 0) {
+                                    alert("請輸入公司統一編號！");
+                                    form.m_invoice_no.focus();
+                                    return false;
+                                }
+                                if (form.m_sname.value.length == 0) {
+                                    alert("請輸入收件人姓名！");
+                                    form.m_sname.focus();
+                                    return false;
+                                }
+                                if (form.m_stel.value.length == 0) {
+                                    alert("請輸入收件人電話！");
+                                    form.m_stel.focus();
+                                    return false;
+                                }
+                                if (form.m_smtel.value.length == 0) {
+                                    alert("請輸入收件人行動電話！");
+                                    form.m_smtel.focus();
+                                    return false;
+                                }
+                                if (form.m_smtel.value.length != 0) {
+                                    if (!form.m_smtel.value.match(/^09[0-9]{8}$/)) {
+                                        alert("手機不可空白!必須09開頭的10碼數字。")
+                                        form.m_smtel.focus();
+                                        return false;
+                                    }
+                                } if (form.m_szip.value.length == 0) {
+                                    alert("請輸入收件人郵遞區號！");
+                                    form.m_szip.focus();
+                                    return false;
+                                }
+                                if (form.m_sadr.value.length == 0) {
+                                    alert("請輸入收件人地址！");
+                                    form.m_sadr.focus();
+                                    return false;
+                                }
+
+
+                                if (form.m_code.value.length == 0) {
+                                    alert("請輸入驗證碼");
+                                    form.m_code.focus();
+                                    return false;
+                                }
+
+
+                                //验证是否重复提交  
+                                if (subed == true) {
+                                    alert("訂單正在傳送中，請稍候，並请勿重複點擊送出按鈕或重新整理畫面！");
+                                    return false;
+                                }
+                                subed = true;
+
+
+                                return true;
+                            }
+
+                        function checkdata1(form) {
+                            if (document.order.m_name && document.order.m_sname) {
+                                document.order.m_sname.value = document.order.m_name.value;
+                            }
+                            if (document.order.m_tel && document.order.m_stel) {
+                                document.order.m_stel.value = document.order.m_tel.value;
+                            }
+                            if (document.order.m_mtel && document.order.m_smtel) {
+                                document.order.m_smtel.value = document.order.m_mtel.value;
+                            }
+                            if (document.order.m_zip && document.order.m_szip) {
+                                document.order.m_szip.value = document.order.m_zip.value;
+                            }
+                            if (document.order.m_adr && document.order.m_sadr) {
+                                document.order.m_sadr.value = document.order.m_adr.value;
+                            }
+                        }
+                        function checkdata2(form) {
+                            document.order.m_sname.value = "";
+                            document.order.m_stel.value = "";
+                            document.order.m_smtel.value = "";
+                            document.order.m_szip.value = "";
+                            document.order.m_sadr.value = "";
+                        }
+                    </script> -->
+                    <div class="col-all">
+
+                        <div class="table-wrapper" style="text-align:center">
+                            <div class="table-subject">
+                                <span class="fleft"><span class="icon-cart"></span>您的購物車內容</span>
+                                <span class="fright" style="word-break:keep-all"><a href="javascript:history.back(0)"
+                                        class="gopage-link">回上頁</a></span>
+                                <div class="clearfloat"></div>
+                            </div>
+                            <a name="309"></a>
+                            <br><br><br>3 <table class="footable phone breakpoint no-paging footable-loaded"
+                                data-page-size="50">
+                                <thead>
+                                    <tr>
+                                        <th class="footable-visible footable-first-column footable-sortable">項目<span
+                                                class="footable-sort-indicator"></span></th>
+                                        <th data-hide="sphone,phone" style="display: none;" class="footable-sortable">
+                                            編號<span class="footable-sort-indicator"></span></th>
+                                        <th data-hide="sphone,phone" style="display: none;" class="footable-sortable">
+                                            價格<span class="footable-sort-indicator"></span></th>
+                                        <th data-sort-ignore="true" class="footable-visible">數量</th>
+                                        <th class="footable-visible footable-sortable">小計<span
+                                                class="footable-sort-indicator"></span></th>
+                                        <th data-sort-ignore="true" class="footable-visible footable-last-column">取消
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="display: table-row;">
+                                        <td class="footable-visible footable-first-column"><span
+                                                class="footable-toggle"></span>fsdfdsfds </td>
+                                        <td style="display: none;">ABC-123</td>
+                                        <td style="white-space: nowrap; display: none;">NTD 200000 元 0</td>
+                                        <td class="footable-visible">1 </td>
+                                        <td style="white-space:nowrap;" class="footable-visible">NTD 200000 元</td>
+                                        <td class="footable-visible footable-last-column"><input type="button"
+                                                value="取消" onclick="parent.location='/a0001/buy/main_pay.php?del=0'"
+                                                class="btn btn-color"> </td>
+                                    </tr>
+
+
+
+
+
+
+                                </tbody>
+                            </table>
+                            <input type="button" value="返回-修改購物車內容" onclick="parent.location='main_cart.php'"
+                                class="btn btn-color">
+                        </div>
+
+                        <div class="color1" style="font-weight:bold; text-align:center ">
+                        </div>
+
+                        <div id="paymentTop">
+                            <table width="100%" border="0" class="footable footable-loaded no-paging"
+                                data-page-size="50">
+                                <tbody>
+                                    <tr style="display: table-row;">
+                                        <td>
+                                            <div class="color3"><span id="freight_other_price_all_string"
+                                                    style="display:none;"><span
+                                                        id="freight_other_price_title">手續費：</span>NTD <span
+                                                        id="freight_other_price" style="white-space:nowrap;">0</span>
+                                                    元</span></div>
+                                            <div id="carriageList">
+                                                <table border="0" cellspacing="0" cellpadding="0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="right" nowrap="nowrap">常溫運送：</td>
+                                                            <td align="left" nowrap="nowrap">NTD <span
+                                                                    id="cart_carriage_n"
+                                                                    style="white-space:nowrap;">990</span> 元</td>
+                                                        </tr>
+
+
+
+                                                        <tr style="display:none;">
+                                                            <td align="right" nowrap="nowrap">以重量計算運費：</td>
+                                                            <td align="left" nowrap="nowrap">NTD <span
+                                                                    style="white-space:nowrap;" id="weight2">0</span> 元
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr class="color1" id="freight_priceTr" style="display: none;">
+                                                            <td align="right" nowrap="nowrap">運費合計：</td>
+                                                            <td align="left" nowrap="nowrap">NTD <span
+                                                                    id="freight_price"
+                                                                    style="white-space:nowrap;">990</span> 元</td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                                <span id="freight_price_hide" style="display:none">990</span>
+                                                <span id="total_pay_price_hide" style="display:none">200000</span>
+
+                                                <span id="order_discount_calculate" style="display:none">1</span>
+                                                <span id="product_discount_calculate" style="display:none">1</span>
+
+
+                                            </div>
+                                            <div>
+                                                <table border="0" cellspacing="0" cellpadding="0">
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="right" nowrap="nowrap">商品小計：</td>
+                                                            <td align="left" nowrap="nowrap">NTD <span
+                                                                    style="white-space:nowrap;">200000</span> 元</td>
+                                                        </tr>
+                                                        <tr class="color1">
+                                                            <td align="right" nowrap="nowrap">訂單總計：</td>
+                                                            <td align="left" nowrap="nowrap">NTD <span
+                                                                    id="total_all_price"
+                                                                    style="white-space:nowrap;">200990</span> 元</td>
+                                                        </tr>
+                                                        <tr class="color1">
+                                                            <td align="right" nowrap="nowrap">結帳金額：</td>
+                                                            <td align="left" nowrap="nowrap">NTD <span
+                                                                    id="total_all_price2"
+                                                                    style="white-space:nowrap;">200990</span> 元 </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div><br>
+
+
+
+
+
+
+
+                        <form name="order" method="post" action="" onsubmit="return checkpost(this);">
+
+
+                            <div class="form-group web-s panel pay-set-line">
+                                <div class="panel-heading">
+                                    <h3 class="cart05 panel-title" style="padding:5px">付費方式</h3>
+                                </div>
+                                <div class="panel-body">
+
+                                    <script language="javascript">
+                                        function pay_show(id) {
+
+                                            $('.panel-body select').attr('disabled', true);
+                                            $('#pay_type_' + id).attr('disabled', false);
+                                            var paySelect = $('#pay_type_' + id).val();
+                                            var url = 'show_payexp_New.php?type=' + paySelect;
+                                            var qstr = 'pay_id=' + id;
+                                            var divname = 'pay_exp_show';
+                                            var cart_carriage_n_refrigeration = $("#cart_carriage_n_refrigeration").html();//取得冷藏運費,超商取貨付款不能使用於冷藏商品
+                                            var cart_carriage_n_freezing = $("#cart_carriage_n_freezing").html();//取得常溫冷凍運費,超商取貨付款不能使用於冷凍商品
+
+                                            $.ajax(
+                                                {
+                                                    url: url,
+                                                    type: "post",
+                                                    data: qstr,
+                                                    cache: false,
+                                                    dataType: "text",
+                                                    success: function (mydata) {
+                                                        //alert(mydata);
+                                                        $('#allpay_c2c_html').empty(); $('#allpay_c2c_code').empty(); $('#allpay_c2c_code').css('display', 'none');
+                                                        var e = document.getElementById('pay_type_' + id);
+                                                        var strUser = e.options[e.selectedIndex].value;
+
+                                                        if (parseInt(strUser) >= 7 && parseInt(strUser) <= 21) {
+                                                            //alert(strUser);
+
+                                                            if (parseInt(cart_carriage_n_refrigeration) >= 1 || parseInt(cart_carriage_n_freezing) >= 1) {
+                                                                c2c_allpay_fun('c2c_act2.php', '', 'allpay_c2c_html');//有冷藏冷凍商品則出現不提供此付款方式
+                                                            } else {
+                                                                c2c_allpay_fun('c2c_act.php', 'index_id=' + parseInt(strUser), 'allpay_c2c_html');//有核選就出現地圖
+                                                            }
+                                                        }
+
+                                                        $("#" + divname).html(mydata);
+                                                    }
+                                                });
+                                        }
+                                        pay_show('23');
+                                    </script>
+
+                                    <div class="content03 col-row">
+                                        <label><input type="radio" value="23" name="cart_pay"
+                                                onclick="pay_show(23);">綠界2</label>
+                                                <!-- onchange="if(parseInt(this.value)>=7 &amp;&amp; parseInt(this.value)<=21){c2c_allpay_fun('c2c_act.php','index_id='+this.value,'allpay_c2c_html');}else{$('#allpay_c2c_html').empty();$('#allpay_c2c_code').empty();$('#allpay_c2c_code').css('display', 'none');}" -->
+                                        <select id="pay_type_23" name="pay_type_23"
+                                            disabled="disabled">
+
+
+                                            <option value="1">信用卡一次付</option>
+                                            <option value="3">Web ATM付款</option>
+                                            <option value="4">ATM付款</option>
+                                            <option value="5">4大超商代碼</option>
+                                            <option value="6">超商條碼</option>
+                                            <option value="7">信用卡1次付清，7-11超商到店取貨</option>
+                                            <option value="12">信用卡1次付清，全家超商到店取貨</option>
+                                            <option value="17">信用卡1次付清，萊爾富超商到店取貨</option>
+                                            <option value="8">ATM網路櫃員機，7-11超商到店取貨</option>
+                                            <option value="13">ATM網路櫃員機，全家超商到店取貨</option>
+                                            <option value="18">ATM網路櫃員機，萊爾富超商到店取貨</option>
+                                            <option value="9">網路ATM，7-11超商到店取貨</option>
+                                            <option value="14">網路ATM，全家超商到店取貨</option>
+                                            <option value="19">網路ATM，萊爾富超商到店取貨</option>
+                                            <option value="10">四大超商代碼/條碼，7-11超商到店取貨</option>
+                                            <option value="15">四大超商代碼，全家超商到店取貨</option>
+                                            <option value="20">四大超商代碼，萊爾富超商到店取貨</option>
+                                            <option value="11">7-11超商到店取貨付款</option>
+                                            <option value="16">全家超商到店取貨付款</option>
+                                            <option value="21">萊爾富超商到店取貨付款</option>
+
+
+
+
+                                        </select>
+
+
+                                        <script>
+                                            function c2c_allpay_fun(url_link, qstr, divname) {
+                                                jQuery.ajax(
+                                                    {
+                                                        url: url_link,
+                                                        type: "post",
+                                                        data: qstr,
+                                                        cache: false,
+                                                        dataType: "text",
+                                                        success: function (mydata) {
+                                                            jQuery("#" + divname).html(mydata);
+                                                            //jQuery('#'+loadingname).hide();
+                                                        }
+                                                    });
+                                            }
+
+                                        </script>
+
+
+                                        <script>
+
+                                            $('#pay_type_23').on('change', function () {
+
+                                                // alert( this.value );
+                                                var selectedText = $(this).find("option:selected").text();
+
+                                                alert("採用 [ " + selectedText + " ] 結帳");
+                                                pay_show('23');
+
+                                            });
+            //var radioYes23=$('#pay_type_23').prop("checked", true);
+
+
+                                        </script>
+                                    </div>
+                                    <div class="content03 col-row">
+                                        <label><input type="radio" value="5" name="cart_pay"
+                                                onclick="pay_show(5);">1111</label>
+                                        <select id="pay_type_5" name="pay_type_5" disabled="disabled"
+                                            style="display:none;">
+
+                                            <option value=" "> </option>
+                                        </select>
+
+                                        <script>
+
+                                            $('#pay_type_5').on('change', function () {
+
+                                                // alert( this.value );
+                                                var selectedText = $(this).find("option:selected").text();
+
+                                                alert("採用 [ " + selectedText + " ] 結帳");
+                                                pay_show('5');
+
+                                            });
+            //var radioYes5=$('#pay_type_5').prop("checked", true);
+
+
+                                        </script>
+                                    </div>
+                                    <div class="content03 col-row">
+                                        <label><input type="radio" value="4" name="cart_pay"
+                                                onclick="pay_show(4);">台灣里金流</label>
+
+                                        <select id="pay_type_4" name="pay_type_4" disabled="disabled">
+                                            <option value="c_0">信用卡線上付款</option>
+                                            <option value="o_2">銀行 ATM 轉帳付款</option>
+                                            <option value="o_12">全家 FamiPort 付款</option>
+                                            <option value="o_4">WEBATM</option>
+                                            <option value="o_8">超商條碼付款</option>
+                                            <option value="o_9">7-11 ibon 付款</option>
+                                            <option value="c_3">信用卡線上付款分3期(+2.5%)</option>
+                                        </select>
+
+
+                                        <script>
+
+                                            $('#pay_type_4').on('change', function () {
+
+                                                // alert( this.value );
+                                                var selectedText = $(this).find("option:selected").text();
+
+                                                alert("採用 [ " + selectedText + " ] 結帳");
+                                                pay_show('4');
+
+                                            });
+            //var radioYes4=$('#pay_type_4').prop("checked", true);
+
+
+                                        </script>
+                                    </div>
+                                    <div class="content03 col-row">
+                                        <label><input type="radio" value="6" name="cart_pay"
+                                                onclick="pay_show(6);">PAYPAL</label>
+                                        <select id="pay_type_6" name="pay_type_6" disabled="disabled"
+                                            style="display:none;">
+
+                                            <option value=" "> </option>
+                                        </select>
+
+                                        <script>
+
+                                            $('#pay_type_6').on('change', function () {
+
+                                                // alert( this.value );
+                                                var selectedText = $(this).find("option:selected").text();
+
+                                                alert("採用 [ " + selectedText + " ] 結帳");
+                                                pay_show('6');
+
+                                            });
+            //var radioYes6=$('#pay_type_6').prop("checked", true);
+
+
+                                        </script>
+                                    </div>
+                                    <div class="content03 col-row">
+                                        <label><input type="radio" value="8" name="cart_pay"
+                                                onclick="pay_show(8);">便利配az</label>
+                                        <select id="pay_type_8" name="pay_type_8" disabled="disabled"
+                                            style="display:none;">
+
+                                            <option value=" "> </option>
+                                        </select>
+
+                                        <script>
+
+                                            $('#pay_type_8').on('change', function () {
+
+                                                // alert( this.value );
+                                                var selectedText = $(this).find("option:selected").text();
+
+                                                alert("採用 [ " + selectedText + " ] 結帳");
+                                                pay_show('8');
+
+                                            });
+            //var radioYes8=$('#pay_type_8').prop("checked", true);
+
+
+                                        </script>
+                                    </div>
+                                    <div class="content03 col-row">
+                                        <label><input type="radio" value="13" name="cart_pay"
+                                                onclick="pay_show(13);">一般無串接付費方式2(收運費,有其它費用)</label>
+                                        <select id="pay_type_13" name="pay_type_13" disabled="disabled"
+                                            style="display:none;">
+
+                                            <option value=" "> </option>
+                                        </select>
+
+                                        <script>
+
+                                            $('#pay_type_13').on('change', function () {
+
+                                                // alert( this.value );
+                                                var selectedText = $(this).find("option:selected").text();
+
+                                                alert("採用 [ " + selectedText + " ] 結帳");
+                                                pay_show('13');
+
+                                            });
+            //var radioYes13=$('#pay_type_13').prop("checked", true);
+
+
+                                        </script>
+                                    </div>
+                                    <div class="content03 col-row">
+                                        <label><input type="radio" value="14" name="cart_pay"
+                                                onclick="pay_show(14);">一般無串接付費方式3(不收運費,無其它費用)</label>
+                                        <select id="pay_type_14" name="pay_type_14" disabled="disabled"
+                                            style="display:none;">
+
+                                            <option value=" "> </option>
+                                        </select>
+
+                                        <script>
+
+                                            $('#pay_type_14').on('change', function () {
+
+                                                // alert( this.value );
+                                                var selectedText = $(this).find("option:selected").text();
+
+                                                alert("採用 [ " + selectedText + " ] 結帳");
+                                                pay_show('14');
+
+                                            });
+            //var radioYes14=$('#pay_type_14').prop("checked", true);
+
+
+                                        </script>
+                                    </div>
+                                    <div class="content03 col-row">
+                                        <label><input type="radio" value="15" name="cart_pay"
+                                                onclick="pay_show(15);">一般無串接付費方式4(不收運費,有其它費用)</label>
+                                        <select id="pay_type_15" name="pay_type_15" disabled="disabled"
+                                            style="display:none;">
+
+                                            <option value=" "> </option>
+                                        </select>
+
+                                        <script>
+
+                                            $('#pay_type_15').on('change', function () {
+
+                                                // alert( this.value );
+                                                var selectedText = $(this).find("option:selected").text();
+
+                                                alert("採用 [ " + selectedText + " ] 結帳");
+                                                pay_show('15');
+
+                                            });
+            //var radioYes15=$('#pay_type_15').prop("checked", true);
+
+
+                                        </script>
+                                    </div>
+                                    <div class="content03 col-row">
+                                        <label><input type="radio" value="16" name="cart_pay"
+                                                onclick="pay_show(16);">永豐網易收</label>
+                                        <select id="pay_type_16" name="pay_type_16" disabled="disabled">
+                                            <option value="21">虛擬帳號</option>
+                                            <option value="22">信用卡</option>
+                                            <option value="23">WebATM</option>
+                                        </select>
+
+
+                                        <script>
+
+                                            $('#pay_type_16').on('change', function () {
+
+                                                // alert( this.value );
+                                                var selectedText = $(this).find("option:selected").text();
+
+                                                alert("採用 [ " + selectedText + " ] 結帳");
+                                                pay_show('16');
+
+                                            });
+            //var radioYes16=$('#pay_type_16').prop("checked", true);
+
+
+                                        </script>
+                                    </div>
+                                    <div class="content03 col-row">
+                                        <label><input type="radio" value="17" name="cart_pay"
+                                                onclick="pay_show(17);">sdfsdf</label>
+                                        <select id="pay_type_17" name="pay_type_17" disabled="disabled"
+                                            style="display:none;">
+
+                                            <option value=" "> </option>
+                                        </select>
+
+                                        <script>
+
+                                            $('#pay_type_17').on('change', function () {
+
+                                                // alert( this.value );
+                                                var selectedText = $(this).find("option:selected").text();
+
+                                                alert("採用 [ " + selectedText + " ] 結帳");
+                                                pay_show('17');
+
+                                            });
+            //var radioYes17=$('#pay_type_17').prop("checked", true);
+
+
+                                        </script>
+                                    </div>
+                                    <div class="content03 col-row">
+                                        <label><input type="radio" value="18" name="cart_pay"
+                                                onclick="pay_show(18);">藍新金流</label>
+                                        <select id="pay_type_18" name="pay_type_18" disabled="disabled">
+                                            <option value="1">信用卡一次付清(+2%)</option>
+                                            <option value="5">WebATM(+10元)</option>
+                                            <option value="6">ATM轉帳</option>
+                                            <option value="27">超商代碼繳費</option>
+                                            <option value="28">超商條碼繳費</option>
+                                            <option value="103">信用卡分期-3期(+3%)</option>
+                                            <option value="106">信用卡分期-6期(+7%)</option>
+                                            <option value="30">Samsung Pay(+3%)</option>
+                                            <option value="29">Google Pay(+3%)</option>
+                                        </select>
+
+
+                                        <script>
+
+                                            $('#pay_type_18').on('change', function () {
+
+                                                // alert( this.value );
+                                                var selectedText = $(this).find("option:selected").text();
+
+                                                alert("採用 [ " + selectedText + " ] 結帳");
+                                                pay_show('18');
+
+                                            });
+            //var radioYes18=$('#pay_type_18').prop("checked", true);
+
+
+                                        </script>
+                                    </div>
+                                    <div class="content03 col-row">
+                                        <label><input type="radio" value="19" name="cart_pay"
+                                                onclick="pay_show(19);">綠界金流</label>
+                                            <!-- onchange="if(parseInt(this.value)>=7 &amp;&amp; parseInt(this.value)<=21){c2c_allpay_fun('c2c_act.php','index_id='+this.value,'allpay_c2c_html');}else{$('#allpay_c2c_html').empty();$('#allpay_c2c_code').empty();$('#allpay_c2c_code').css('display', 'none');}" -->
+                                        <select id="pay_type_19" name="pay_type_19"
+                                            
+                                            disabled="disabled">
+
+
+                                            <option value="1">信用卡一次付</option>
+                                            <option value="3">Web ATM付款</option>
+                                            <option value="4">ATM付款</option>
+                                            <option value="5">4大超商代碼</option>
+                                            <option value="6">超商條碼</option>
+                                        </select>
+
+
+                                        <script>
+                                            function c2c_allpay_fun(url_link, qstr, divname) {
+                                                jQuery.ajax(
+                                                    {
+                                                        url: url_link,
+                                                        type: "post",
+                                                        data: qstr,
+                                                        cache: false,
+                                                        dataType: "text",
+                                                        success: function (mydata) {
+                                                            jQuery("#" + divname).html(mydata);
+                                                            //jQuery('#'+loadingname).hide();
+                                                        }
+                                                    });
+                                            }
+
+                                        </script>
+
+
+                                        <script>
+
+                                            $('#pay_type_19').on('change', function () {
+
+                                                // alert( this.value );
+                                                var selectedText = $(this).find("option:selected").text();
+
+                                                alert("採用 [ " + selectedText + " ] 結帳");
+                                                pay_show('19');
+
+                                            });
+            //var radioYes19=$('#pay_type_19').prop("checked", true);
+
+
+                                        </script>
+                                    </div>
+                                    <div class="content03 col-row">
+                                        <label><input type="radio" value="20" name="cart_pay"
+                                                onclick="pay_show(20);">貨到付款</label>
+                                        <select id="pay_type_20" name="pay_type_20" disabled="disabled"
+                                            style="display:none;">
+
+                                            <option value=" "> </option>
+                                        </select>
+
+                                        <script>
+
+                                            $('#pay_type_20').on('change', function () {
+
+                                                // alert( this.value );
+                                                var selectedText = $(this).find("option:selected").text();
+
+                                                alert("採用 [ " + selectedText + " ] 結帳");
+                                                pay_show('20');
+
+                                            });
+            //var radioYes20=$('#pay_type_20').prop("checked", true);
+
+
+                                        </script>
+                                    </div>
+                                    <div class="content03 col-row">
+                                        <label><input type="radio" value="21" name="cart_pay"
+                                                onclick="pay_show(21);">Freepay付款</label>
+                                        <select id="pay_type_21" name="pay_type_21" disabled="disabled"
+                                            style="display:none;">
+
+                                            <option value=" "> </option>
+                                        </select>
+
+                                        <script>
+
+                                            $('#pay_type_21').on('change', function () {
+
+                                                // alert( this.value );
+                                                var selectedText = $(this).find("option:selected").text();
+
+                                                alert("採用 [ " + selectedText + " ] 結帳");
+                                                pay_show('21');
+
+                                            });
+            //var radioYes21=$('#pay_type_21').prop("checked", true);
+
+
+                                        </script>
+                                    </div>
+                                    <div class="content03 col-row">
+                                        <label><input type="radio" value="22" name="cart_pay"
+                                                onclick="pay_show(22);">台灣里第二個</label>
+
+                                        <select id="pay_type_22" name="pay_type_22" disabled="disabled">
+                                            <option value="o_2">銀行 ATM 轉帳付款(+1元)</option>
+                                            <option value="o_9">7-11 ibon 付款(+2元)</option>
+                                            <option value="o_16">7-11取貨付款(+3元)</option>
+                                        </select>
+
+
+                                        <script>
+
+                                            $('#pay_type_22').on('change', function () {
+
+                                                // alert( this.value );
+                                                var selectedText = $(this).find("option:selected").text();
+
+                                                alert("採用 [ " + selectedText + " ] 結帳");
+                                                pay_show('22');
+
+                                            });
+            //var radioYes22=$('#pay_type_22').prop("checked", true);
+
+
+                                        </script>
+                                    </div>
+
+                                    <span id="allpay_c2c_html"></span>
+                                    <div id="allpay_c2c_code" style="display:none;"></div>
+                                    <div class="clearfloat"></div>
+
+
+                                    <div class="panel-footer notes">
+                                        <div id="pay_exp_show" class="notes">﻿<p>綠界2</p>
+                                            <script language="javascript">
+                                                var pay_type_Values = $("#pay_type_23").val();
+                                                var pay_type_Text = $('#pay_type_23 :selected').text();
+                                                var pay_flag = 13;
+
+
+
+
+
+                                                var pay_flagAdd = 0;//只要這邊的值的型態有錯~前端就會不能運行 
+                                                var pay_carriage_price_limit = 0;//先即時定義滿則免運金額
+                                                var pay_other_price_limit = 0;//先即時定議滿則免額外費金額
+                                                var price_limit = 1500;//先即時定義超過多少費用才能使用這方款方式的金額
+                                                var price_limit_big = 1600;//先即時定義少於多少費用才能使用這方款方式的金額
+                                                var GetRedDot = $("#GetRedDot").html();//定義使用的紅利積點
+                                                var cart_carriage = $("#freight_price_hide").html();//定義運費
+                                                var cart_carriage_n = $("#cart_carriage_n").html();//取得常溫一般運費
+                                                //var cart_carriage_weight2=$("#weight2").html();//定義重量運費
+                                                var total_price = $("#total_pay_price_hide").html();//定義總價
+                                                var order_discount_calculate = $("#order_discount_calculate").html();//定義訂單折扣
+                                                var product_discount_calculate = $("#product_discount_calculate").html();//定義產品小計折扣
+
+                                                var other_pay_price = 0;
+                                                var pay_carriage = 0;
+                                                if (pay_carriage == 1) cart_carriage = 0;
+
+
+                                                if (pay_carriage_price_limit > 0 && total_price >= pay_carriage_price_limit) {
+                                                    $("#pay_carriage_price_limit").html("***以此付款方式結帳,購物已達NTD" + pay_carriage_price_limit + "元,免運費***");//如有設滿額免運
+                                                    var cart_carriage = 0;
+                                                } else {
+                                                    $("#pay_carriage_price_limit").html("");//如有設滿額免運
+                                                }
+                                                if (pay_other_price_limit > 0 && total_price >= pay_other_price_limit) {
+                                                    $("#pay_other_price_limit").html("***以此付款方式結帳,購物已達NTD" + pay_other_price_limit + "元,免***");//如有設滿額免額外費
+                                                    var other_pay_price = 0;
+                                                    $("#postOrderOtherCcarriage").val(0);
+                                                } else {
+                                                    $("#pay_other_price_limit").html("");//如有設滿額免額外費
+                                                    $("#postOrderOtherCcarriage").val(other_pay_price);
+                                                }
+
+
+
+                                                if (parseFloat(GetRedDot) > 0) {
+
+                                                } else {
+                                                    var GetRedDot = 0;//定義使用的紅利積點
+                                                }
+
+
+                                                if ((total_price < price_limit || (price_limit_big > 0 && total_price > price_limit_big)) && $('input[name="cart_pay"][value="23"]').prop('checked') == true) {
+
+                                                    alert("金額低於" + price_limit + "元或高於" + price_limit_big + "，恕不提供以此方式結帳");
+                                                    $('input[name="cart_pay"]').attr('checked', false);//把所有的核選清空
+
+                                                    $("#pay_exp_show").html("");//隱藏紅字說明
+                                                    //$('input[name="cart_pay"]:first').attr('checked', true);
+                                                    //$("input:radio[name=cart_pay][disabled=false]:first").attr('checked', true);
+                                                }
+
+                                                var total_all_price = (parseFloat(total_price) + parseFloat(cart_carriage) + parseFloat(other_pay_price)) - parseFloat(GetRedDot);
+                                                var total_all_price2 = total_all_price;
+                                                var total_all_price_last = Math.round((parseFloat(total_price) + parseFloat(cart_carriage) + parseFloat(other_pay_price)) * parseFloat(order_discount_calculate)) - parseFloat(GetRedDot);
+                                                var total_all_price_last2 = total_all_price_last;
+                                                $("#freight_other_price_all_string").hide();
+                                                $("#freight_other_price_title").html("手續費：");
+                                                $("#freight_other_price").html(other_pay_price);
+                                                $("#freight_price").html(cart_carriage);
+                                                $("#postOrderCartCcarriage").val(cart_carriage);
+                                                $("#total_all_price").html(total_all_price);
+                                                $("#total_all_price2").html(total_all_price2);
+                                                $("#total_all_price_last").html(total_all_price_last);
+                                                $("#total_all_price_last2").html(total_all_price_last2);
+                                                $("#postOrderAllMoney").val(total_all_price_last);
+                                                $("#postOrderAllMoney2").val(total_all_price_last2);
+                                                $("#postOrderAllMoney2Text").val(pay_type_Text);
+
+                                                if (cart_carriage == 0) {
+                                                    $("#carriageList").hide();
+                                                } else {
+                                                    $("#carriageList").show();
+                                                }
+                                                if (cart_carriage == cart_carriage_n) { //如果一般常溫運費等於運費合計~代表沒其它運費~就隱藏運費合計
+                                                    $("#freight_priceTr").hide();
+                                                } else {
+                                                    $("#freight_priceTr").show();
+                                                }
+                                            </script>
+                                        </div> <span id="pay_carriage_price_limit"></span><br><span
+                                            id="pay_other_price_limit"></span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                            <h3 class="stitle">購買人資料<input name="people_info" type="hidden" value="購買人資料"></h3>
+                            <div class="web-s buy-field-set-line">
+
+                                <div class="form-group">
+                                    <label class="col-left1 notice">姓名</label>
+                                    <div class="col-right1"><input name="m_name" id="m_name" type="text"
+                                            class="form-control form-sizel" maxlength="10" value=""></div>
+                                    <div class="clearfloat"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-left1 ">性別</label>
+                                    <div class="col-right1">
+                                        <label><input type="radio" name="m_sex" value="1">男</label>　
+                                        <label><input type="radio" name="m_sex" value="2" checked="">女</label>　
+                                    </div>
+                                    <div class="clearfloat"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-left1 notice">電話</label>
+                                    <div class="col-right1"><input name="m_tel" id="m_tel" type="tel"
+                                            class="form-control form-sizel" maxlength="40" value=""></div>
+                                    <div class="clearfloat"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-left1 notice">手機</label>
+                                    <div class="col-right1"><input name="m_mtel" id="m_mtel" type="text"
+                                            class="form-control form-sizel" maxlength="10" value=""></div>
+                                    <div class="clearfloat"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-left1 notice">電子郵件</label>
+                                    <div class="col-right1"><input name="m_email" type="email"
+                                            class="form-control form-sizel" size="60" value=""></div>
+                                    <div class="clearfloat"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-left1 notice">郵遞區號</label>
+                                    <div class="col-right1"><input name="m_zip" type="number"
+                                            class="form-control form-sizel" maxlength="5" value=""></div>
+                                    <div class="clearfloat"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-left1 notice">地址</label>
+                                    <div class="col-right1"><input name="m_adr" type="text"
+                                            class="form-control form-sizel" size="60" value=""></div>
+                                    <div class="clearfloat"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-left1 ">附註</label>
+                                    <div class="col-right1"><textarea name="m_exp" type="text" cols="80" rows="5"
+                                            class="form-control form-sizel" id="textarea" placeholder=""></textarea>
+                                    </div>
+                                    <div class="clearfloat"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-left1 notice">發票抬頭</label>
+                                    <div class="col-right1"><input name="m_invoice_title" type="text"
+                                            class="form-control form-sizel"></div>
+                                    <div class="clearfloat"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-left1 notice">統一編號</label>
+                                    <div class="col-right1"><input name="m_invoice_no" type="number"
+                                            class="form-control form-sizel" size="45"></div>
+                                    <div class="clearfloat"></div>
+                                </div>
+
+
+                                <div>
+                                    <h3 class="stitle">收件人資料</h3>
+
+
+
+                                    <div class="form-group">
+                                        <label class="col-left1">資料是否同上</label>
+                                        <div class="col-right1">
+                                            <label><input type="radio" name="m_type" value="1"
+                                                    onclick="checkdata1(this)">是</label>　
+                                            <label><input type="radio" name="m_type" value="2"
+                                                    onclick="checkdata2(this)" checked="">否</label>　
+                                        </div>
+                                        <div class="clearfloat"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-left1 notice">姓名</label>
+                                        <div class="col-right1"><input name="m_sname" type="text"
+                                                class="form-control form-sizel" maxlength="10"></div>
+                                        <div class="clearfloat"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-left1 notice">電話</label>
+                                        <div class="col-right1"><input name="m_stel" type="tel"
+                                                class="form-control form-sizel" maxlength="40"></div>
+                                        <div class="clearfloat"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-left1 notice">手機</label>
+                                        <div class="col-right1"><input name="m_smtel" id="m_smtel" type="tel"
+                                                class="form-control form-sizel" maxlength="10"></div>
+                                        <div class="clearfloat"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-left1 notice">郵遞區號</label>
+                                        <div class="col-right1"><input name="m_szip" type="text"
+                                                class="form-control form-sizel" size="5" maxlength="5"></div>
+                                        <div class="clearfloat"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-left1 notice">地址</label>
+                                        <div class="col-right1"><input name="m_sadr" type="text"
+                                                class="form-control form-sizel" size="60"></div>
+                                        <div class="clearfloat"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-left1 ">收貨時段</label>
+                                        <div class="col-right1">
+                                            <select name="m_stime">
+                                                <option selected="" value="不限時段">不限時段</option>
+                                                <option value="上午a08:00~12:00">上午a08:00~12:00</option>
+                                                <option value="下午b12:00~17:00">下午b12:00~17:00</option>
+                                            </select>
+                                        </div>
+                                        <div class="clearfloat"></div>
+                                    </div>
+
+
+
+
+
+                                </div>
+
+
+
+                            </div>
+
+
+
+                            <div class="form-group">
+                                <label class="col-left1 notice">驗證碼</label>
+                                <div class="col-right1">
+                                    <input name="m_code" type="text" class="form-control form-sizem" size="20">
+                                    <iframe src="./../check_key/chk_pic.php" name="rundata_pic" width="99" height="33"
+                                        align="middle" scrolling="No" frameborder="0" hspace="5" vspace=""
+                                        id="rundata_pic"></iframe>
+                                </div>
+                                <div class="clearfloat"></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-right1"><input name="rid_index" type="hidden" id="rid_index"
+                                        value=""><input name="click_id_index" type="hidden" id="click_id_index"
+                                        value=""><input name="order_sale_or_inquiry" type="hidden" value="1">
+                                    <input name="submit" type="submit" class="btn btn-color" value="確認結帳">
+                                    <input id="rpt2" type="reset" class="btn btn-color" value="清除重填" name="rpt">
+                                </div>
+                                <div class="clearfloat"></div>
+                            </div><input type="hidden" name="currencyCodeType" value="">
+                            <input type="hidden" name="in4show" placeholder="1為訂單合計一定要顯示" value="0">
+                            <input type="hidden" name="order_carriage_n" placeholder="常運" value="990">
+                            <input type="hidden" name="order_carriage_r" placeholder="冷運" value="">
+                            <input type="hidden" name="order_carriage_f" placeholder="凍運" value="">
+                            <input type="hidden" name="order_carriage_w" placeholder="重運" value="0">
+                            <input type="hidden" name="order_discount_calculate" placeholder="總計優惠" value="1">
+                            <input type="hidden" name="product_discount_calculate" placeholder="產品優惠" value="1">
+                            <input type="hidden" name="allCartNum" placeholder="總產品數" value="1">
+                            <input type="hidden" name="myip" value="49.217.135.173">
+                            <input type="hidden" placeholder="是否達滿件或滿額" name="order_discount_note" value="">
+                            <input type="hidden" name="hideSize" value="Y">
+
+
+
+
+                            <input type="hidden" name="orderCartCcarriage" id="postOrderCartCcarriage"
+                                placeholder="最後運費" value="990">
+                            <input type="hidden" name="postOrderOtherCcarriage" id="postOrderOtherCcarriage"
+                                placeholder="最後額外費用" value="0">
+                            <input type="hidden" name="orderAllMoney" id="postOrderAllMoney" placeholder="最後訂單總額"
+                                value="200990"><input type="hidden" name="orderAllMoney2" id="postOrderAllMoney2"
+                                value="200990"><input type="hidden" name="orderAllMoney2Text"
+                                id="postOrderAllMoney2Text" value="信用卡一次付">
+                        </form>
+
+
+
+
+
+
+                    </div><!--col-all結尾-->
+
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="container">
+            <div class="flex footer_main">
+                <!-- left side -->
+                <div class="footer_logo_side">
+                    <div>
+                        <img class="footer_logo" src="Images/logo.png" loading="lazy">
+                    </div>
+                    <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs=""
+                        data-adapt-container-width width="270" height="" data-small-header="false"
+                        data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a
+                                href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+                    </div>
+                </div>
+                <!-- right side -->
+                <div class="footer_content">
+                    <!-- fast link -->
+                    <div class="footer_fastLink">
+                        <a href="">
+                            <div>品牌資訊</div>
+                        </a>
+                        <a href="">
+                            <div>門市據點</div>
+                        </a>
+                        <a href="">
+                            <div>會員權益說明</div>
+                        </a>
+                        <a href="">
+                            <div>付款方式</div>
+                        </a>
+                        <a href="">
+                            <div>寄送服務</div>
+                        </a>
+                        <a href="">
+                            <div>售後服務</div>
+                        </a>
+                        <a href="">
+                            <div>媒體報導</div>
+                        </a>
+                        <a href="">
+                            <div>隱私權條款</div>
+                        </a>
+                        <a href="">
+                            <div>場地租借(台中)</div>
+                        </a>
+                        <a href="">
+                            <div>團體行程(台中)</div>
+                        </a>
+
+                    </div>
+
+                    <!-- icons -->
+                    <div class="footer_icons">
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="Images/img_facebook.svg" width="35" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- copyright  -->
+        <div class="copyright">
+            <div class="container flex">
+                <div>
+                    Copyright © Company
+                </div>
+                <div>
+                    Tel: +886 0 0000-0000　　Fax: +886 0 0000-0000
+                </div>
+                <div>
+                    Address: 00000 台中市00區00路0段00號
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+form .web-s:first-of-type {
+    display: block !important;
+    padding-top: 0 !important;
+}
+
+.col-right1 {
+    justify-content: unset ;
+}
+
+.form[name="order"] > .form-group:last-of-type > .col-right1 {
+    justify-content: center !important;
+}
+
+
+form[name="order"] .form-group:last-of-type .col-right1 {
+    display: flex;
+    justify-content: center ;
+}
+
+.table-subject {
+    position: relative;
+}
+.fleft,.fright {
+    position: absolute;
+}
+.fleft {
+    left: 0;
+}
+.fright {
+    right: 0;
+}
+
+.table-wrapper {
+    text-align: left !important;
+    position: relative;
+}
+
+.table-wrapper > input {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+label {
+    padding-top: 10px;
+}
+
+label input,.content03 select {
+    width: unset !important;
+    margin: 10px;
+}
+
+.content03 select {
+    padding: 10px 5px;
+}
+
+
+.panel-body {
+    position: relative;
+}
+.content03 {
+    margin: 0.5% 0;
+    width: 100%;
+}
+
+.col-left1 {
+    width: 13% !important;
+}
+
+.col-right1 select {
+    width: 99%;
+    border-color: #00000033;
+    padding: 1.2% 1%;
+}
+
+.web-s .form-group,form[name="order"] .form-group {
+    display: flex ; 
+    flex-direction: row;
+}
+
+@media (max-width:730px) {
+    .col-left1 {
+        text-align: left !important;
+        padding-left: 0 !important;
+        margin-bottom: 2%;
+        width: 100% !important;
+    }
+    
+    .web-s .form-group, form[name="order"] .form-group {
+        flex-direction: column;
+    }
+}
